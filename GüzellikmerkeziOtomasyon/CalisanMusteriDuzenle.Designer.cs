@@ -40,6 +40,8 @@
             this.btnsil = new System.Windows.Forms.Button();
             this.btngeri = new System.Windows.Forms.Button();
             this.musteridatagrid = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.ıdtxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.musteridatagrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,6 +67,7 @@
             this.btnekle.TabIndex = 58;
             this.btnekle.Text = "EKLE";
             this.btnekle.UseVisualStyleBackColor = false;
+            this.btnekle.Click += new System.EventHandler(this.btnekle_Click);
             // 
             // btnguncelle
             // 
@@ -77,54 +80,55 @@
             this.btnguncelle.TabIndex = 57;
             this.btnguncelle.Text = "GÜNCELLE";
             this.btnguncelle.UseVisualStyleBackColor = false;
+            this.btnguncelle.Click += new System.EventHandler(this.btnguncelle_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(241, 491);
+            this.label3.Location = new System.Drawing.Point(180, 523);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 19);
+            this.label3.Size = new System.Drawing.Size(69, 19);
             this.label3.TabIndex = 56;
-            this.label3.Text = "TEL NO";
+            this.label3.Text = "TEL NO :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(241, 440);
+            this.label2.Location = new System.Drawing.Point(180, 472);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 19);
+            this.label2.Size = new System.Drawing.Size(72, 19);
             this.label2.TabIndex = 55;
-            this.label2.Text = "SOYADI";
+            this.label2.Text = "SOYADI :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(266, 387);
+            this.label1.Location = new System.Drawing.Point(208, 426);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 19);
+            this.label1.Size = new System.Drawing.Size(44, 19);
             this.label1.TabIndex = 54;
-            this.label1.Text = "ADI";
+            this.label1.Text = "ADI :";
             // 
             // soyadtxt
             // 
-            this.soyadtxt.Location = new System.Drawing.Point(343, 437);
+            this.soyadtxt.Location = new System.Drawing.Point(267, 469);
             this.soyadtxt.Name = "soyadtxt";
             this.soyadtxt.Size = new System.Drawing.Size(190, 22);
             this.soyadtxt.TabIndex = 53;
             // 
             // adtxt
             // 
-            this.adtxt.Location = new System.Drawing.Point(343, 384);
+            this.adtxt.Location = new System.Drawing.Point(267, 423);
             this.adtxt.Name = "adtxt";
             this.adtxt.Size = new System.Drawing.Size(190, 22);
             this.adtxt.TabIndex = 52;
             // 
             // teltxt
             // 
-            this.teltxt.Location = new System.Drawing.Point(343, 488);
+            this.teltxt.Location = new System.Drawing.Point(267, 520);
             this.teltxt.Name = "teltxt";
             this.teltxt.Size = new System.Drawing.Size(190, 22);
             this.teltxt.TabIndex = 51;
@@ -140,6 +144,7 @@
             this.btnsil.TabIndex = 50;
             this.btnsil.Text = "SİL";
             this.btnsil.UseVisualStyleBackColor = false;
+            this.btnsil.Click += new System.EventHandler(this.btnsil_Click);
             // 
             // btngeri
             // 
@@ -164,6 +169,26 @@
             this.musteridatagrid.RowTemplate.Height = 24;
             this.musteridatagrid.Size = new System.Drawing.Size(1048, 277);
             this.musteridatagrid.TabIndex = 48;
+            this.musteridatagrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.musteridatagrid_CellClick);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(219, 384);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 19);
+            this.label5.TabIndex = 60;
+            this.label5.Text = "ID :";
+            // 
+            // ıdtxt
+            // 
+            this.ıdtxt.Location = new System.Drawing.Point(267, 382);
+            this.ıdtxt.Name = "ıdtxt";
+            this.ıdtxt.ReadOnly = true;
+            this.ıdtxt.Size = new System.Drawing.Size(190, 22);
+            this.ıdtxt.TabIndex = 61;
+            this.ıdtxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ıdtxt_KeyPress);
             // 
             // CalisanMusteriDuzenle
             // 
@@ -171,6 +196,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1072, 583);
+            this.Controls.Add(this.ıdtxt);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnekle);
             this.Controls.Add(this.btnguncelle);
@@ -186,6 +213,7 @@
             this.Name = "CalisanMusteriDuzenle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CalisanMusteriDüzenle";
+            this.Load += new System.EventHandler(this.CalisanMusteriDuzenle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.musteridatagrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -206,5 +234,7 @@
         private System.Windows.Forms.Button btnsil;
         private System.Windows.Forms.Button btngeri;
         private System.Windows.Forms.DataGridView musteridatagrid;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox ıdtxt;
     }
 }

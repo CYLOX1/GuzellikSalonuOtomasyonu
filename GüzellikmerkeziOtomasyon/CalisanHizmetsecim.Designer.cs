@@ -35,6 +35,7 @@
             this.btnonay = new System.Windows.Forms.Button();
             this.hizmetlist = new System.Windows.Forms.CheckedListBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label3
@@ -52,7 +53,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(545, 94);
+            this.label2.Location = new System.Drawing.Point(640, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(146, 24);
             this.label2.TabIndex = 53;
@@ -60,7 +61,7 @@
             // 
             // tarihzamanaracı
             // 
-            this.tarihzamanaracı.Location = new System.Drawing.Point(527, 196);
+            this.tarihzamanaracı.Location = new System.Drawing.Point(516, 197);
             this.tarihzamanaracı.Name = "tarihzamanaracı";
             this.tarihzamanaracı.Size = new System.Drawing.Size(191, 22);
             this.tarihzamanaracı.TabIndex = 51;
@@ -119,12 +120,21 @@
             this.label4.TabIndex = 55;
             this.label4.Text = "HİZMETLER";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(725, 195);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(153, 24);
+            this.comboBox1.TabIndex = 56;
+            // 
             // CalisanHizmetsecim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1072, 583);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -149,5 +159,6 @@
         private System.Windows.Forms.Button btnonay;
         private System.Windows.Forms.CheckedListBox hizmetlist;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
