@@ -30,5 +30,15 @@ namespace GüzellikmerkeziOtomasyon
             chizmetsec.Show();
             this.Hide();
         }
+
+        private void kapatmafoto_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void kucultfoto_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

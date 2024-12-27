@@ -31,11 +31,16 @@
             this.seanslardatagrid = new System.Windows.Forms.DataGridView();
             this.btngeri = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.kapatmafoto = new System.Windows.Forms.PictureBox();
+            this.kucultfoto = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.seanslardatagrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).BeginInit();
             this.SuspendLayout();
             // 
             // seanslardatagrid
             // 
+            this.seanslardatagrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.seanslardatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.seanslardatagrid.Location = new System.Drawing.Point(38, 72);
             this.seanslardatagrid.Name = "seanslardatagrid";
@@ -68,19 +73,48 @@
             this.label2.TabIndex = 52;
             this.label2.Text = "SEANSLAR";
             // 
+            // kapatmafoto
+            // 
+            this.kapatmafoto.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_close_50;
+            this.kapatmafoto.InitialImage = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_close_50;
+            this.kapatmafoto.Location = new System.Drawing.Point(1029, 12);
+            this.kapatmafoto.Name = "kapatmafoto";
+            this.kapatmafoto.Size = new System.Drawing.Size(31, 35);
+            this.kapatmafoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.kapatmafoto.TabIndex = 54;
+            this.kapatmafoto.TabStop = false;
+            this.kapatmafoto.Click += new System.EventHandler(this.kapatmafoto_Click);
+            // 
+            // kucultfoto
+            // 
+            this.kucultfoto.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_drop_down_50;
+            this.kucultfoto.Location = new System.Drawing.Point(986, 12);
+            this.kucultfoto.Name = "kucultfoto";
+            this.kucultfoto.Size = new System.Drawing.Size(37, 35);
+            this.kucultfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.kucultfoto.TabIndex = 53;
+            this.kucultfoto.TabStop = false;
+            this.kucultfoto.Click += new System.EventHandler(this.kucultfoto_Click);
+            // 
             // CalisanSeansGoruntule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1072, 583);
+            this.Controls.Add(this.kapatmafoto);
+            this.Controls.Add(this.kucultfoto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btngeri);
             this.Controls.Add(this.seanslardatagrid);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CalisanSeansGoruntule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SeansGoruntule";
+            this.Load += new System.EventHandler(this.CalisanSeansGoruntule_Load);
             ((System.ComponentModel.ISupportInitialize)(this.seanslardatagrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -91,5 +125,7 @@
         private System.Windows.Forms.DataGridView seanslardatagrid;
         private System.Windows.Forms.Button btngeri;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox kapatmafoto;
+        private System.Windows.Forms.PictureBox kucultfoto;
     }
 }

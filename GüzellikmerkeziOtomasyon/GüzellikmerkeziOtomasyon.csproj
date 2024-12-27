@@ -207,6 +207,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="CalisanSeansGoruntule.resx">
       <DependentUpon>CalisanSeansGoruntule.cs</DependentUpon>
@@ -246,6 +247,14 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\icons8-close-50.png" />
+    <None Include="Resources\icons8-shutdown-641.png" />
+    <None Include="Resources\icons8-close-window-50.png" />
+    <None Include="Resources\icons8-drop-down-50.png" />
+    <None Include="Resources\kapaligoz.png" />
+    <None Include="Resources\acikgoz1.png" />
+    <None Include="Resources\acikgoz.png" />
+    <None Include="Resources\icons8-shutdown-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

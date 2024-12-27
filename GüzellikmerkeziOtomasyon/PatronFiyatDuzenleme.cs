@@ -113,5 +113,15 @@ namespace GüzellikmerkeziOtomasyon
                 listele();
             }
         }
+
+        private void kucultfoto_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+        }
+
+        private void kapatmafoto_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -30,15 +30,22 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.grspanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sifretxt = new System.Windows.Forms.TextBox();
             this.kaditxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btngiris = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
+            this.kucultfoto = new System.Windows.Forms.PictureBox();
             this.kapatfoto = new System.Windows.Forms.PictureBox();
+            this.kapatmafoto = new System.Windows.Forms.PictureBox();
             this.grspanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kapatfoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -54,6 +61,7 @@
             // grspanel
             // 
             this.grspanel.BackColor = System.Drawing.Color.SeaShell;
+            this.grspanel.Controls.Add(this.pictureBox1);
             this.grspanel.Controls.Add(this.sifretxt);
             this.grspanel.Controls.Add(this.kaditxt);
             this.grspanel.Controls.Add(this.label3);
@@ -63,11 +71,21 @@
             this.grspanel.Size = new System.Drawing.Size(663, 289);
             this.grspanel.TabIndex = 2;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(383, 194);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(101, 59);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // sifretxt
             // 
             this.sifretxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sifretxt.Location = new System.Drawing.Point(232, 152);
             this.sifretxt.Name = "sifretxt";
+            this.sifretxt.PasswordChar = '*';
             this.sifretxt.Size = new System.Drawing.Size(252, 22);
             this.sifretxt.TabIndex = 3;
             // 
@@ -122,14 +140,39 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "KAPAT";
             // 
+            // kucultfoto
+            // 
+            this.kucultfoto.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_drop_down_50;
+            this.kucultfoto.Location = new System.Drawing.Point(975, 21);
+            this.kucultfoto.Name = "kucultfoto";
+            this.kucultfoto.Size = new System.Drawing.Size(37, 35);
+            this.kucultfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.kucultfoto.TabIndex = 9;
+            this.kucultfoto.TabStop = false;
+            this.kucultfoto.Click += new System.EventHandler(this.kucultfoto_Click);
+            // 
             // kapatfoto
             // 
+            this.kapatfoto.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_shutdown_64;
             this.kapatfoto.Location = new System.Drawing.Point(12, 501);
             this.kapatfoto.Name = "kapatfoto";
             this.kapatfoto.Size = new System.Drawing.Size(51, 54);
             this.kapatfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.kapatfoto.TabIndex = 7;
             this.kapatfoto.TabStop = false;
+            this.kapatfoto.Click += new System.EventHandler(this.kapatfoto_Click);
+            // 
+            // kapatmafoto
+            // 
+            this.kapatmafoto.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_close_50;
+            this.kapatmafoto.InitialImage = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_close_50;
+            this.kapatmafoto.Location = new System.Drawing.Point(1018, 21);
+            this.kapatmafoto.Name = "kapatmafoto";
+            this.kapatmafoto.Size = new System.Drawing.Size(31, 35);
+            this.kapatmafoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.kapatmafoto.TabIndex = 10;
+            this.kapatmafoto.TabStop = false;
+            this.kapatmafoto.Click += new System.EventHandler(this.kapatmafoto_Click);
             // 
             // Girissayfa
             // 
@@ -137,17 +180,24 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1072, 583);
+            this.Controls.Add(this.kapatmafoto);
+            this.Controls.Add(this.kucultfoto);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.kapatfoto);
             this.Controls.Add(this.btngiris);
             this.Controls.Add(this.grspanel);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Girissayfa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Girissayfa_Load);
             this.grspanel.ResumeLayout(false);
             this.grspanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kapatfoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,6 +214,10 @@
         private System.Windows.Forms.Button btngiris;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox kapatfoto;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
+        private System.Windows.Forms.PictureBox kucultfoto;
+        private System.Windows.Forms.PictureBox kapatmafoto;
     }
 }
 

@@ -35,7 +35,11 @@
             this.btnonay = new System.Windows.Forms.Button();
             this.hizmetlist = new System.Windows.Forms.CheckedListBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.combosaat = new System.Windows.Forms.ComboBox();
+            this.kapatmafoto = new System.Windows.Forms.PictureBox();
+            this.kucultfoto = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -109,6 +113,7 @@
             this.hizmetlist.Name = "hizmetlist";
             this.hizmetlist.Size = new System.Drawing.Size(253, 337);
             this.hizmetlist.TabIndex = 48;
+            this.hizmetlist.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.hizmetlist_ItemCheck);
             // 
             // label4
             // 
@@ -120,13 +125,47 @@
             this.label4.TabIndex = 55;
             this.label4.Text = "HİZMETLER";
             // 
-            // comboBox1
+            // combosaat
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(725, 195);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(153, 24);
-            this.comboBox1.TabIndex = 56;
+            this.combosaat.FormattingEnabled = true;
+            this.combosaat.Items.AddRange(new object[] {
+            "9:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "13:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00",
+            "18:00"});
+            this.combosaat.Location = new System.Drawing.Point(725, 195);
+            this.combosaat.Name = "combosaat";
+            this.combosaat.Size = new System.Drawing.Size(153, 24);
+            this.combosaat.TabIndex = 56;
+            // 
+            // kapatmafoto
+            // 
+            this.kapatmafoto.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_close_50;
+            this.kapatmafoto.InitialImage = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_close_50;
+            this.kapatmafoto.Location = new System.Drawing.Point(1034, 12);
+            this.kapatmafoto.Name = "kapatmafoto";
+            this.kapatmafoto.Size = new System.Drawing.Size(31, 35);
+            this.kapatmafoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.kapatmafoto.TabIndex = 58;
+            this.kapatmafoto.TabStop = false;
+            this.kapatmafoto.Click += new System.EventHandler(this.kapatmafoto_Click);
+            // 
+            // kucultfoto
+            // 
+            this.kucultfoto.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_drop_down_50;
+            this.kucultfoto.Location = new System.Drawing.Point(991, 12);
+            this.kucultfoto.Name = "kucultfoto";
+            this.kucultfoto.Size = new System.Drawing.Size(37, 35);
+            this.kucultfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.kucultfoto.TabIndex = 57;
+            this.kucultfoto.TabStop = false;
+            this.kucultfoto.Click += new System.EventHandler(this.kucultfoto_Click);
             // 
             // CalisanHizmetsecim
             // 
@@ -134,7 +173,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1072, 583);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.kapatmafoto);
+            this.Controls.Add(this.kucultfoto);
+            this.Controls.Add(this.combosaat);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -142,9 +183,12 @@
             this.Controls.Add(this.btngeri);
             this.Controls.Add(this.btnonay);
             this.Controls.Add(this.hizmetlist);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CalisanHizmetsecim";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hizmetsecim";
+            ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,6 +203,8 @@
         private System.Windows.Forms.Button btnonay;
         private System.Windows.Forms.CheckedListBox hizmetlist;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox combosaat;
+        private System.Windows.Forms.PictureBox kapatmafoto;
+        private System.Windows.Forms.PictureBox kucultfoto;
     }
 }

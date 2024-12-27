@@ -48,5 +48,15 @@ namespace GüzellikmerkeziOtomasyon
                 MessageBox.Show("Bir hata ile karşılaşıldı"+ ex.Message);
             }
         }
+
+        private void kucultfoto_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+        }
+
+        private void kapatmafoto_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

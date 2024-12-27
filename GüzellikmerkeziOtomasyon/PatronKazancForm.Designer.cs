@@ -33,13 +33,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btngeri = new System.Windows.Forms.Button();
+            this.kapatmafoto = new System.Windows.Forms.PictureBox();
+            this.kucultfoto = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(524, 293);
+            this.label3.Location = new System.Drawing.Point(547, 293);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 29);
             this.label3.TabIndex = 5;
@@ -49,7 +53,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(449, 293);
+            this.label2.Location = new System.Drawing.Point(462, 293);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 29);
             this.label2.TabIndex = 4;
@@ -60,7 +64,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.MistyRose;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(361, 205);
+            this.label1.Location = new System.Drawing.Point(380, 204);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(272, 44);
             this.label1.TabIndex = 3;
@@ -90,20 +94,48 @@
             this.btngeri.UseVisualStyleBackColor = false;
             this.btngeri.Click += new System.EventHandler(this.btngeri_Click);
             // 
+            // kapatmafoto
+            // 
+            this.kapatmafoto.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_close_50;
+            this.kapatmafoto.InitialImage = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_close_50;
+            this.kapatmafoto.Location = new System.Drawing.Point(1017, 12);
+            this.kapatmafoto.Name = "kapatmafoto";
+            this.kapatmafoto.Size = new System.Drawing.Size(31, 35);
+            this.kapatmafoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.kapatmafoto.TabIndex = 55;
+            this.kapatmafoto.TabStop = false;
+            this.kapatmafoto.Click += new System.EventHandler(this.kapatmafoto_Click);
+            // 
+            // kucultfoto
+            // 
+            this.kucultfoto.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_drop_down_50;
+            this.kucultfoto.Location = new System.Drawing.Point(965, 12);
+            this.kucultfoto.Name = "kucultfoto";
+            this.kucultfoto.Size = new System.Drawing.Size(37, 35);
+            this.kucultfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.kucultfoto.TabIndex = 54;
+            this.kucultfoto.TabStop = false;
+            this.kucultfoto.Click += new System.EventHandler(this.kucultfoto_Click);
+            // 
             // PatronKazancForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(1072, 583);
+            this.ClientSize = new System.Drawing.Size(1060, 583);
+            this.Controls.Add(this.kapatmafoto);
+            this.Controls.Add(this.kucultfoto);
             this.Controls.Add(this.btngeri);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PatronKazancForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PatronKazancForm";
+            ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,5 +148,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btngeri;
+        private System.Windows.Forms.PictureBox kapatmafoto;
+        private System.Windows.Forms.PictureBox kucultfoto;
     }
 }

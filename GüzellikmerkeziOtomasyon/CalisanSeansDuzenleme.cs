@@ -18,6 +18,7 @@ namespace GüzellikmerkeziOtomasyon
         public CalisanSeansDuzenleme()
         {
             InitializeComponent();
+            tarihzaman.MinDate = DateTime.Now.Date;
         }
 
         private void btngeri_Click(object sender, EventArgs e)
@@ -94,6 +95,14 @@ namespace GüzellikmerkeziOtomasyon
             listele();
         }
 
+        private void kucultfoto_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+        }
 
+        private void kapatmafoto_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -52,5 +52,15 @@ namespace GüzellikmerkeziOtomasyon
             calisanSeans.Show();
             this.Hide();
         }
+
+        private void kucultfoto_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void kapatmafoto_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -42,7 +42,11 @@
             this.calisandatagrid = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.ıdtxt = new System.Windows.Forms.TextBox();
+            this.kapatmafoto = new System.Windows.Forms.PictureBox();
+            this.kucultfoto = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.calisandatagrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -163,7 +167,7 @@
             // 
             this.calisandatagrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.calisandatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.calisandatagrid.Location = new System.Drawing.Point(39, 63);
+            this.calisandatagrid.Location = new System.Drawing.Point(44, 74);
             this.calisandatagrid.Name = "calisandatagrid";
             this.calisandatagrid.ReadOnly = true;
             this.calisandatagrid.RowHeadersWidth = 51;
@@ -190,12 +194,37 @@
             this.ıdtxt.Size = new System.Drawing.Size(190, 22);
             this.ıdtxt.TabIndex = 61;
             // 
+            // kapatmafoto
+            // 
+            this.kapatmafoto.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_close_50;
+            this.kapatmafoto.InitialImage = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_close_50;
+            this.kapatmafoto.Location = new System.Drawing.Point(1029, 12);
+            this.kapatmafoto.Name = "kapatmafoto";
+            this.kapatmafoto.Size = new System.Drawing.Size(31, 35);
+            this.kapatmafoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.kapatmafoto.TabIndex = 63;
+            this.kapatmafoto.TabStop = false;
+            this.kapatmafoto.Click += new System.EventHandler(this.kapatmafoto_Click);
+            // 
+            // kucultfoto
+            // 
+            this.kucultfoto.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_drop_down_50;
+            this.kucultfoto.Location = new System.Drawing.Point(986, 12);
+            this.kucultfoto.Name = "kucultfoto";
+            this.kucultfoto.Size = new System.Drawing.Size(37, 35);
+            this.kucultfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.kucultfoto.TabIndex = 62;
+            this.kucultfoto.TabStop = false;
+            this.kucultfoto.Click += new System.EventHandler(this.kucultfoto_Click);
+            // 
             // PatronCalisanDuzenle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1072, 583);
+            this.Controls.Add(this.kapatmafoto);
+            this.Controls.Add(this.kucultfoto);
             this.Controls.Add(this.ıdtxt);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -210,11 +239,14 @@
             this.Controls.Add(this.btnguncelle);
             this.Controls.Add(this.btnsil);
             this.Controls.Add(this.calisandatagrid);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PatronCalisanDuzenle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PatronCalisanDüzenlecs";
             this.Load += new System.EventHandler(this.PatronCalisanDuzenle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.calisandatagrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,5 +268,7 @@
         private System.Windows.Forms.DataGridView calisandatagrid;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox ıdtxt;
+        private System.Windows.Forms.PictureBox kapatmafoto;
+        private System.Windows.Forms.PictureBox kucultfoto;
     }
 }

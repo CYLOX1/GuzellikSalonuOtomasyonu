@@ -47,5 +47,45 @@ namespace GüzellikmerkeziOtomasyon
 
             }
         }
+
+        private void kapatfoto_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if(sifretxt.PasswordChar == '*')
+            {
+                sifretxt.PasswordChar = '\0';
+                pictureBox1.Image = Properties.Resources.acikgoz;
+            }
+            else
+            {
+                sifretxt.PasswordChar = '*';
+                pictureBox1.Image = Properties.Resources.kapaligoz;
+            }
+        }
+
+        private void Girissayfa_Load(object sender, EventArgs e)
+        {
+            sifretxt.PasswordChar = '*';
+
+
+            pictureBox1.Image = Properties.Resources.kapaligoz;
+        }
+
+        private void kapatmafoto_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void kucultfoto_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
+
+
 }
