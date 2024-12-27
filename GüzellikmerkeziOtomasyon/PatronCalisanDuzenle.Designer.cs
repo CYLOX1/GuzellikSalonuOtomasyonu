@@ -40,6 +40,8 @@
             this.btnguncelle = new System.Windows.Forms.Button();
             this.btnsil = new System.Windows.Forms.Button();
             this.calisandatagrid = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.ıdtxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.calisandatagrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +50,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.HotPink;
-            this.label4.Location = new System.Drawing.Point(353, 26);
+            this.label4.Location = new System.Drawing.Point(357, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(351, 40);
             this.label4.TabIndex = 59;
@@ -65,6 +67,7 @@
             this.btnekle.TabIndex = 58;
             this.btnekle.Text = "EKLE";
             this.btnekle.UseVisualStyleBackColor = false;
+            this.btnekle.Click += new System.EventHandler(this.btnekle_Click);
             // 
             // label3
             // 
@@ -80,7 +83,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(199, 487);
+            this.label2.Location = new System.Drawing.Point(199, 499);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 19);
             this.label2.TabIndex = 56;
@@ -90,7 +93,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(224, 432);
+            this.label1.Location = new System.Drawing.Point(227, 459);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 19);
             this.label1.TabIndex = 55;
@@ -98,14 +101,14 @@
             // 
             // soyadtxt
             // 
-            this.soyadtxt.Location = new System.Drawing.Point(290, 485);
+            this.soyadtxt.Location = new System.Drawing.Point(290, 497);
             this.soyadtxt.Name = "soyadtxt";
             this.soyadtxt.Size = new System.Drawing.Size(190, 22);
             this.soyadtxt.TabIndex = 54;
             // 
             // adtxt
             // 
-            this.adtxt.Location = new System.Drawing.Point(290, 430);
+            this.adtxt.Location = new System.Drawing.Point(290, 457);
             this.adtxt.Name = "adtxt";
             this.adtxt.Size = new System.Drawing.Size(190, 22);
             this.adtxt.TabIndex = 53;
@@ -141,6 +144,7 @@
             this.btnguncelle.TabIndex = 50;
             this.btnguncelle.Text = "GÜNCELLE";
             this.btnguncelle.UseVisualStyleBackColor = false;
+            this.btnguncelle.Click += new System.EventHandler(this.btnguncelle_Click);
             // 
             // btnsil
             // 
@@ -153,16 +157,38 @@
             this.btnsil.TabIndex = 49;
             this.btnsil.Text = "SİL";
             this.btnsil.UseVisualStyleBackColor = false;
+            this.btnsil.Click += new System.EventHandler(this.btnsil_Click);
             // 
             // calisandatagrid
             // 
+            this.calisandatagrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.calisandatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.calisandatagrid.Location = new System.Drawing.Point(37, 86);
+            this.calisandatagrid.Location = new System.Drawing.Point(39, 63);
             this.calisandatagrid.Name = "calisandatagrid";
+            this.calisandatagrid.ReadOnly = true;
             this.calisandatagrid.RowHeadersWidth = 51;
             this.calisandatagrid.RowTemplate.Height = 24;
             this.calisandatagrid.Size = new System.Drawing.Size(990, 312);
             this.calisandatagrid.TabIndex = 48;
+            this.calisandatagrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.calisandatagrid_CellClick);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(235, 422);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(25, 19);
+            this.label5.TabIndex = 60;
+            this.label5.Text = "ID";
+            // 
+            // ıdtxt
+            // 
+            this.ıdtxt.Location = new System.Drawing.Point(290, 419);
+            this.ıdtxt.Name = "ıdtxt";
+            this.ıdtxt.ReadOnly = true;
+            this.ıdtxt.Size = new System.Drawing.Size(190, 22);
+            this.ıdtxt.TabIndex = 61;
             // 
             // PatronCalisanDuzenle
             // 
@@ -170,6 +196,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1072, 583);
+            this.Controls.Add(this.ıdtxt);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnekle);
             this.Controls.Add(this.label3);
@@ -185,6 +213,7 @@
             this.Name = "PatronCalisanDuzenle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PatronCalisanDüzenlecs";
+            this.Load += new System.EventHandler(this.PatronCalisanDuzenle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.calisandatagrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -205,5 +234,7 @@
         private System.Windows.Forms.Button btnguncelle;
         private System.Windows.Forms.Button btnsil;
         private System.Windows.Forms.DataGridView calisandatagrid;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox ıdtxt;
     }
 }

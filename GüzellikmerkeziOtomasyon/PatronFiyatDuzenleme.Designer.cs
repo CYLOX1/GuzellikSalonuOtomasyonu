@@ -38,6 +38,8 @@
             this.btnsil = new System.Windows.Forms.Button();
             this.btngeri = new System.Windows.Forms.Button();
             this.fiyatdatagrid = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.hizmetıdtxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.fiyatdatagrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,6 +65,7 @@
             this.btnekle.TabIndex = 56;
             this.btnekle.Text = "EKLE";
             this.btnekle.UseVisualStyleBackColor = false;
+            this.btnekle.Click += new System.EventHandler(this.btnekle_Click);
             // 
             // btnguncelle
             // 
@@ -75,12 +78,13 @@
             this.btnguncelle.TabIndex = 55;
             this.btnguncelle.Text = "GÜNCELLE";
             this.btnguncelle.UseVisualStyleBackColor = false;
+            this.btnguncelle.Click += new System.EventHandler(this.btnguncelle_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(190, 503);
+            this.label2.Location = new System.Drawing.Point(190, 527);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 19);
             this.label2.TabIndex = 54;
@@ -90,7 +94,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(190, 456);
+            this.label1.Location = new System.Drawing.Point(209, 488);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 19);
             this.label1.TabIndex = 53;
@@ -98,14 +102,14 @@
             // 
             // hizmetfiyattxt
             // 
-            this.hizmetfiyattxt.Location = new System.Drawing.Point(321, 500);
+            this.hizmetfiyattxt.Location = new System.Drawing.Point(321, 524);
             this.hizmetfiyattxt.Name = "hizmetfiyattxt";
             this.hizmetfiyattxt.Size = new System.Drawing.Size(190, 22);
             this.hizmetfiyattxt.TabIndex = 52;
             // 
             // hizmetadtxt
             // 
-            this.hizmetadtxt.Location = new System.Drawing.Point(321, 453);
+            this.hizmetadtxt.Location = new System.Drawing.Point(321, 485);
             this.hizmetadtxt.Name = "hizmetadtxt";
             this.hizmetadtxt.Size = new System.Drawing.Size(190, 22);
             this.hizmetadtxt.TabIndex = 51;
@@ -121,6 +125,7 @@
             this.btnsil.TabIndex = 50;
             this.btnsil.Text = "SİL";
             this.btnsil.UseVisualStyleBackColor = false;
+            this.btnsil.Click += new System.EventHandler(this.btnsil_Click);
             // 
             // btngeri
             // 
@@ -137,6 +142,7 @@
             // 
             // fiyatdatagrid
             // 
+            this.fiyatdatagrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.fiyatdatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.fiyatdatagrid.Location = new System.Drawing.Point(12, 79);
             this.fiyatdatagrid.Name = "fiyatdatagrid";
@@ -144,6 +150,24 @@
             this.fiyatdatagrid.RowTemplate.Height = 24;
             this.fiyatdatagrid.Size = new System.Drawing.Size(1048, 333);
             this.fiyatdatagrid.TabIndex = 48;
+            this.fiyatdatagrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.fiyatdatagrid_CellClick);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(209, 446);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 19);
+            this.label4.TabIndex = 58;
+            this.label4.Text = "HİZMET ID";
+            // 
+            // hizmetıdtxt
+            // 
+            this.hizmetıdtxt.Location = new System.Drawing.Point(321, 443);
+            this.hizmetıdtxt.Name = "hizmetıdtxt";
+            this.hizmetıdtxt.Size = new System.Drawing.Size(190, 22);
+            this.hizmetıdtxt.TabIndex = 59;
             // 
             // PatronFiyatDuzenleme
             // 
@@ -151,6 +175,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1072, 583);
+            this.Controls.Add(this.hizmetıdtxt);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnekle);
             this.Controls.Add(this.btnguncelle);
@@ -164,6 +190,7 @@
             this.Name = "PatronFiyatDuzenleme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PatronFiyatDuzenleme";
+            this.Load += new System.EventHandler(this.PatronFiyatDuzenleme_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fiyatdatagrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -182,5 +209,7 @@
         private System.Windows.Forms.Button btnsil;
         private System.Windows.Forms.Button btngeri;
         private System.Windows.Forms.DataGridView fiyatdatagrid;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox hizmetıdtxt;
     }
 }

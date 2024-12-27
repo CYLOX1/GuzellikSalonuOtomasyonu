@@ -165,6 +165,7 @@
             this.musteridatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.musteridatagrid.Location = new System.Drawing.Point(12, 87);
             this.musteridatagrid.Name = "musteridatagrid";
+            this.musteridatagrid.ReadOnly = true;
             this.musteridatagrid.RowHeadersWidth = 51;
             this.musteridatagrid.RowTemplate.Height = 24;
             this.musteridatagrid.Size = new System.Drawing.Size(1048, 277);

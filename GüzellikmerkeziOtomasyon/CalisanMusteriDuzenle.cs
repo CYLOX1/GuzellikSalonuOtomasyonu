@@ -26,6 +26,10 @@ namespace GüzellikmerkeziOtomasyon
             var liste = cagir.müşteriler.AsNoTracking().ToList();
             musteridatagrid.DataSource = liste;
             musteridatagrid.ClearSelection();
+            ıdtxt.Clear();
+            adtxt.Clear();
+            soyadtxt.Clear();
+            teltxt.Clear();
         }
         private void btngeri_Click(object sender, EventArgs e)
         {
@@ -70,12 +74,20 @@ namespace GüzellikmerkeziOtomasyon
 
         private void btnsil_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(ıdtxt.Text);
-            var bgl= db.baglan();
-            var sil = bgl.müşteriler.Find(id);
-            bgl.müşteriler.Remove(sil);
-            bgl.SaveChanges();
-            listele();
+            try
+            {
+                int id = Convert.ToInt32(ıdtxt.Text);
+                var bgl = db.baglan();
+                var sil = bgl.müşteriler.Find(id);
+                bgl.müşteriler.Remove(sil);
+                bgl.SaveChanges();
+                listele();
+            }
+            catch(Exception ex)
+            { 
+                MessageBox.Show(ex.Message); 
+            }
+
         }
 
         private void musteridatagrid_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btndegistir = new System.Windows.Forms.Button();
+            this.btnguncelle = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,26 +39,29 @@
             this.btngeri = new System.Windows.Forms.Button();
             this.musteridatagrid = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.ıdtxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.musteridatagrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // btndegistir
+            // btnguncelle
             // 
-            this.btndegistir.BackColor = System.Drawing.Color.HotPink;
-            this.btndegistir.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndegistir.ForeColor = System.Drawing.SystemColors.Control;
-            this.btndegistir.Location = new System.Drawing.Point(768, 429);
-            this.btndegistir.Name = "btndegistir";
-            this.btndegistir.Size = new System.Drawing.Size(146, 75);
-            this.btndegistir.TabIndex = 40;
-            this.btndegistir.Text = "DEĞİŞTİR";
-            this.btndegistir.UseVisualStyleBackColor = false;
+            this.btnguncelle.BackColor = System.Drawing.Color.HotPink;
+            this.btnguncelle.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnguncelle.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnguncelle.Location = new System.Drawing.Point(768, 464);
+            this.btnguncelle.Name = "btnguncelle";
+            this.btnguncelle.Size = new System.Drawing.Size(146, 75);
+            this.btnguncelle.TabIndex = 40;
+            this.btnguncelle.Text = "GÜNCELLE";
+            this.btnguncelle.UseVisualStyleBackColor = false;
+            this.btnguncelle.Click += new System.EventHandler(this.btnguncelle_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(220, 541);
+            this.label3.Location = new System.Drawing.Point(228, 541);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 19);
             this.label3.TabIndex = 39;
@@ -68,7 +71,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(220, 485);
+            this.label2.Location = new System.Drawing.Point(225, 503);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 19);
             this.label2.TabIndex = 38;
@@ -78,7 +81,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(227, 429);
+            this.label1.Location = new System.Drawing.Point(253, 467);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 19);
             this.label1.TabIndex = 37;
@@ -86,21 +89,21 @@
             // 
             // soyadtxt
             // 
-            this.soyadtxt.Location = new System.Drawing.Point(290, 485);
+            this.soyadtxt.Location = new System.Drawing.Point(298, 500);
             this.soyadtxt.Name = "soyadtxt";
             this.soyadtxt.Size = new System.Drawing.Size(190, 22);
             this.soyadtxt.TabIndex = 36;
             // 
             // adtxt
             // 
-            this.adtxt.Location = new System.Drawing.Point(290, 429);
+            this.adtxt.Location = new System.Drawing.Point(298, 464);
             this.adtxt.Name = "adtxt";
             this.adtxt.Size = new System.Drawing.Size(190, 22);
             this.adtxt.TabIndex = 35;
             // 
             // teltxt
             // 
-            this.teltxt.Location = new System.Drawing.Point(290, 538);
+            this.teltxt.Location = new System.Drawing.Point(298, 538);
             this.teltxt.Name = "teltxt";
             this.teltxt.Size = new System.Drawing.Size(190, 22);
             this.teltxt.TabIndex = 34;
@@ -110,12 +113,13 @@
             this.btnsil.BackColor = System.Drawing.Color.HotPink;
             this.btnsil.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsil.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnsil.Location = new System.Drawing.Point(593, 429);
+            this.btnsil.Location = new System.Drawing.Point(600, 464);
             this.btnsil.Name = "btnsil";
             this.btnsil.Size = new System.Drawing.Size(146, 75);
             this.btnsil.TabIndex = 33;
             this.btnsil.Text = "SİL";
             this.btnsil.UseVisualStyleBackColor = false;
+            this.btnsil.Click += new System.EventHandler(this.btnsil_Click);
             // 
             // btngeri
             // 
@@ -132,6 +136,7 @@
             // 
             // musteridatagrid
             // 
+            this.musteridatagrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.musteridatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.musteridatagrid.Location = new System.Drawing.Point(42, 81);
             this.musteridatagrid.Name = "musteridatagrid";
@@ -139,6 +144,7 @@
             this.musteridatagrid.RowTemplate.Height = 24;
             this.musteridatagrid.Size = new System.Drawing.Size(957, 313);
             this.musteridatagrid.TabIndex = 31;
+            this.musteridatagrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.musteridatagrid_CellClick);
             // 
             // label4
             // 
@@ -151,14 +157,33 @@
             this.label4.TabIndex = 53;
             this.label4.Text = "MÜŞTERİ DÜZENLE";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(253, 431);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(25, 19);
+            this.label5.TabIndex = 54;
+            this.label5.Text = "ID";
+            // 
+            // ıdtxt
+            // 
+            this.ıdtxt.Location = new System.Drawing.Point(298, 428);
+            this.ıdtxt.Name = "ıdtxt";
+            this.ıdtxt.Size = new System.Drawing.Size(190, 22);
+            this.ıdtxt.TabIndex = 55;
+            // 
             // PatronMüsteriDuzenleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1072, 583);
+            this.Controls.Add(this.ıdtxt);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btndegistir);
+            this.Controls.Add(this.btnguncelle);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -171,6 +196,7 @@
             this.Name = "PatronMüsteriDuzenleme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PatronMüsteriDüzenleme";
+            this.Load += new System.EventHandler(this.PatronMüsteriDuzenleme_Load);
             ((System.ComponentModel.ISupportInitialize)(this.musteridatagrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -179,7 +205,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btndegistir;
+        private System.Windows.Forms.Button btnguncelle;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -190,5 +216,7 @@
         private System.Windows.Forms.Button btngeri;
         private System.Windows.Forms.DataGridView musteridatagrid;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox ıdtxt;
     }
 }

@@ -38,10 +38,8 @@
             this.seansdatagrid = new System.Windows.Forms.DataGridView();
             this.adtxt = new System.Windows.Forms.TextBox();
             this.soyadtxt = new System.Windows.Forms.TextBox();
-            this.teltxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.ıdtxt = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -95,7 +93,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(326, 375);
+            this.label1.Location = new System.Drawing.Point(364, 391);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 23);
             this.label1.TabIndex = 50;
@@ -112,6 +110,7 @@
             this.btnsil.TabIndex = 49;
             this.btnsil.Text = "SİL";
             this.btnsil.UseVisualStyleBackColor = false;
+            this.btnsil.Click += new System.EventHandler(this.btnsil_Click);
             // 
             // btngeri
             // 
@@ -132,6 +131,7 @@
             this.seansdatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.seansdatagrid.Location = new System.Drawing.Point(12, 63);
             this.seansdatagrid.Name = "seansdatagrid";
+            this.seansdatagrid.ReadOnly = true;
             this.seansdatagrid.RowHeadersWidth = 51;
             this.seansdatagrid.RowTemplate.Height = 24;
             this.seansdatagrid.Size = new System.Drawing.Size(1048, 280);
@@ -140,30 +140,23 @@
             // 
             // adtxt
             // 
-            this.adtxt.Location = new System.Drawing.Point(318, 457);
+            this.adtxt.Location = new System.Drawing.Point(356, 473);
             this.adtxt.Name = "adtxt";
             this.adtxt.Size = new System.Drawing.Size(168, 22);
             this.adtxt.TabIndex = 58;
             // 
             // soyadtxt
             // 
-            this.soyadtxt.Location = new System.Drawing.Point(318, 498);
+            this.soyadtxt.Location = new System.Drawing.Point(356, 514);
             this.soyadtxt.Name = "soyadtxt";
             this.soyadtxt.Size = new System.Drawing.Size(168, 22);
             this.soyadtxt.TabIndex = 59;
-            // 
-            // teltxt
-            // 
-            this.teltxt.Location = new System.Drawing.Point(318, 539);
-            this.teltxt.Name = "teltxt";
-            this.teltxt.Size = new System.Drawing.Size(168, 22);
-            this.teltxt.TabIndex = 60;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(160, 463);
+            this.label4.Location = new System.Drawing.Point(198, 479);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(134, 19);
             this.label4.TabIndex = 61;
@@ -173,27 +166,17 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(132, 504);
+            this.label5.Location = new System.Drawing.Point(170, 520);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(162, 19);
             this.label5.TabIndex = 62;
             this.label5.Text = "SEANS SAHİBİ SOYAD";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(118, 544);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(176, 19);
-            this.label6.TabIndex = 63;
-            this.label6.Text = "SEANS SAHİBİ TELEFON";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(160, 421);
+            this.label7.Location = new System.Drawing.Point(198, 437);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(128, 19);
             this.label7.TabIndex = 64;
@@ -201,8 +184,10 @@
             // 
             // ıdtxt
             // 
-            this.ıdtxt.Location = new System.Drawing.Point(318, 418);
+            this.ıdtxt.Enabled = false;
+            this.ıdtxt.Location = new System.Drawing.Point(356, 434);
             this.ıdtxt.Name = "ıdtxt";
+            this.ıdtxt.ReadOnly = true;
             this.ıdtxt.Size = new System.Drawing.Size(168, 22);
             this.ıdtxt.TabIndex = 65;
             // 
@@ -219,6 +204,17 @@
             // combosaat
             // 
             this.combosaat.FormattingEnabled = true;
+            this.combosaat.Items.AddRange(new object[] {
+            "9:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "13:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00",
+            "18:00"});
             this.combosaat.Location = new System.Drawing.Point(604, 525);
             this.combosaat.Name = "combosaat";
             this.combosaat.Size = new System.Drawing.Size(200, 24);
@@ -245,10 +241,8 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.ıdtxt);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.teltxt);
             this.Controls.Add(this.soyadtxt);
             this.Controls.Add(this.adtxt);
             this.Controls.Add(this.label2);
@@ -281,10 +275,8 @@
         private System.Windows.Forms.DataGridView seansdatagrid;
         private System.Windows.Forms.TextBox adtxt;
         private System.Windows.Forms.TextBox soyadtxt;
-        private System.Windows.Forms.TextBox teltxt;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox ıdtxt;
         private System.Windows.Forms.Label label8;

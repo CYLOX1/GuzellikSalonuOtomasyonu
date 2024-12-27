@@ -35,13 +35,18 @@ namespace GüzellikmerkeziOtomasyon
             var liste = cagir.Seanslar.AsNoTracking().ToList();
             seansdatagrid.DataSource = liste;
             seansdatagrid.ClearSelection();
+            ıdtxt.Clear();
+            adtxt.Clear();
+            soyadtxt.Clear();
+            combosaat.ResetText();
+
+
         }
         private void CalisanSeansDuzenleme_Load(object sender, EventArgs e)
         {
+
             listele();
 
-            combosaat.Items.Add("8.00");
-            combosaat.Items.Add("14.00");
 
         }
         private void ıdtxt_KeyPress(object sender, KeyPressEventArgs e)
@@ -51,7 +56,7 @@ namespace GüzellikmerkeziOtomasyon
 
         private void btndegistir_Click(object sender, EventArgs e)
         {
-            if (adtxt.Text == "" || soyadtxt.Text == "" || teltxt.Text == "")
+            if (adtxt.Text == "" || soyadtxt.Text == "" || tarihzaman.Text == "" || combosaat.Text == "")
             {
                 MessageBox.Show("Boş alan bırakmayınız!");
             }
@@ -63,7 +68,7 @@ namespace GüzellikmerkeziOtomasyon
                 guncelle.Ad = adtxt.Text;
                 guncelle.Soyad = soyadtxt.Text;
                 guncelle.Tarih = tarihzaman.Value;
-                //guncelle.Saat = combosaat.SelectedValue.ToString();    Combobox itemini sql e gönderme
+                guncelle.Saat = TimeSpan.Parse(combosaat.Text);
                 bgl.SaveChanges();
                 listele();
             }
@@ -75,7 +80,20 @@ namespace GüzellikmerkeziOtomasyon
             ıdtxt.Text = seansdatagrid.Rows[secilensatir].Cells[0].Value.ToString();
             adtxt.Text = seansdatagrid.Rows[secilensatir].Cells[1].Value.ToString();
             soyadtxt.Text = seansdatagrid.Rows[secilensatir].Cells[2].Value.ToString();
-            teltxt.Text = seansdatagrid.Rows[secilensatir].Cells[3].Value.ToString();
+            tarihzaman.Text = seansdatagrid.Rows[secilensatir].Cells[4].Value.ToString();
+            combosaat.Text = seansdatagrid.Rows[secilensatir].Cells[5].Value.ToString();
         }
+
+        private void btnsil_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(ıdtxt.Text);
+            var bgl = db.baglan();
+            var sil = bgl.Seanslar.Find(id);
+            bgl.Seanslar.Remove(sil);
+            bgl.SaveChanges();
+            listele();
+        }
+
+
     }
 }
