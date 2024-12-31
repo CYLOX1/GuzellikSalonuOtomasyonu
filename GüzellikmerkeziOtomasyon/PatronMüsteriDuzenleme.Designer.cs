@@ -43,9 +43,11 @@
             this.ıdtxt = new System.Windows.Forms.TextBox();
             this.kapatmafoto = new System.Windows.Forms.PictureBox();
             this.kucultfoto = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.musteridatagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnguncelle
@@ -53,7 +55,7 @@
             this.btnguncelle.BackColor = System.Drawing.Color.HotPink;
             this.btnguncelle.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnguncelle.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnguncelle.Location = new System.Drawing.Point(768, 464);
+            this.btnguncelle.Location = new System.Drawing.Point(853, 464);
             this.btnguncelle.Name = "btnguncelle";
             this.btnguncelle.Size = new System.Drawing.Size(146, 75);
             this.btnguncelle.TabIndex = 40;
@@ -65,7 +67,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(228, 541);
+            this.label3.Location = new System.Drawing.Point(308, 540);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 19);
             this.label3.TabIndex = 39;
@@ -75,7 +77,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(225, 503);
+            this.label2.Location = new System.Drawing.Point(305, 502);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 19);
             this.label2.TabIndex = 38;
@@ -85,7 +87,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(253, 467);
+            this.label1.Location = new System.Drawing.Point(333, 466);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 19);
             this.label1.TabIndex = 37;
@@ -93,31 +95,32 @@
             // 
             // soyadtxt
             // 
-            this.soyadtxt.Location = new System.Drawing.Point(298, 500);
+            this.soyadtxt.Location = new System.Drawing.Point(378, 499);
             this.soyadtxt.Name = "soyadtxt";
             this.soyadtxt.Size = new System.Drawing.Size(190, 22);
             this.soyadtxt.TabIndex = 36;
             // 
             // adtxt
             // 
-            this.adtxt.Location = new System.Drawing.Point(298, 464);
+            this.adtxt.Location = new System.Drawing.Point(378, 463);
             this.adtxt.Name = "adtxt";
             this.adtxt.Size = new System.Drawing.Size(190, 22);
             this.adtxt.TabIndex = 35;
             // 
             // teltxt
             // 
-            this.teltxt.Location = new System.Drawing.Point(298, 538);
+            this.teltxt.Location = new System.Drawing.Point(378, 537);
             this.teltxt.Name = "teltxt";
             this.teltxt.Size = new System.Drawing.Size(190, 22);
             this.teltxt.TabIndex = 34;
+            this.teltxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.teltxt_KeyPress);
             // 
             // btnsil
             // 
             this.btnsil.BackColor = System.Drawing.Color.HotPink;
             this.btnsil.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsil.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnsil.Location = new System.Drawing.Point(600, 464);
+            this.btnsil.Location = new System.Drawing.Point(685, 464);
             this.btnsil.Name = "btnsil";
             this.btnsil.Size = new System.Drawing.Size(146, 75);
             this.btnsil.TabIndex = 33;
@@ -141,6 +144,7 @@
             // musteridatagrid
             // 
             this.musteridatagrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.musteridatagrid.BackgroundColor = System.Drawing.Color.MistyRose;
             this.musteridatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.musteridatagrid.Location = new System.Drawing.Point(42, 81);
             this.musteridatagrid.Name = "musteridatagrid";
@@ -165,7 +169,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(253, 431);
+            this.label5.Location = new System.Drawing.Point(333, 430);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(25, 19);
             this.label5.TabIndex = 54;
@@ -173,8 +177,10 @@
             // 
             // ıdtxt
             // 
-            this.ıdtxt.Location = new System.Drawing.Point(298, 428);
+            this.ıdtxt.Enabled = false;
+            this.ıdtxt.Location = new System.Drawing.Point(378, 427);
             this.ıdtxt.Name = "ıdtxt";
+            this.ıdtxt.ReadOnly = true;
             this.ıdtxt.Size = new System.Drawing.Size(190, 22);
             this.ıdtxt.TabIndex = 55;
             // 
@@ -201,12 +207,23 @@
             this.kucultfoto.TabStop = false;
             this.kucultfoto.Click += new System.EventHandler(this.kucultfoto_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.user__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(143, 430);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(156, 129);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 58;
+            this.pictureBox1.TabStop = false;
+            // 
             // PatronMüsteriDuzenleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1072, 583);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.kapatmafoto);
             this.Controls.Add(this.kucultfoto);
             this.Controls.Add(this.ıdtxt);
@@ -230,6 +247,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.musteridatagrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,5 +270,6 @@
         private System.Windows.Forms.TextBox ıdtxt;
         private System.Windows.Forms.PictureBox kapatmafoto;
         private System.Windows.Forms.PictureBox kucultfoto;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

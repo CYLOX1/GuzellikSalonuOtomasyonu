@@ -62,5 +62,12 @@ namespace GüzellikmerkeziOtomasyon
         {
             this.Close();
         }
+
+        private void btnseans_Click(object sender, EventArgs e)
+        {
+            CalisanHizmetsecim chizmnetsec = new CalisanHizmetsecim();
+            chizmnetsec.Show();
+            this.Hide();
+        }
     }
 }

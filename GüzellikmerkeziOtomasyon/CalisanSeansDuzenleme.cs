@@ -18,7 +18,7 @@ namespace GüzellikmerkeziOtomasyon
         public CalisanSeansDuzenleme()
         {
             InitializeComponent();
-            tarihzaman.MinDate = DateTime.Now.Date;
+            
         }
 
         private void btngeri_Click(object sender, EventArgs e)
@@ -63,36 +63,83 @@ namespace GüzellikmerkeziOtomasyon
             }
             else
             {
-                int id = Convert.ToInt32(ıdtxt.Text);
-                var bgl = db.baglan();
-                var guncelle = bgl.Seanslar.Find(id);
-                guncelle.Ad = adtxt.Text;
-                guncelle.Soyad = soyadtxt.Text;
-                guncelle.Tarih = tarihzaman.Value;
-                guncelle.Saat = TimeSpan.Parse(combosaat.Text);
-                bgl.SaveChanges();
-                listele();
+                try
+                {
+                    int id = Convert.ToInt32(ıdtxt.Text);
+                    var bgl = db.baglan();
+                    var guncelle = bgl.Seanslar.Find(id);
+
+                    DateTime secilenTarih = tarihzaman.Value.Date;
+                    TimeSpan secilenSaat = TimeSpan.Parse(combosaat.Text);
+
+                    // Eski tarih kontrolü
+                    if (secilenTarih < DateTime.Now.Date)
+                    {
+                        MessageBox.Show("Geçmiş tarih seçemezsiniz!");
+                        return;
+                    }
+
+                    // Aynı tarih ve saatte başka bir seans var mı kontrolü
+                    bool seansVar = bgl.Seanslar.Any(s => s.Tarih == secilenTarih && s.Saat == secilenSaat && s.SeansID != id);
+
+                    if (seansVar)
+                    {
+                        MessageBox.Show("Bu tarih ve saatte zaten bir seans var! Lütfen farklı bir saat seçiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    // Güncelleme işlemi
+                    guncelle.Tarih = secilenTarih;
+                    guncelle.Ad = adtxt.Text;
+                    guncelle.Soyad = soyadtxt.Text;
+                    guncelle.Saat = secilenSaat;
+
+                    bgl.SaveChanges();
+                    listele();
+
+                    MessageBox.Show("Seans başarıyla güncellendi!", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
         private void seansdatagrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int secilensatir = seansdatagrid.SelectedCells[0].RowIndex;
-            ıdtxt.Text = seansdatagrid.Rows[secilensatir].Cells[0].Value.ToString();
-            adtxt.Text = seansdatagrid.Rows[secilensatir].Cells[1].Value.ToString();
-            soyadtxt.Text = seansdatagrid.Rows[secilensatir].Cells[2].Value.ToString();
-            tarihzaman.Text = seansdatagrid.Rows[secilensatir].Cells[4].Value.ToString();
-            combosaat.Text = seansdatagrid.Rows[secilensatir].Cells[5].Value.ToString();
+            try
+            {
+                int secilensatir = seansdatagrid.SelectedCells[0].RowIndex;
+                ıdtxt.Text = seansdatagrid.Rows[secilensatir].Cells[0].Value.ToString();
+                adtxt.Text = seansdatagrid.Rows[secilensatir].Cells[1].Value.ToString();
+                soyadtxt.Text = seansdatagrid.Rows[secilensatir].Cells[2].Value.ToString();
+                tarihzaman.Text = seansdatagrid.Rows[secilensatir].Cells[4].Value.ToString();
+                combosaat.Text = seansdatagrid.Rows[secilensatir].Cells[5].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void btnsil_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(ıdtxt.Text);
-            var bgl = db.baglan();
-            var sil = bgl.Seanslar.Find(id);
-            bgl.Seanslar.Remove(sil);
-            bgl.SaveChanges();
-            listele();
+            try
+            {
+                int id = Convert.ToInt32(ıdtxt.Text);
+                var bgl = db.baglan();
+                var sil = bgl.Seanslar.Find(id);
+                bgl.Seanslar.Remove(sil);
+                bgl.SaveChanges();
+                listele();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void kucultfoto_Click(object sender, EventArgs e)

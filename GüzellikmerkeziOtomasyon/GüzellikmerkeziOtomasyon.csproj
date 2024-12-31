@@ -163,6 +163,10 @@
     <Compile Include="Seanslar.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToplamTutar.cs" />
     <EmbeddedResource Include="CalisanArayuz.resx">
       <DependentUpon>CalisanArayuz.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,6 +251,19 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\business-finance_4058613.png" />
+    <None Include="Resources\Screenshot_2.png" />
+    <None Include="Resources\profile.png" />
+    <None Include="Resources\maintenance.png" />
+    <None Include="Resources\coin.png" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\calendar %282%29.png" />
+    <None Include="Resources\calendar %281%29.png" />
+    <None Include="Resources\user-setting.png" />
+    <None Include="Resources\calendar.png" />
+    <None Include="Resources\user %282%29.png" />
+    <None Include="Resources\user %281%29.png" />
+    <None Include="Resources\user.png" />
     <None Include="Resources\icons8-close-50.png" />
     <None Include="Resources\icons8-shutdown-641.png" />
     <None Include="Resources\icons8-close-window-50.png" />

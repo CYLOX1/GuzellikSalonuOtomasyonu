@@ -31,6 +31,7 @@ namespace GüzellikmerkeziOtomasyon
         public virtual DbSet<hizmetler> hizmetler { get; set; }
         public virtual DbSet<müşteriler> müşteriler { get; set; }
         public virtual DbSet<Seanslar> Seanslar { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     
         public virtual int sp_EkleSeans(string ad, string soyad, Nullable<System.DateTime> tarih, Nullable<System.TimeSpan> saat)
         {

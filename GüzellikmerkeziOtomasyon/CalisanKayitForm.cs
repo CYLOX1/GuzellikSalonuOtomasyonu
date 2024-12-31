@@ -16,6 +16,8 @@ namespace GüzellikmerkeziOtomasyon
         {
             InitializeComponent();
         }
+        baglanti db = new baglanti();
+
 
         private void btngeri_Click(object sender, EventArgs e)
         {
@@ -26,9 +28,38 @@ namespace GüzellikmerkeziOtomasyon
 
         private void btnkkaydet_Click(object sender, EventArgs e)
         {
-            CalisanHizmetsecim chizmetsec = new CalisanHizmetsecim();
-            chizmetsec.Show();
-            this.Hide();
+            var cagir = db.baglan();
+
+
+            if (adtxt.Text == "" || soyadtxt.Text == "" || teltxt.Text == "")
+            {
+                MessageBox.Show("Lütfen gerkli alanları doldurunuz!");
+            }
+            else
+            {
+
+                try
+                {
+                    müşteriler ekle = new müşteriler();
+                    ekle.Ad = adtxt.Text;
+                    ekle.Soyad = soyadtxt.Text;
+                    ekle.TelefonNo = teltxt.Text;
+                    cagir.müşteriler.Add(ekle);
+                    cagir.SaveChanges();
+
+                    CalisanHizmetsecim chizmetsec = new CalisanHizmetsecim();
+                    chizmetsec.Show();
+                    this.Hide();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+
+
+            }
+
         }
 
         private void kapatmafoto_Click(object sender, EventArgs e)
@@ -39,6 +70,16 @@ namespace GüzellikmerkeziOtomasyon
         private void kucultfoto_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void teltxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+            (e.KeyChar != '+') && (e.KeyChar != '-') &&
+            (e.KeyChar != '(') && (e.KeyChar != ')') && (e.KeyChar != ' ')) 
+                {
+                    e.Handled = true; 
+                }
         }
     }
 }

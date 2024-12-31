@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="localModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="localModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="calisan">
           <Key>
             <PropertyRef Name="ID" />
@@ -41,6 +41,17 @@
           <Property Name="VerilenHizmet" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Tarih" Type="date" Nullable="false" />
           <Property Name="Saat" Type="time" Precision="7" Nullable="false" />
+          <Property Name="kazanc" Type="int" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <Function Name="sp_EkleSeans" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Ad" Type="nvarchar" Mode="In" />
@@ -53,9 +64,9 @@
           <EntitySet Name="hizmetler" EntityType="Self.hizmetler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="müşteriler" EntityType="Self.müşteriler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Seanslar" EntityType="Self.Seanslar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="localModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -95,6 +106,7 @@
           <Property Name="VerilenHizmet" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Tarih" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Saat" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="kazanc" Type="Int32" />
         </EntityType>
         <EntityContainer Name="localEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="calisan" EntityType="Self.calisan" />
@@ -107,7 +119,18 @@
             <Parameter Name="Tarih" Mode="In" Type="DateTime" />
             <Parameter Name="Saat" Mode="In" Type="Time" />
           </FunctionImport>
+          <EntitySet Name="sysdiagrams" EntityType="localModel.sysdiagrams" />
         </EntityContainer>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -146,6 +169,7 @@
           <EntitySetMapping Name="Seanslar">
             <EntityTypeMapping TypeName="localModel.Seanslar">
               <MappingFragment StoreEntitySet="Seanslar">
+                <ScalarProperty Name="kazanc" ColumnName="kazanc" />
                 <ScalarProperty Name="SeansID" ColumnName="SeansID" />
                 <ScalarProperty Name="Ad" ColumnName="Ad" />
                 <ScalarProperty Name="Soyad" ColumnName="Soyad" />
@@ -156,6 +180,17 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="sp_EkleSeans" FunctionName="localModel.Store.sp_EkleSeans" />
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="localModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

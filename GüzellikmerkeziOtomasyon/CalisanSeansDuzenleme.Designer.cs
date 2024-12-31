@@ -47,9 +47,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.kapatmafoto = new System.Windows.Forms.PictureBox();
             this.kucultfoto = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.seansdatagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -257,12 +259,23 @@
             this.kucultfoto.TabStop = false;
             this.kucultfoto.Click += new System.EventHandler(this.kucultfoto_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.user__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(50, 391);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(142, 126);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 71;
+            this.pictureBox1.TabStop = false;
+            // 
             // CalisanSeansDuzenleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1072, 583);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.kapatmafoto);
             this.Controls.Add(this.kucultfoto);
             this.Controls.Add(this.label9);
@@ -290,6 +303,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.seansdatagrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,5 +330,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox kapatmafoto;
         private System.Windows.Forms.PictureBox kucultfoto;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.kazanclbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btngeri = new System.Windows.Forms.Button();
@@ -49,15 +49,15 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "TL";
             // 
-            // label2
+            // kazanclbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(462, 293);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 29);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "XXXX ";
+            this.kazanclbl.AutoSize = true;
+            this.kazanclbl.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kazanclbl.Location = new System.Drawing.Point(462, 293);
+            this.kazanclbl.Name = "kazanclbl";
+            this.kazanclbl.Size = new System.Drawing.Size(79, 29);
+            this.kazanclbl.TabIndex = 4;
+            this.kazanclbl.Text = "XXXX ";
             // 
             // label1
             // 
@@ -128,12 +128,13 @@
             this.Controls.Add(this.btngeri);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.kazanclbl);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PatronKazancForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PatronKazancForm";
+            this.Load += new System.EventHandler(this.PatronKazancForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).EndInit();
             this.ResumeLayout(false);
@@ -144,7 +145,7 @@
         #endregion
 
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label kazanclbl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btngeri;

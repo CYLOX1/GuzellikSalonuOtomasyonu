@@ -36,8 +36,16 @@
             this.hizmetlist = new System.Windows.Forms.CheckedListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.combosaat = new System.Windows.Forms.ComboBox();
+            this.musteridatagrid = new System.Windows.Forms.DataGridView();
+            this.adtxt = new System.Windows.Forms.TextBox();
+            this.soyadtxt = new System.Windows.Forms.TextBox();
+            this.musteriad = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.ıdtxt = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.kapatmafoto = new System.Windows.Forms.PictureBox();
             this.kucultfoto = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.musteridatagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +65,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(640, 94);
+            this.label2.Location = new System.Drawing.Point(881, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(146, 24);
             this.label2.TabIndex = 53;
@@ -65,7 +73,7 @@
             // 
             // tarihzamanaracı
             // 
-            this.tarihzamanaracı.Location = new System.Drawing.Point(516, 197);
+            this.tarihzamanaracı.Location = new System.Drawing.Point(851, 149);
             this.tarihzamanaracı.Name = "tarihzamanaracı";
             this.tarihzamanaracı.Size = new System.Drawing.Size(191, 22);
             this.tarihzamanaracı.TabIndex = 51;
@@ -88,7 +96,7 @@
             this.btnonay.BackColor = System.Drawing.Color.HotPink;
             this.btnonay.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnonay.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnonay.Location = new System.Drawing.Point(516, 389);
+            this.btnonay.Location = new System.Drawing.Point(885, 487);
             this.btnonay.Name = "btnonay";
             this.btnonay.Size = new System.Drawing.Size(175, 84);
             this.btnonay.TabIndex = 49;
@@ -99,19 +107,11 @@
             // hizmetlist
             // 
             this.hizmetlist.CheckOnClick = true;
-            this.hizmetlist.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hizmetlist.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hizmetlist.FormattingEnabled = true;
-            this.hizmetlist.Items.AddRange(new object[] {
-            "Manikür",
-            "Pedikür",
-            "Epilasyon ",
-            "Kalıcı Makyaj",
-            "Kirpik ",
-            "Cilt Bakımı",
-            "Protez Tırnak"});
-            this.hizmetlist.Location = new System.Drawing.Point(145, 136);
+            this.hizmetlist.Location = new System.Drawing.Point(559, 149);
             this.hizmetlist.Name = "hizmetlist";
-            this.hizmetlist.Size = new System.Drawing.Size(253, 337);
+            this.hizmetlist.Size = new System.Drawing.Size(253, 312);
             this.hizmetlist.TabIndex = 48;
             this.hizmetlist.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.hizmetlist_ItemCheck);
             // 
@@ -119,7 +119,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(211, 94);
+            this.label4.Location = new System.Drawing.Point(625, 107);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 24);
             this.label4.TabIndex = 55;
@@ -139,10 +139,78 @@
             "16:00",
             "17:00",
             "18:00"});
-            this.combosaat.Location = new System.Drawing.Point(725, 195);
+            this.combosaat.Location = new System.Drawing.Point(874, 277);
             this.combosaat.Name = "combosaat";
             this.combosaat.Size = new System.Drawing.Size(153, 24);
             this.combosaat.TabIndex = 56;
+            // 
+            // musteridatagrid
+            // 
+            this.musteridatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.musteridatagrid.Location = new System.Drawing.Point(3, 107);
+            this.musteridatagrid.Name = "musteridatagrid";
+            this.musteridatagrid.RowHeadersWidth = 51;
+            this.musteridatagrid.RowTemplate.Height = 24;
+            this.musteridatagrid.Size = new System.Drawing.Size(524, 237);
+            this.musteridatagrid.TabIndex = 59;
+            this.musteridatagrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.musteridatagrid_CellClick);
+            // 
+            // adtxt
+            // 
+            this.adtxt.Enabled = false;
+            this.adtxt.Location = new System.Drawing.Point(171, 402);
+            this.adtxt.Name = "adtxt";
+            this.adtxt.ReadOnly = true;
+            this.adtxt.Size = new System.Drawing.Size(159, 22);
+            this.adtxt.TabIndex = 61;
+            // 
+            // soyadtxt
+            // 
+            this.soyadtxt.Enabled = false;
+            this.soyadtxt.Location = new System.Drawing.Point(345, 402);
+            this.soyadtxt.Name = "soyadtxt";
+            this.soyadtxt.ReadOnly = true;
+            this.soyadtxt.Size = new System.Drawing.Size(156, 22);
+            this.soyadtxt.TabIndex = 62;
+            // 
+            // musteriad
+            // 
+            this.musteriad.AutoSize = true;
+            this.musteriad.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.musteriad.Location = new System.Drawing.Point(233, 360);
+            this.musteriad.Name = "musteriad";
+            this.musteriad.Size = new System.Drawing.Size(36, 24);
+            this.musteriad.TabIndex = 63;
+            this.musteriad.Text = "AD";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(391, 360);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 24);
+            this.label5.TabIndex = 64;
+            this.label5.Text = "SOYAD";
+            // 
+            // ıdtxt
+            // 
+            this.ıdtxt.Enabled = false;
+            this.ıdtxt.Location = new System.Drawing.Point(6, 402);
+            this.ıdtxt.Name = "ıdtxt";
+            this.ıdtxt.ReadOnly = true;
+            this.ıdtxt.Size = new System.Drawing.Size(159, 22);
+            this.ıdtxt.TabIndex = 65;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(71, 360);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 24);
+            this.label1.TabIndex = 66;
+            this.label1.Text = "ID";
             // 
             // kapatmafoto
             // 
@@ -173,6 +241,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1072, 583);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ıdtxt);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.musteriad);
+            this.Controls.Add(this.soyadtxt);
+            this.Controls.Add(this.adtxt);
+            this.Controls.Add(this.musteridatagrid);
             this.Controls.Add(this.kapatmafoto);
             this.Controls.Add(this.kucultfoto);
             this.Controls.Add(this.combosaat);
@@ -187,6 +262,8 @@
             this.Name = "CalisanHizmetsecim";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hizmetsecim";
+            this.Load += new System.EventHandler(this.CalisanHizmetsecim_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.musteridatagrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).EndInit();
             this.ResumeLayout(false);
@@ -206,5 +283,12 @@
         private System.Windows.Forms.ComboBox combosaat;
         private System.Windows.Forms.PictureBox kapatmafoto;
         private System.Windows.Forms.PictureBox kucultfoto;
+        private System.Windows.Forms.DataGridView musteridatagrid;
+        private System.Windows.Forms.TextBox adtxt;
+        private System.Windows.Forms.TextBox soyadtxt;
+        private System.Windows.Forms.Label musteriad;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox ıdtxt;
+        private System.Windows.Forms.Label label1;
     }
 }

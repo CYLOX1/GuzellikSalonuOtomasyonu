@@ -20,5 +20,7 @@ namespace GüzellikmerkeziOtomasyon
         {
             return new SqlConnection(@"Data Source=DESKTOP-3L4M0RL;Initial Catalog=local;Integrated Security=True;Trust Server Certificate=True");
         }
+
+
     }
 }

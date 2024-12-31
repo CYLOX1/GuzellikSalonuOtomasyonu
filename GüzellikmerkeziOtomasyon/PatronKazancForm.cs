@@ -16,6 +16,7 @@ namespace GüzellikmerkeziOtomasyon
         {
             InitializeComponent();
         }
+        baglanti db = new baglanti();
 
         private void btngeri_Click(object sender, EventArgs e)
         {
@@ -32,6 +33,11 @@ namespace GüzellikmerkeziOtomasyon
         private void kapatmafoto_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void PatronKazancForm_Load(object sender, EventArgs e)
+        {
+            kazanclbl.Text = db.baglan().Seanslar.Sum(x => x.kazanc).ToString();
         }
     }
 }

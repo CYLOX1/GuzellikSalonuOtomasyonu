@@ -63,6 +63,14 @@ namespace GüzellikmerkeziOtomasyon
                 }
                 else
                 {
+                    bool mevcutCalisan = cagir.calisan
+                    .Any(c => c.Ad == adtxt.Text && c.Soyad == soyadtxt.Text);
+
+                    if (mevcutCalisan)
+                    {
+                        MessageBox.Show("Bu isim ve soyisimde zaten bir çalışan mevcut. Lütfen farklı bir isim giriniz.");
+                        return;
+                    }
 
                     calisan ekle = new calisan();
                     ekle.Ad = adtxt.Text;
@@ -135,6 +143,16 @@ namespace GüzellikmerkeziOtomasyon
         private void kapatmafoto_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void teltxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+            (e.KeyChar != '+') && (e.KeyChar != '-') &&
+            (e.KeyChar != '(') && (e.KeyChar != ')') && (e.KeyChar != ' '))
+            {
+                e.Handled = true; // Geçersiz karakter girişini engelle
+            }
         }
     }
 }

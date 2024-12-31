@@ -12,14 +12,12 @@ namespace GüzellikmerkeziOtomasyon
     using System;
     using System.Collections.Generic;
     
-    public partial class Seanslar
+    public partial class sysdiagrams
     {
-        public int SeansID { get; set; }
-        public string Ad { get; set; }
-        public string Soyad { get; set; }
-        public string VerilenHizmet { get; set; }
-        public System.DateTime Tarih { get; set; }
-        public System.TimeSpan Saat { get; set; }
-        public Nullable<int> kazanc { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

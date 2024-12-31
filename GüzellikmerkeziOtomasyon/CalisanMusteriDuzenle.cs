@@ -55,6 +55,14 @@ namespace GüzellikmerkeziOtomasyon
                 }
                 else
                 {
+                    bool mevcutMusteri = cagir.müşteriler
+                    .Any(m => m.Ad == adtxt.Text && m.Soyad == soyadtxt.Text);
+
+                    if (mevcutMusteri)
+                    {
+                        MessageBox.Show("Bu isim ve soyisimde zaten bir müşteri mevcut. Lütfen farklı bir isim giriniz.");
+                        return;
+                    }
 
                     müşteriler ekle = new müşteriler();
                     ekle.Ad = adtxt.Text;
@@ -92,11 +100,19 @@ namespace GüzellikmerkeziOtomasyon
 
         private void musteridatagrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int secilensatir = musteridatagrid.SelectedCells[0].RowIndex;
-            ıdtxt.Text = musteridatagrid.Rows[secilensatir].Cells[0].Value.ToString();
-            adtxt.Text = musteridatagrid.Rows[secilensatir].Cells[1].Value.ToString();
-            soyadtxt.Text = musteridatagrid.Rows[secilensatir].Cells[2].Value.ToString();
-            teltxt.Text = musteridatagrid.Rows[secilensatir].Cells[3].Value.ToString();
+            try
+            {
+                int secilensatir = musteridatagrid.SelectedCells[0].RowIndex;
+                ıdtxt.Text = musteridatagrid.Rows[secilensatir].Cells[0].Value.ToString();
+                adtxt.Text = musteridatagrid.Rows[secilensatir].Cells[1].Value.ToString();
+                soyadtxt.Text = musteridatagrid.Rows[secilensatir].Cells[2].Value.ToString();
+                teltxt.Text = musteridatagrid.Rows[secilensatir].Cells[3].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            } 
+
 
         }
 
@@ -132,6 +148,16 @@ namespace GüzellikmerkeziOtomasyon
         private void kapatmafoto_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void teltxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+            (e.KeyChar != '+') && (e.KeyChar != '-') &&
+            (e.KeyChar != '(') && (e.KeyChar != ')') && (e.KeyChar != ' '))
+            {
+                e.Handled = true; // Geçersiz karakter girişini engelle
+            }
         }
     }
 }
