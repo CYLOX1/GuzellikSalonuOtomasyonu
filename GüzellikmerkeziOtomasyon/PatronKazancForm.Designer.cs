@@ -35,15 +35,25 @@
             this.btngeri = new System.Windows.Forms.Button();
             this.kapatmafoto = new System.Windows.Forms.PictureBox();
             this.kucultfoto = new System.Windows.Forms.PictureBox();
+            this.kazancdatagrid = new System.Windows.Forms.DataGridView();
+            this.dateTimebaslangic = new System.Windows.Forms.DateTimePicker();
+            this.dateTimebitis = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnfiltre = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.filtrekazanc = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kazancdatagrid)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(547, 293);
+            this.label3.Location = new System.Drawing.Point(788, 180);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 29);
             this.label3.TabIndex = 5;
@@ -53,7 +63,7 @@
             // 
             this.kazanclbl.AutoSize = true;
             this.kazanclbl.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kazanclbl.Location = new System.Drawing.Point(462, 293);
+            this.kazanclbl.Location = new System.Drawing.Point(703, 180);
             this.kazanclbl.Name = "kazanclbl";
             this.kazanclbl.Size = new System.Drawing.Size(79, 29);
             this.kazanclbl.TabIndex = 4;
@@ -64,7 +74,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.MistyRose;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(380, 204);
+            this.label1.Location = new System.Drawing.Point(638, 323);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(272, 44);
             this.label1.TabIndex = 3;
@@ -117,12 +127,107 @@
             this.kucultfoto.TabStop = false;
             this.kucultfoto.Click += new System.EventHandler(this.kucultfoto_Click);
             // 
+            // kazancdatagrid
+            // 
+            this.kazancdatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.kazancdatagrid.Location = new System.Drawing.Point(29, 108);
+            this.kazancdatagrid.Name = "kazancdatagrid";
+            this.kazancdatagrid.RowHeadersWidth = 51;
+            this.kazancdatagrid.RowTemplate.Height = 24;
+            this.kazancdatagrid.Size = new System.Drawing.Size(493, 218);
+            this.kazancdatagrid.TabIndex = 56;
+            // 
+            // dateTimebaslangic
+            // 
+            this.dateTimebaslangic.Location = new System.Drawing.Point(29, 376);
+            this.dateTimebaslangic.Name = "dateTimebaslangic";
+            this.dateTimebaslangic.Size = new System.Drawing.Size(200, 22);
+            this.dateTimebaslangic.TabIndex = 57;
+            // 
+            // dateTimebitis
+            // 
+            this.dateTimebitis.Location = new System.Drawing.Point(272, 376);
+            this.dateTimebitis.Name = "dateTimebitis";
+            this.dateTimebitis.Size = new System.Drawing.Size(200, 22);
+            this.dateTimebitis.TabIndex = 58;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(83, 345);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 16);
+            this.label2.TabIndex = 59;
+            this.label2.Text = "Başlangıc Tarihi";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(336, 345);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 16);
+            this.label5.TabIndex = 60;
+            this.label5.Text = "Bitiş Tarihi";
+            // 
+            // btnfiltre
+            // 
+            this.btnfiltre.BackColor = System.Drawing.Color.HotPink;
+            this.btnfiltre.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnfiltre.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnfiltre.Location = new System.Drawing.Point(200, 426);
+            this.btnfiltre.Name = "btnfiltre";
+            this.btnfiltre.Size = new System.Drawing.Size(90, 49);
+            this.btnfiltre.TabIndex = 61;
+            this.btnfiltre.Text = "Filtrele";
+            this.btnfiltre.UseVisualStyleBackColor = false;
+            this.btnfiltre.Click += new System.EventHandler(this.btnfiltre_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.MistyRose;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(703, 108);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(135, 44);
+            this.label6.TabIndex = 62;
+            this.label6.Text = "Kazanç";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(791, 408);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 29);
+            this.label7.TabIndex = 64;
+            this.label7.Text = "TL";
+            // 
+            // filtrekazanc
+            // 
+            this.filtrekazanc.AutoSize = true;
+            this.filtrekazanc.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filtrekazanc.Location = new System.Drawing.Point(706, 408);
+            this.filtrekazanc.Name = "filtrekazanc";
+            this.filtrekazanc.Size = new System.Drawing.Size(79, 29);
+            this.filtrekazanc.TabIndex = 63;
+            this.filtrekazanc.Text = "XXXX ";
+            // 
             // PatronKazancForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1060, 583);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.filtrekazanc);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.btnfiltre);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dateTimebitis);
+            this.Controls.Add(this.dateTimebaslangic);
+            this.Controls.Add(this.kazancdatagrid);
             this.Controls.Add(this.kapatmafoto);
             this.Controls.Add(this.kucultfoto);
             this.Controls.Add(this.btngeri);
@@ -137,6 +242,7 @@
             this.Load += new System.EventHandler(this.PatronKazancForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kazancdatagrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,5 +257,14 @@
         private System.Windows.Forms.Button btngeri;
         private System.Windows.Forms.PictureBox kapatmafoto;
         private System.Windows.Forms.PictureBox kucultfoto;
+        private System.Windows.Forms.DataGridView kazancdatagrid;
+        private System.Windows.Forms.DateTimePicker dateTimebaslangic;
+        private System.Windows.Forms.DateTimePicker dateTimebitis;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnfiltre;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label filtrekazanc;
     }
 }

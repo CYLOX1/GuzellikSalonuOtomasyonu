@@ -102,8 +102,8 @@ namespace GüzellikmerkeziOtomasyon
 
         private void btngeri_Click(object sender, EventArgs e)
         {
-            CalisanKayitForm calisanKayitForm = new CalisanKayitForm();
-            calisanKayitForm.Show();
+            CalisanArayuz carayuz = new CalisanArayuz();
+            carayuz.Show();
             this.Close();
         }
 
@@ -135,8 +135,8 @@ namespace GüzellikmerkeziOtomasyon
             var cagir = db.baglan();
             var liste = cagir.hizmetler.AsNoTracking().ToList();
 
-            var uygulamalar = from hizmet in cagir.hizmetler
-                              select hizmet.hizmet;
+            var uygulamalar = from h in cagir.hizmetler
+                              select h.hizmet;
             foreach (var item in uygulamalar)
             {
                 hizmetlist.Items.Add(item);
@@ -153,5 +153,56 @@ namespace GüzellikmerkeziOtomasyon
             soyadtxt.Text = musteridatagrid.Rows[secilensatir].Cells[2].Value.ToString();
 
         }
+
+
+        private void filtre()
+        {
+            var cagir = db.baglan();
+            var filtrelenmisListe = cagir.müşteriler.AsNoTracking().Where(m =>
+                (string.IsNullOrEmpty(txtfiltread.Text) || m.Ad.Contains(txtfiltread.Text)) &&
+                (string.IsNullOrEmpty(txtfiltresoyad.Text) || m.Soyad.Contains(txtfiltresoyad.Text)) &&
+                (string.IsNullOrEmpty(txtfiltretel.Text) || m.TelefonNo.Contains(txtfiltretel.Text))
+            ).ToList();
+
+            musteridatagrid.DataSource = filtrelenmisListe;
+            musteridatagrid.ClearSelection();
+        }
+
+        private void txtfiltread_TextChanged(object sender, EventArgs e)
+        {
+            filtre();
+        }
+
+        private void txtfiltresoyad_TextChanged(object sender, EventArgs e)
+        {
+            filtre();
+        }
+        private void txtfiltretel_TextChanged(object sender, EventArgs e)
+        {
+            listele();
+        }
+
+        private void checkfiltre_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkfiltre.Checked)
+            {
+                txtfiltread.Visible = true;
+                txtfiltresoyad.Visible = true;
+                txtfiltretel.Visible = true;
+
+            }
+            else
+            {
+               txtfiltread.Visible = false;
+               txtfiltresoyad.Visible = false;
+               txtfiltretel.Visible = false;
+               txtfiltread.Clear();
+               txtfiltresoyad.Clear();
+               listele();
+            }
+
+        }
+
+        
     }
 }

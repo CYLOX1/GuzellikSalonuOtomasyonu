@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.btngeri = new System.Windows.Forms.Button();
             this.seansdatagrid = new System.Windows.Forms.DataGridView();
             this.btnanasayfa = new System.Windows.Forms.Button();
             this.kapatmafoto = new System.Windows.Forms.PictureBox();
@@ -50,19 +49,6 @@
             this.label2.TabIndex = 51;
             this.label2.Text = "SEANSLAR";
             // 
-            // btngeri
-            // 
-            this.btngeri.BackColor = System.Drawing.Color.HotPink;
-            this.btngeri.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btngeri.ForeColor = System.Drawing.SystemColors.Control;
-            this.btngeri.Location = new System.Drawing.Point(12, 530);
-            this.btngeri.Name = "btngeri";
-            this.btngeri.Size = new System.Drawing.Size(91, 41);
-            this.btngeri.TabIndex = 49;
-            this.btngeri.Text = "GERİ";
-            this.btngeri.UseVisualStyleBackColor = false;
-            this.btngeri.Click += new System.EventHandler(this.btngeri_Click);
-            // 
             // seansdatagrid
             // 
             this.seansdatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -78,7 +64,7 @@
             this.btnanasayfa.BackColor = System.Drawing.Color.HotPink;
             this.btnanasayfa.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnanasayfa.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnanasayfa.Location = new System.Drawing.Point(125, 530);
+            this.btnanasayfa.Location = new System.Drawing.Point(12, 530);
             this.btnanasayfa.Name = "btnanasayfa";
             this.btnanasayfa.Size = new System.Drawing.Size(122, 41);
             this.btnanasayfa.TabIndex = 50;
@@ -119,7 +105,6 @@
             this.Controls.Add(this.kucultfoto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnanasayfa);
-            this.Controls.Add(this.btngeri);
             this.Controls.Add(this.seansdatagrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CalisanSeans";
@@ -137,7 +122,6 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btngeri;
         private System.Windows.Forms.DataGridView seansdatagrid;
         private System.Windows.Forms.Button btnanasayfa;
         private System.Windows.Forms.PictureBox kapatmafoto;

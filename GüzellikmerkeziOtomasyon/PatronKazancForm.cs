@@ -25,6 +25,21 @@ namespace GüzellikmerkeziOtomasyon
             this.Close();
         }
 
+        private void SeanslariListele()
+        {
+            // Tüm seansları listele
+            var seanslar = db.baglan().Seanslar
+                .Select(x => new
+                {
+                    x.Tarih,
+                    x.VerilenHizmet,
+                    x.kazanc
+                })
+                .ToList();
+
+            // DataGridView'e bağla
+            kazancdatagrid.DataSource = seanslar;
+        }
         private void kucultfoto_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
@@ -37,7 +52,43 @@ namespace GüzellikmerkeziOtomasyon
 
         private void PatronKazancForm_Load(object sender, EventArgs e)
         {
-            kazanclbl.Text = db.baglan().Seanslar.Sum(x => x.kazanc).ToString();
+            DateTime ayinIlkGunu = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+            DateTime ayinSonGunu = ayinIlkGunu.AddMonths(1).AddSeconds(-1);
+
+            // Bu ayın kazancını hesapla
+            var buAyinKazanci = db.baglan().Seanslar
+                .Where(x => x.Tarih >= ayinIlkGunu && x.Tarih <= ayinSonGunu)
+                .Sum(x => x.kazanc);
+
+            // Kazancı label'a yazdır
+            kazanclbl.Text = buAyinKazanci.ToString();
+            SeanslariListele();
+        }
+
+        private void btnfiltre_Click(object sender, EventArgs e)
+        {
+            DateTime baslangicTarihi = dateTimebaslangic.Value.Date;
+            DateTime bitisTarihi = dateTimebitis.Value.Date.AddDays(1).AddSeconds(-1); // Gün sonuna kadar
+
+            // Seansları tarih aralığına göre filtrele
+            var filtrelenmisSeanslar = db.baglan().Seanslar
+                .Where(x => x.Tarih >= baslangicTarihi && x.Tarih <= bitisTarihi)
+                .Select(x => new
+                {
+                    x.Tarih,
+                    x.VerilenHizmet,
+                    x.kazanc
+                })
+                .ToList();
+
+            // DataGridView'e bağla
+          kazancdatagrid.DataSource = filtrelenmisSeanslar;
+
+            // Filtrelenen seansların toplam kazancını hesapla
+            var toplamKazanc = filtrelenmisSeanslar.Sum(x => x.kazanc);
+
+            // Toplam kazancı Label'a yazdır
+            filtrekazanc.Text = toplamKazanc.ToString(); 
         }
     }
 }

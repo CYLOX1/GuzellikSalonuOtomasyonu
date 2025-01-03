@@ -36,10 +36,28 @@ namespace GüzellikmerkeziOtomasyon
         }
         private void listele()
         {
-            var cagir = db.baglan();
-            var liste = cagir.Seanslar.AsNoTracking().ToList();
-            seanslardatagrid.DataSource = liste;
-            seanslardatagrid.ClearSelection();
+               var cagir = db.baglan();
+                var liste = cagir.Seanslar.AsNoTracking().ToList();
+                seanslardatagrid.DataSource = liste;
+               seanslardatagrid.ClearSelection();
+
+            //var cagir = db.baglan();
+            //var liste = (from seans in cagir.Seanslar.AsNoTracking()
+            //             join musteri in cagir.müşteriler on  equals musteri.MusteriId
+            //             join hizmet in cagir.Hizmetler on seans.HizmetId equals hizmet.HizmetId
+            //             select new
+            //             {
+            //                 SeansID = seans.SeansId,
+            //                 MusteriID = musteri.MusteriId,
+            //                 MusteriAdiSoyadi = musteri.Adi + " " + musteri.Soyadi,
+            //                 AldigiHizmet = hizmet.HizmetAdi,
+            //                 Tarih = seans.Tarih,
+            //                 Saat = seans.Saat,
+            //                 Ucret = seans.Ucret
+            //             }).ToList();
+
+            //seanslardatagrid.DataSource = liste;
+            //seanslardatagrid.ClearSelection();
         }
 
 

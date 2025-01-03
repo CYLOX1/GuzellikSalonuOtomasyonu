@@ -45,6 +45,10 @@
             this.kucultfoto = new System.Windows.Forms.PictureBox();
             this.ıdtxt = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtfiltread = new System.Windows.Forms.TextBox();
+            this.txtfiltresoyad = new System.Windows.Forms.TextBox();
+            this.txtfiltretel = new System.Windows.Forms.TextBox();
+            this.checkfiltre = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.musteridatagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).BeginInit();
@@ -67,7 +71,7 @@
             this.btnekle.BackColor = System.Drawing.Color.HotPink;
             this.btnekle.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnekle.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnekle.Location = new System.Drawing.Point(711, 391);
+            this.btnekle.Location = new System.Drawing.Point(709, 391);
             this.btnekle.Name = "btnekle";
             this.btnekle.Size = new System.Drawing.Size(146, 75);
             this.btnekle.TabIndex = 58;
@@ -80,7 +84,7 @@
             this.btnguncelle.BackColor = System.Drawing.Color.HotPink;
             this.btnguncelle.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnguncelle.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnguncelle.Location = new System.Drawing.Point(792, 472);
+            this.btnguncelle.Location = new System.Drawing.Point(803, 472);
             this.btnguncelle.Name = "btnguncelle";
             this.btnguncelle.Size = new System.Drawing.Size(146, 75);
             this.btnguncelle.TabIndex = 57;
@@ -92,7 +96,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(337, 541);
+            this.label3.Location = new System.Drawing.Point(116, 528);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 19);
             this.label3.TabIndex = 56;
@@ -102,7 +106,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(337, 490);
+            this.label2.Location = new System.Drawing.Point(113, 490);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 19);
             this.label2.TabIndex = 55;
@@ -112,7 +116,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(365, 444);
+            this.label1.Location = new System.Drawing.Point(141, 444);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 19);
             this.label1.TabIndex = 54;
@@ -120,21 +124,21 @@
             // 
             // soyadtxt
             // 
-            this.soyadtxt.Location = new System.Drawing.Point(424, 487);
+            this.soyadtxt.Location = new System.Drawing.Point(200, 487);
             this.soyadtxt.Name = "soyadtxt";
             this.soyadtxt.Size = new System.Drawing.Size(190, 22);
             this.soyadtxt.TabIndex = 53;
             // 
             // adtxt
             // 
-            this.adtxt.Location = new System.Drawing.Point(424, 441);
+            this.adtxt.Location = new System.Drawing.Point(200, 441);
             this.adtxt.Name = "adtxt";
             this.adtxt.Size = new System.Drawing.Size(190, 22);
             this.adtxt.TabIndex = 52;
             // 
             // teltxt
             // 
-            this.teltxt.Location = new System.Drawing.Point(424, 538);
+            this.teltxt.Location = new System.Drawing.Point(200, 525);
             this.teltxt.Name = "teltxt";
             this.teltxt.Size = new System.Drawing.Size(190, 22);
             this.teltxt.TabIndex = 51;
@@ -183,7 +187,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(376, 402);
+            this.label5.Location = new System.Drawing.Point(152, 402);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 19);
             this.label5.TabIndex = 60;
@@ -215,7 +219,7 @@
             // ıdtxt
             // 
             this.ıdtxt.Enabled = false;
-            this.ıdtxt.Location = new System.Drawing.Point(424, 402);
+            this.ıdtxt.Location = new System.Drawing.Point(200, 402);
             this.ıdtxt.Name = "ıdtxt";
             this.ıdtxt.ReadOnly = true;
             this.ıdtxt.Size = new System.Drawing.Size(190, 22);
@@ -224,12 +228,51 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.user__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(138, 404);
+            this.pictureBox1.Location = new System.Drawing.Point(18, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(176, 156);
+            this.pictureBox1.Size = new System.Drawing.Size(74, 60);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 67;
             this.pictureBox1.TabStop = false;
+            // 
+            // txtfiltread
+            // 
+            this.txtfiltread.Location = new System.Drawing.Point(453, 430);
+            this.txtfiltread.Name = "txtfiltread";
+            this.txtfiltread.Size = new System.Drawing.Size(152, 22);
+            this.txtfiltread.TabIndex = 74;
+            this.txtfiltread.Visible = false;
+            this.txtfiltread.TextChanged += new System.EventHandler(this.txtfiltread_TextChanged);
+            // 
+            // txtfiltresoyad
+            // 
+            this.txtfiltresoyad.Location = new System.Drawing.Point(453, 476);
+            this.txtfiltresoyad.Name = "txtfiltresoyad";
+            this.txtfiltresoyad.Size = new System.Drawing.Size(152, 22);
+            this.txtfiltresoyad.TabIndex = 75;
+            this.txtfiltresoyad.Visible = false;
+            this.txtfiltresoyad.TextChanged += new System.EventHandler(this.txtfiltresoyad_TextChanged);
+            // 
+            // txtfiltretel
+            // 
+            this.txtfiltretel.Location = new System.Drawing.Point(453, 525);
+            this.txtfiltretel.Name = "txtfiltretel";
+            this.txtfiltretel.Size = new System.Drawing.Size(152, 22);
+            this.txtfiltretel.TabIndex = 76;
+            this.txtfiltretel.Visible = false;
+            this.txtfiltretel.TextChanged += new System.EventHandler(this.txtfiltretel_TextChanged);
+            // 
+            // checkfiltre
+            // 
+            this.checkfiltre.AutoSize = true;
+            this.checkfiltre.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.checkfiltre.Location = new System.Drawing.Point(486, 391);
+            this.checkfiltre.Name = "checkfiltre";
+            this.checkfiltre.Size = new System.Drawing.Size(75, 28);
+            this.checkfiltre.TabIndex = 77;
+            this.checkfiltre.Text = "Filtre";
+            this.checkfiltre.UseVisualStyleBackColor = true;
+            this.checkfiltre.CheckedChanged += new System.EventHandler(this.checkfiltre_CheckedChanged);
             // 
             // CalisanMusteriDuzenle
             // 
@@ -237,6 +280,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1072, 583);
+            this.Controls.Add(this.checkfiltre);
+            this.Controls.Add(this.txtfiltretel);
+            this.Controls.Add(this.txtfiltresoyad);
+            this.Controls.Add(this.txtfiltread);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ıdtxt);
             this.Controls.Add(this.kapatmafoto);
@@ -287,5 +334,9 @@
         private System.Windows.Forms.PictureBox kucultfoto;
         private System.Windows.Forms.TextBox ıdtxt;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtfiltread;
+        private System.Windows.Forms.TextBox txtfiltresoyad;
+        private System.Windows.Forms.TextBox txtfiltretel;
+        private System.Windows.Forms.CheckBox checkfiltre;
     }
 }

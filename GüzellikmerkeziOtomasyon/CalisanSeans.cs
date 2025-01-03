@@ -18,13 +18,6 @@ namespace GüzellikmerkeziOtomasyon
         }
         baglanti bagla = new baglanti();
 
-        private void btngeri_Click(object sender, EventArgs e)
-        {
-            CalisanHizmetsecim calisanhizmet = new CalisanHizmetsecim();
-            calisanhizmet.Show();
-            this.Close();
-
-        }
 
         private void btnanasayfa_Click(object sender, EventArgs e)
         {

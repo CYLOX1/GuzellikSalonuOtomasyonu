@@ -45,6 +45,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.kapatmafoto = new System.Windows.Forms.PictureBox();
             this.kucultfoto = new System.Windows.Forms.PictureBox();
+            this.checkfiltre = new System.Windows.Forms.CheckBox();
+            this.txtfiltresoyad = new System.Windows.Forms.TextBox();
+            this.txtfiltread = new System.Windows.Forms.TextBox();
+            this.txtfiltretel = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.musteridatagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).BeginInit();
@@ -55,7 +59,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.HotPink;
-            this.label3.Location = new System.Drawing.Point(378, 32);
+            this.label3.Location = new System.Drawing.Point(372, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(408, 40);
             this.label3.TabIndex = 54;
@@ -73,7 +77,7 @@
             // 
             // tarihzamanaracı
             // 
-            this.tarihzamanaracı.Location = new System.Drawing.Point(851, 149);
+            this.tarihzamanaracı.Location = new System.Drawing.Point(869, 171);
             this.tarihzamanaracı.Name = "tarihzamanaracı";
             this.tarihzamanaracı.Size = new System.Drawing.Size(191, 22);
             this.tarihzamanaracı.TabIndex = 51;
@@ -109,9 +113,9 @@
             this.hizmetlist.CheckOnClick = true;
             this.hizmetlist.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hizmetlist.FormattingEnabled = true;
-            this.hizmetlist.Location = new System.Drawing.Point(559, 149);
+            this.hizmetlist.Location = new System.Drawing.Point(575, 149);
             this.hizmetlist.Name = "hizmetlist";
-            this.hizmetlist.Size = new System.Drawing.Size(253, 312);
+            this.hizmetlist.Size = new System.Drawing.Size(270, 368);
             this.hizmetlist.TabIndex = 48;
             this.hizmetlist.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.hizmetlist_ItemCheck);
             // 
@@ -119,7 +123,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(625, 107);
+            this.label4.Location = new System.Drawing.Point(646, 107);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 24);
             this.label4.TabIndex = 55;
@@ -139,7 +143,7 @@
             "16:00",
             "17:00",
             "18:00"});
-            this.combosaat.Location = new System.Drawing.Point(874, 277);
+            this.combosaat.Location = new System.Drawing.Point(885, 320);
             this.combosaat.Name = "combosaat";
             this.combosaat.Size = new System.Drawing.Size(153, 24);
             this.combosaat.TabIndex = 56;
@@ -151,25 +155,21 @@
             this.musteridatagrid.Name = "musteridatagrid";
             this.musteridatagrid.RowHeadersWidth = 51;
             this.musteridatagrid.RowTemplate.Height = 24;
-            this.musteridatagrid.Size = new System.Drawing.Size(524, 237);
+            this.musteridatagrid.Size = new System.Drawing.Size(550, 237);
             this.musteridatagrid.TabIndex = 59;
             this.musteridatagrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.musteridatagrid_CellClick);
             // 
             // adtxt
             // 
-            this.adtxt.Enabled = false;
             this.adtxt.Location = new System.Drawing.Point(171, 402);
             this.adtxt.Name = "adtxt";
-            this.adtxt.ReadOnly = true;
             this.adtxt.Size = new System.Drawing.Size(159, 22);
             this.adtxt.TabIndex = 61;
             // 
             // soyadtxt
             // 
-            this.soyadtxt.Enabled = false;
             this.soyadtxt.Location = new System.Drawing.Point(345, 402);
             this.soyadtxt.Name = "soyadtxt";
-            this.soyadtxt.ReadOnly = true;
             this.soyadtxt.Size = new System.Drawing.Size(156, 22);
             this.soyadtxt.TabIndex = 62;
             // 
@@ -235,12 +235,55 @@
             this.kucultfoto.TabStop = false;
             this.kucultfoto.Click += new System.EventHandler(this.kucultfoto_Click);
             // 
+            // checkfiltre
+            // 
+            this.checkfiltre.AutoSize = true;
+            this.checkfiltre.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.checkfiltre.Location = new System.Drawing.Point(63, 459);
+            this.checkfiltre.Name = "checkfiltre";
+            this.checkfiltre.Size = new System.Drawing.Size(75, 28);
+            this.checkfiltre.TabIndex = 81;
+            this.checkfiltre.Text = "Filtre";
+            this.checkfiltre.UseVisualStyleBackColor = true;
+            this.checkfiltre.CheckedChanged += new System.EventHandler(this.checkfiltre_CheckedChanged);
+            // 
+            // txtfiltresoyad
+            // 
+            this.txtfiltresoyad.Location = new System.Drawing.Point(345, 459);
+            this.txtfiltresoyad.Name = "txtfiltresoyad";
+            this.txtfiltresoyad.Size = new System.Drawing.Size(156, 22);
+            this.txtfiltresoyad.TabIndex = 79;
+            this.txtfiltresoyad.Visible = false;
+            this.txtfiltresoyad.TextChanged += new System.EventHandler(this.txtfiltresoyad_TextChanged);
+            // 
+            // txtfiltread
+            // 
+            this.txtfiltread.Location = new System.Drawing.Point(178, 459);
+            this.txtfiltread.Name = "txtfiltread";
+            this.txtfiltread.Size = new System.Drawing.Size(152, 22);
+            this.txtfiltread.TabIndex = 78;
+            this.txtfiltread.Visible = false;
+            this.txtfiltread.TextChanged += new System.EventHandler(this.txtfiltread_TextChanged);
+            // 
+            // txtfiltretel
+            // 
+            this.txtfiltretel.Location = new System.Drawing.Point(257, 499);
+            this.txtfiltretel.Name = "txtfiltretel";
+            this.txtfiltretel.Size = new System.Drawing.Size(156, 22);
+            this.txtfiltretel.TabIndex = 82;
+            this.txtfiltretel.Visible = false;
+            this.txtfiltretel.TextChanged += new System.EventHandler(this.txtfiltretel_TextChanged);
+            // 
             // CalisanHizmetsecim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1072, 583);
+            this.Controls.Add(this.txtfiltretel);
+            this.Controls.Add(this.checkfiltre);
+            this.Controls.Add(this.txtfiltresoyad);
+            this.Controls.Add(this.txtfiltread);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ıdtxt);
             this.Controls.Add(this.label5);
@@ -290,5 +333,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox ıdtxt;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox checkfiltre;
+        private System.Windows.Forms.TextBox txtfiltresoyad;
+        private System.Windows.Forms.TextBox txtfiltread;
+        private System.Windows.Forms.TextBox txtfiltretel;
     }
 }

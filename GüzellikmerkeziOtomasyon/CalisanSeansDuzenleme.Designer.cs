@@ -48,6 +48,13 @@
             this.kapatmafoto = new System.Windows.Forms.PictureBox();
             this.kucultfoto = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.checkfiltre = new System.Windows.Forms.CheckBox();
+            this.txtfiltresoyad = new System.Windows.Forms.TextBox();
+            this.txtfiltread = new System.Windows.Forms.TextBox();
+            this.filtretarih = new System.Windows.Forms.DateTimePicker();
+            this.combofiltresaat = new System.Windows.Forms.ComboBox();
+            this.txtfiltrekazanc = new System.Windows.Forms.TextBox();
+            this.checkfiltretarih = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.seansdatagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).BeginInit();
@@ -67,7 +74,7 @@
             // 
             // tarihzaman
             // 
-            this.tarihzaman.Location = new System.Drawing.Point(604, 456);
+            this.tarihzaman.Location = new System.Drawing.Point(666, 395);
             this.tarihzaman.Name = "tarihzaman";
             this.tarihzaman.Size = new System.Drawing.Size(200, 22);
             this.tarihzaman.TabIndex = 54;
@@ -89,7 +96,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(629, 376);
+            this.label3.Location = new System.Drawing.Point(549, 318);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(146, 23);
             this.label3.TabIndex = 51;
@@ -99,7 +106,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(364, 391);
+            this.label1.Location = new System.Drawing.Point(99, 318);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 23);
             this.label1.TabIndex = 50;
@@ -140,20 +147,20 @@
             this.seansdatagrid.ReadOnly = true;
             this.seansdatagrid.RowHeadersWidth = 51;
             this.seansdatagrid.RowTemplate.Height = 24;
-            this.seansdatagrid.Size = new System.Drawing.Size(1048, 280);
+            this.seansdatagrid.Size = new System.Drawing.Size(1048, 240);
             this.seansdatagrid.TabIndex = 47;
             this.seansdatagrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.seansdatagrid_CellClick);
             // 
             // adtxt
             // 
-            this.adtxt.Location = new System.Drawing.Point(356, 473);
+            this.adtxt.Location = new System.Drawing.Point(183, 399);
             this.adtxt.Name = "adtxt";
             this.adtxt.Size = new System.Drawing.Size(168, 22);
             this.adtxt.TabIndex = 58;
             // 
             // soyadtxt
             // 
-            this.soyadtxt.Location = new System.Drawing.Point(356, 514);
+            this.soyadtxt.Location = new System.Drawing.Point(183, 427);
             this.soyadtxt.Name = "soyadtxt";
             this.soyadtxt.Size = new System.Drawing.Size(168, 22);
             this.soyadtxt.TabIndex = 59;
@@ -162,7 +169,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(198, 479);
+            this.label4.Location = new System.Drawing.Point(20, 399);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(134, 19);
             this.label4.TabIndex = 61;
@@ -172,7 +179,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(170, 520);
+            this.label5.Location = new System.Drawing.Point(1, 429);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(162, 19);
             this.label5.TabIndex = 62;
@@ -182,7 +189,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(198, 437);
+            this.label7.Location = new System.Drawing.Point(26, 371);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(128, 19);
             this.label7.TabIndex = 64;
@@ -191,7 +198,7 @@
             // ıdtxt
             // 
             this.ıdtxt.Enabled = false;
-            this.ıdtxt.Location = new System.Drawing.Point(356, 434);
+            this.ıdtxt.Location = new System.Drawing.Point(183, 371);
             this.ıdtxt.Name = "ıdtxt";
             this.ıdtxt.ReadOnly = true;
             this.ıdtxt.Size = new System.Drawing.Size(168, 22);
@@ -201,7 +208,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(678, 422);
+            this.label8.Location = new System.Drawing.Point(742, 356);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 19);
             this.label8.TabIndex = 66;
@@ -221,7 +228,7 @@
             "16:00",
             "17:00",
             "18:00"});
-            this.combosaat.Location = new System.Drawing.Point(604, 525);
+            this.combosaat.Location = new System.Drawing.Point(407, 393);
             this.combosaat.Name = "combosaat";
             this.combosaat.Size = new System.Drawing.Size(200, 24);
             this.combosaat.TabIndex = 67;
@@ -230,7 +237,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(678, 503);
+            this.label9.Location = new System.Drawing.Point(475, 356);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(39, 19);
             this.label9.TabIndex = 68;
@@ -262,12 +269,94 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.user__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(50, 391);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(142, 126);
+            this.pictureBox1.Size = new System.Drawing.Size(67, 67);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 71;
             this.pictureBox1.TabStop = false;
+            // 
+            // checkfiltre
+            // 
+            this.checkfiltre.AutoSize = true;
+            this.checkfiltre.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.checkfiltre.Location = new System.Drawing.Point(50, 486);
+            this.checkfiltre.Name = "checkfiltre";
+            this.checkfiltre.Size = new System.Drawing.Size(75, 28);
+            this.checkfiltre.TabIndex = 81;
+            this.checkfiltre.Text = "Filtre";
+            this.checkfiltre.UseVisualStyleBackColor = true;
+            this.checkfiltre.CheckedChanged += new System.EventHandler(this.checkfiltre_CheckedChanged);
+            // 
+            // txtfiltresoyad
+            // 
+            this.txtfiltresoyad.Location = new System.Drawing.Point(183, 512);
+            this.txtfiltresoyad.Name = "txtfiltresoyad";
+            this.txtfiltresoyad.Size = new System.Drawing.Size(168, 22);
+            this.txtfiltresoyad.TabIndex = 79;
+            this.txtfiltresoyad.Visible = false;
+            this.txtfiltresoyad.TextChanged += new System.EventHandler(this.txtfiltresoyad_TextChanged);
+            // 
+            // txtfiltread
+            // 
+            this.txtfiltread.Location = new System.Drawing.Point(183, 479);
+            this.txtfiltread.Name = "txtfiltread";
+            this.txtfiltread.Size = new System.Drawing.Size(168, 22);
+            this.txtfiltread.TabIndex = 78;
+            this.txtfiltread.Visible = false;
+            this.txtfiltread.TextChanged += new System.EventHandler(this.txtfiltread_TextChanged);
+            // 
+            // filtretarih
+            // 
+            this.filtretarih.Checked = false;
+            this.filtretarih.Location = new System.Drawing.Point(666, 512);
+            this.filtretarih.Name = "filtretarih";
+            this.filtretarih.Size = new System.Drawing.Size(200, 22);
+            this.filtretarih.TabIndex = 82;
+            this.filtretarih.Visible = false;
+            this.filtretarih.ValueChanged += new System.EventHandler(this.filtretarih_ValueChanged);
+            // 
+            // combofiltresaat
+            // 
+            this.combofiltresaat.FormattingEnabled = true;
+            this.combofiltresaat.Items.AddRange(new object[] {
+            "9:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "13:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00",
+            "18:00"});
+            this.combofiltresaat.Location = new System.Drawing.Point(405, 510);
+            this.combofiltresaat.Name = "combofiltresaat";
+            this.combofiltresaat.Size = new System.Drawing.Size(200, 24);
+            this.combofiltresaat.TabIndex = 83;
+            this.combofiltresaat.Visible = false;
+            this.combofiltresaat.SelectedIndexChanged += new System.EventHandler(this.combofiltresaat_SelectedIndexChanged);
+            // 
+            // txtfiltrekazanc
+            // 
+            this.txtfiltrekazanc.Location = new System.Drawing.Point(183, 549);
+            this.txtfiltrekazanc.Name = "txtfiltrekazanc";
+            this.txtfiltrekazanc.Size = new System.Drawing.Size(168, 22);
+            this.txtfiltrekazanc.TabIndex = 84;
+            this.txtfiltrekazanc.Visible = false;
+            // 
+            // checkfiltretarih
+            // 
+            this.checkfiltretarih.AutoSize = true;
+            this.checkfiltretarih.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.checkfiltretarih.Location = new System.Drawing.Point(666, 475);
+            this.checkfiltretarih.Name = "checkfiltretarih";
+            this.checkfiltretarih.Size = new System.Drawing.Size(69, 23);
+            this.checkfiltretarih.TabIndex = 85;
+            this.checkfiltretarih.Text = "Tarih";
+            this.checkfiltretarih.UseVisualStyleBackColor = true;
+            this.checkfiltretarih.Visible = false;
+            this.checkfiltretarih.CheckedChanged += new System.EventHandler(this.checkfiltretarih_CheckedChanged);
             // 
             // CalisanSeansDuzenleme
             // 
@@ -275,6 +364,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1072, 583);
+            this.Controls.Add(this.checkfiltretarih);
+            this.Controls.Add(this.txtfiltrekazanc);
+            this.Controls.Add(this.combofiltresaat);
+            this.Controls.Add(this.filtretarih);
+            this.Controls.Add(this.checkfiltre);
+            this.Controls.Add(this.txtfiltresoyad);
+            this.Controls.Add(this.txtfiltread);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.kapatmafoto);
             this.Controls.Add(this.kucultfoto);
@@ -331,5 +427,12 @@
         private System.Windows.Forms.PictureBox kapatmafoto;
         private System.Windows.Forms.PictureBox kucultfoto;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox checkfiltre;
+        private System.Windows.Forms.TextBox txtfiltresoyad;
+        private System.Windows.Forms.TextBox txtfiltread;
+        private System.Windows.Forms.DateTimePicker filtretarih;
+        private System.Windows.Forms.ComboBox combofiltresaat;
+        private System.Windows.Forms.TextBox txtfiltrekazanc;
+        private System.Windows.Forms.CheckBox checkfiltretarih;
     }
 }

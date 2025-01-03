@@ -166,7 +166,6 @@
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="ToplamTutar.cs" />
     <EmbeddedResource Include="CalisanArayuz.resx">
       <DependentUpon>CalisanArayuz.cs</DependentUpon>
     </EmbeddedResource>

@@ -45,6 +45,10 @@
             this.kapatmafoto = new System.Windows.Forms.PictureBox();
             this.kucultfoto = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.checkfiltre = new System.Windows.Forms.CheckBox();
+            this.txtfiltretel = new System.Windows.Forms.TextBox();
+            this.txtfiltresoyad = new System.Windows.Forms.TextBox();
+            this.txtfiltread = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.calisandatagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).BeginInit();
@@ -79,7 +83,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(330, 529);
+            this.label3.Location = new System.Drawing.Point(130, 533);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 19);
             this.label3.TabIndex = 57;
@@ -89,7 +93,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(330, 487);
+            this.label2.Location = new System.Drawing.Point(130, 491);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 19);
             this.label2.TabIndex = 56;
@@ -99,7 +103,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(358, 447);
+            this.label1.Location = new System.Drawing.Point(158, 451);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 19);
             this.label1.TabIndex = 55;
@@ -107,21 +111,21 @@
             // 
             // soyadtxt
             // 
-            this.soyadtxt.Location = new System.Drawing.Point(421, 485);
+            this.soyadtxt.Location = new System.Drawing.Point(221, 489);
             this.soyadtxt.Name = "soyadtxt";
             this.soyadtxt.Size = new System.Drawing.Size(190, 22);
             this.soyadtxt.TabIndex = 54;
             // 
             // adtxt
             // 
-            this.adtxt.Location = new System.Drawing.Point(421, 445);
+            this.adtxt.Location = new System.Drawing.Point(221, 449);
             this.adtxt.Name = "adtxt";
             this.adtxt.Size = new System.Drawing.Size(190, 22);
             this.adtxt.TabIndex = 53;
             // 
             // teltxt
             // 
-            this.teltxt.Location = new System.Drawing.Point(421, 526);
+            this.teltxt.Location = new System.Drawing.Point(221, 530);
             this.teltxt.Name = "teltxt";
             this.teltxt.Size = new System.Drawing.Size(190, 22);
             this.teltxt.TabIndex = 52;
@@ -183,7 +187,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(366, 410);
+            this.label5.Location = new System.Drawing.Point(166, 414);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(25, 19);
             this.label5.TabIndex = 60;
@@ -191,7 +195,7 @@
             // 
             // ıdtxt
             // 
-            this.ıdtxt.Location = new System.Drawing.Point(421, 407);
+            this.ıdtxt.Location = new System.Drawing.Point(221, 411);
             this.ıdtxt.Name = "ıdtxt";
             this.ıdtxt.ReadOnly = true;
             this.ıdtxt.Size = new System.Drawing.Size(190, 22);
@@ -223,12 +227,51 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.user__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(143, 423);
+            this.pictureBox1.Location = new System.Drawing.Point(44, 9);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(153, 137);
+            this.pictureBox1.Size = new System.Drawing.Size(59, 59);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 64;
             this.pictureBox1.TabStop = false;
+            // 
+            // checkfiltre
+            // 
+            this.checkfiltre.AutoSize = true;
+            this.checkfiltre.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.checkfiltre.Location = new System.Drawing.Point(510, 404);
+            this.checkfiltre.Name = "checkfiltre";
+            this.checkfiltre.Size = new System.Drawing.Size(75, 28);
+            this.checkfiltre.TabIndex = 81;
+            this.checkfiltre.Text = "Filtre";
+            this.checkfiltre.UseVisualStyleBackColor = true;
+            this.checkfiltre.CheckedChanged += new System.EventHandler(this.checkfiltre_CheckedChanged);
+            // 
+            // txtfiltretel
+            // 
+            this.txtfiltretel.Location = new System.Drawing.Point(477, 538);
+            this.txtfiltretel.Name = "txtfiltretel";
+            this.txtfiltretel.Size = new System.Drawing.Size(152, 22);
+            this.txtfiltretel.TabIndex = 80;
+            this.txtfiltretel.Visible = false;
+            this.txtfiltretel.TextChanged += new System.EventHandler(this.txtfiltretel_TextChanged);
+            // 
+            // txtfiltresoyad
+            // 
+            this.txtfiltresoyad.Location = new System.Drawing.Point(477, 489);
+            this.txtfiltresoyad.Name = "txtfiltresoyad";
+            this.txtfiltresoyad.Size = new System.Drawing.Size(152, 22);
+            this.txtfiltresoyad.TabIndex = 79;
+            this.txtfiltresoyad.Visible = false;
+            this.txtfiltresoyad.TextChanged += new System.EventHandler(this.txtfiltresoyad_TextChanged);
+            // 
+            // txtfiltread
+            // 
+            this.txtfiltread.Location = new System.Drawing.Point(477, 443);
+            this.txtfiltread.Name = "txtfiltread";
+            this.txtfiltread.Size = new System.Drawing.Size(152, 22);
+            this.txtfiltread.TabIndex = 78;
+            this.txtfiltread.Visible = false;
+            this.txtfiltread.TextChanged += new System.EventHandler(this.txtfiltread_TextChanged);
             // 
             // PatronCalisanDuzenle
             // 
@@ -236,6 +279,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1072, 583);
+            this.Controls.Add(this.checkfiltre);
+            this.Controls.Add(this.txtfiltretel);
+            this.Controls.Add(this.txtfiltresoyad);
+            this.Controls.Add(this.txtfiltread);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.kapatmafoto);
             this.Controls.Add(this.kucultfoto);
@@ -286,5 +333,9 @@
         private System.Windows.Forms.PictureBox kapatmafoto;
         private System.Windows.Forms.PictureBox kucultfoto;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox checkfiltre;
+        private System.Windows.Forms.TextBox txtfiltretel;
+        private System.Windows.Forms.TextBox txtfiltresoyad;
+        private System.Windows.Forms.TextBox txtfiltread;
     }
 }

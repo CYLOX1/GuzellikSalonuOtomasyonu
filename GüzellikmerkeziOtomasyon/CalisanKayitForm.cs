@@ -45,10 +45,15 @@ namespace GüzellikmerkeziOtomasyon
                     ekle.Soyad = soyadtxt.Text;
                     ekle.TelefonNo = teltxt.Text;
                     cagir.müşteriler.Add(ekle);
+
+                    //Seanslar seans = new Seanslar();
+                    //seans.Ad = adtxt.Text;
+                    //seans.Soyad = soyadtxt.Text;
+                    //cagir.Seanslar.Add(seans);
                     cagir.SaveChanges();
 
-                    CalisanHizmetsecim chizmetsec = new CalisanHizmetsecim();
-                    chizmetsec.Show();
+                    CalisanArayuz carayuz = new CalisanArayuz();
+                    carayuz.Show();
                     this.Hide();
                 }
                 catch (Exception ex)

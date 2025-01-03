@@ -52,7 +52,7 @@
             // 
             this.btnfiyat.BackColor = System.Drawing.Color.HotPink;
             this.btnfiyat.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnfiyat.Location = new System.Drawing.Point(641, 443);
+            this.btnfiyat.Location = new System.Drawing.Point(601, 443);
             this.btnfiyat.Name = "btnfiyat";
             this.btnfiyat.Size = new System.Drawing.Size(231, 73);
             this.btnfiyat.TabIndex = 18;
@@ -64,7 +64,7 @@
             // 
             this.btncalisan.BackColor = System.Drawing.Color.HotPink;
             this.btncalisan.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncalisan.Location = new System.Drawing.Point(499, 346);
+            this.btncalisan.Location = new System.Drawing.Point(459, 346);
             this.btncalisan.Name = "btncalisan";
             this.btncalisan.Size = new System.Drawing.Size(227, 75);
             this.btncalisan.TabIndex = 17;
@@ -100,7 +100,7 @@
             // 
             this.btnmusteri.BackColor = System.Drawing.Color.HotPink;
             this.btnmusteri.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmusteri.Location = new System.Drawing.Point(339, 246);
+            this.btnmusteri.Location = new System.Drawing.Point(299, 246);
             this.btnmusteri.Name = "btnmusteri";
             this.btnmusteri.Size = new System.Drawing.Size(247, 75);
             this.btnmusteri.TabIndex = 14;
@@ -112,7 +112,7 @@
             // 
             this.btnkazanc.BackColor = System.Drawing.Color.HotPink;
             this.btnkazanc.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnkazanc.Location = new System.Drawing.Point(174, 150);
+            this.btnkazanc.Location = new System.Drawing.Point(134, 150);
             this.btnkazanc.Name = "btnkazanc";
             this.btnkazanc.Size = new System.Drawing.Size(241, 77);
             this.btnkazanc.TabIndex = 13;
@@ -123,7 +123,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.business_finance_4058613;
-            this.pictureBox4.Location = new System.Drawing.Point(879, 443);
+            this.pictureBox4.Location = new System.Drawing.Point(839, 443);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(114, 73);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -133,7 +133,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.profile;
-            this.pictureBox3.Location = new System.Drawing.Point(733, 346);
+            this.pictureBox3.Location = new System.Drawing.Point(693, 346);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(112, 75);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -143,7 +143,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.user_setting;
-            this.pictureBox2.Location = new System.Drawing.Point(592, 246);
+            this.pictureBox2.Location = new System.Drawing.Point(552, 246);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(109, 75);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -153,7 +153,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.coin;
-            this.pictureBox1.Location = new System.Drawing.Point(421, 150);
+            this.pictureBox1.Location = new System.Drawing.Point(381, 150);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(111, 77);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

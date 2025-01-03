@@ -92,7 +92,7 @@ namespace GüzellikmerkeziOtomasyon
 
         private void kucultfoto_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void kapatmafoto_Click(object sender, EventArgs e)
@@ -108,6 +108,55 @@ namespace GüzellikmerkeziOtomasyon
             {
                 e.Handled = true; // Geçersiz karakter girişini engelle
             }
+        }
+
+        private void filtre()
+        {
+            var cagir = db.baglan();
+            var filtrelenmisListe = cagir.müşteriler.AsNoTracking().Where(m =>
+                (string.IsNullOrEmpty(txtfiltread.Text) || m.Ad.Contains(txtfiltread.Text)) &&
+                (string.IsNullOrEmpty(txtfiltresoyad.Text) || m.Soyad.Contains(txtfiltresoyad.Text)) &&
+                (string.IsNullOrEmpty(txtfiltretel.Text) || m.TelefonNo.Contains(txtfiltretel.Text))
+            ).ToList();
+
+            musteridatagrid.DataSource = filtrelenmisListe;
+            musteridatagrid.ClearSelection();
+        }
+
+
+        private void checkfiltre_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkfiltre.Checked)
+            {
+              txtfiltread.Visible = true;
+              txtfiltresoyad.Visible = true;
+              txtfiltretel.Visible = true;
+            }
+            else
+            {
+                txtfiltread.Visible = false;
+                txtfiltresoyad.Visible = false;
+                txtfiltretel.Visible = false;
+                txtfiltread.Clear();
+                txtfiltresoyad.Clear();
+                txtfiltretel.Clear();
+                listele();
+            }
+        }
+
+        private void txtfiltread_TextChanged(object sender, EventArgs e)
+        {
+            filtre();
+        }
+
+        private void txtfiltresoyad_TextChanged(object sender, EventArgs e)
+        {
+            filtre();
+        }
+
+        private void txtfiltretel_TextChanged(object sender, EventArgs e)
+        {
+            filtre();
         }
     }
 }

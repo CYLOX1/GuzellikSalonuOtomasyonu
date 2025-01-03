@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -144,12 +145,148 @@ namespace GüzellikmerkeziOtomasyon
 
         private void kucultfoto_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void kapatmafoto_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+
+
+        private void filtreadsoyad()
+        {
+
+
+
+            {
+                var cagir = db.baglan();
+
+                // DateTimePicker'dan seçilen tarihi alıyoruz
+                DateTime secilenTarih = filtretarih.Value.Date;
+
+                if (secilenTarih == DateTime.MinValue)
+                {
+                    MessageBox.Show("Lütfen bir tarih seçin.", "Tarih Seçimi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Tarih seçilmediği için işlemi sonlandırıyoruz
+                }
+
+                    // Combobox'tan seçilen saat değerini TimeSpan'a dönüştür
+                    TimeSpan? secilenSaat = null;
+                if (combofiltresaat.SelectedItem != null)
+                {
+                    if (TimeSpan.TryParse(combofiltresaat.SelectedItem.ToString(), out TimeSpan result))
+                    {
+                        secilenSaat = result;
+                    }
+                }
+
+                // Filtrelenmiş listeyi sorgulama
+                var filtrelenmisListe = cagir.Seanslar.AsNoTracking().Where(m =>
+                    // Ad filtresi
+                    (string.IsNullOrEmpty(txtfiltread.Text) || m.Ad.Contains(txtfiltread.Text)) &&
+                    // Soyad filtresi
+                    (string.IsNullOrEmpty(txtfiltresoyad.Text) || m.Soyad.Contains(txtfiltresoyad.Text)) &&
+                    // Saat filtresi (eğer saat seçilmişse, saat karşılaştırması yapılır)
+                    (!secilenSaat.HasValue || m.Saat == secilenSaat.Value)
+                ).ToList();
+
+                // Sonuçları grid'e aktar
+                seansdatagrid.DataSource = filtrelenmisListe;
+                seansdatagrid.ClearSelection();
+            }
+
+            //var cagir = db.baglan();
+            //var filtrelenmisListe = cagir.Seanslar.AsNoTracking().Where(m =>
+            //    (string.IsNullOrEmpty(txtfiltread.Text) || m.Ad.Contains(txtfiltread.Text)) &&
+            //    (string.IsNullOrEmpty(txtfiltresoyad.Text) || m.Soyad.Contains(txtfiltresoyad.Text)) 
+            //).ToList();
+
+            //seansdatagrid.DataSource = filtrelenmisListe;
+            //seansdatagrid.ClearSelection();
+
+
+
+        }
+
+        private void filtrezaman()
+        {
+            var cagir = db.baglan();
+            DateTime secilenTarih = filtretarih.Value.Date;
+            if (secilenTarih == DateTime.MinValue)
+            {
+                MessageBox.Show("Lütfen bir tarih seçin.", "Tarih Seçimi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Tarih seçilmediği için işlemi sonlandırıyoruz
+            }
+
+            var filtrelenmisListe = cagir.Seanslar.AsNoTracking().Where(m =>
+                (secilenTarih == DateTime.MinValue || DbFunctions.TruncateTime(m.Tarih) == secilenTarih)
+            ).ToList();
+
+            seansdatagrid.DataSource = filtrelenmisListe;
+            seansdatagrid.ClearSelection();
+        }
+
+
+
+        private void checkfiltre_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkfiltre.Checked)
+            {
+                checkfiltretarih.Visible = true;
+                txtfiltread.Visible = true;
+                txtfiltresoyad.Visible = true;
+
+                combofiltresaat.Visible = true;
+            }
+            else
+            {
+                checkfiltretarih.Visible = false;
+                txtfiltread.Visible = false;
+                txtfiltresoyad.Visible = false;
+                filtretarih.Visible = false;
+                combofiltresaat.Visible = false;
+                txtfiltread.Clear();
+                txtfiltresoyad.Clear();
+                combofiltresaat.ResetText();
+                filtretarih.Value = DateTime.Now;
+                listele();
+            }
+        }
+
+        private void txtfiltread_TextChanged(object sender, EventArgs e)
+        {
+            filtreadsoyad();
+        }
+
+        private void txtfiltresoyad_TextChanged(object sender, EventArgs e)
+        {
+            filtreadsoyad();
+        }
+
+        private void filtretarih_ValueChanged(object sender, EventArgs e)
+        {
+            filtrezaman();
+        }
+
+        private void combofiltresaat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            filtreadsoyad();
+        }
+
+        private void checkfiltretarih_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkfiltretarih.Checked)
+            {
+                filtretarih.Visible = true;
+                filtrezaman();
+            }
+            else
+            {
+                filtretarih.Visible = false;
+                listele();
+            }
         }
     }
 }
