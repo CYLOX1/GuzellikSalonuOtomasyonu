@@ -33,6 +33,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.kytpanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.teltxt = new System.Windows.Forms.TextBox();
             this.soyadtxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,11 +42,10 @@
             this.adtxt = new System.Windows.Forms.TextBox();
             this.kapatmafoto = new System.Windows.Forms.PictureBox();
             this.kucultfoto = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.kytpanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btngeri
@@ -109,6 +109,16 @@
             this.kytpanel.Size = new System.Drawing.Size(501, 219);
             this.kytpanel.TabIndex = 11;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.user__2_;
+            this.pictureBox1.Location = new System.Drawing.Point(21, 44);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(127, 116);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // teltxt
             // 
             this.teltxt.BackColor = System.Drawing.SystemColors.Window;
@@ -116,6 +126,7 @@
             this.teltxt.Name = "teltxt";
             this.teltxt.Size = new System.Drawing.Size(195, 22);
             this.teltxt.TabIndex = 5;
+            this.teltxt.TextChanged += new System.EventHandler(this.teltxt_TextChanged);
             this.teltxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.teltxt_KeyPress);
             // 
             // soyadtxt
@@ -184,16 +195,6 @@
             this.kucultfoto.TabStop = false;
             this.kucultfoto.Click += new System.EventHandler(this.kucultfoto_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.user__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 44);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(127, 116);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
             // CalisanKayitForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -213,9 +214,9 @@
             this.Text = "kayitform";
             this.kytpanel.ResumeLayout(false);
             this.kytpanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

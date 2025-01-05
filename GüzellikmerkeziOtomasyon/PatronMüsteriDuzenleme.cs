@@ -156,7 +156,33 @@ namespace GüzellikmerkeziOtomasyon
 
         private void txtfiltretel_TextChanged(object sender, EventArgs e)
         {
+            if (teltxt.Text.Length > 15)
+            {
+                teltxt.Text = teltxt.Text.Substring(0, 12); // Fazla karakterleri kes
+                teltxt.SelectionStart = teltxt.Text.Length; // İmleci sona taşı
+            }
+
             filtre();
+        }
+
+        private void teltxt_TextChanged(object sender, EventArgs e)
+        {
+            if (teltxt.Text.Length > 15)
+            {
+                teltxt.Text = teltxt.Text.Substring(0, 12);
+                teltxt.SelectionStart = teltxt.Text.Length;
+            }
+
+        }
+
+        private void txtfiltretel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+            (e.KeyChar != '+') && (e.KeyChar != '-') &&
+            (e.KeyChar != '(') && (e.KeyChar != ')') && (e.KeyChar != ' '))
+            {
+                e.Handled = true; 
+            }
         }
     }
 }

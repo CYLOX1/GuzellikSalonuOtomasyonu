@@ -18,7 +18,6 @@ namespace GüzellikmerkeziOtomasyon
         }
         baglanti db = new baglanti();
 
-
         private void btngeri_Click(object sender, EventArgs e)
         {
             CalisanArayuz calisara = new CalisanArayuz();
@@ -30,14 +29,12 @@ namespace GüzellikmerkeziOtomasyon
         {
             var cagir = db.baglan();
 
-
             if (adtxt.Text == "" || soyadtxt.Text == "" || teltxt.Text == "")
             {
-                MessageBox.Show("Lütfen gerkli alanları doldurunuz!");
+                MessageBox.Show("Lütfen gerekli alanları doldurunuz!");
             }
             else
             {
-
                 try
                 {
                     müşteriler ekle = new müşteriler();
@@ -46,10 +43,6 @@ namespace GüzellikmerkeziOtomasyon
                     ekle.TelefonNo = teltxt.Text;
                     cagir.müşteriler.Add(ekle);
 
-                    //Seanslar seans = new Seanslar();
-                    //seans.Ad = adtxt.Text;
-                    //seans.Soyad = soyadtxt.Text;
-                    //cagir.Seanslar.Add(seans);
                     cagir.SaveChanges();
 
                     CalisanArayuz carayuz = new CalisanArayuz();
@@ -60,11 +53,7 @@ namespace GüzellikmerkeziOtomasyon
                 {
                     MessageBox.Show(ex.Message);
                 }
-
-
-
             }
-
         }
 
         private void kapatmafoto_Click(object sender, EventArgs e)
@@ -79,12 +68,21 @@ namespace GüzellikmerkeziOtomasyon
 
         private void teltxt_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-            (e.KeyChar != '+') && (e.KeyChar != '-') &&
-            (e.KeyChar != '(') && (e.KeyChar != ')') && (e.KeyChar != ' ')) 
-                {
-                    e.Handled = true; 
-                }
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '+') && (e.KeyChar != '-') &&
+                (e.KeyChar != '(') && (e.KeyChar != ')') && (e.KeyChar != ' '))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void teltxt_TextChanged(object sender, EventArgs e)
+        {
+            if (teltxt.Text.Length > 15)
+            {
+                teltxt.Text = teltxt.Text.Substring(0, 12); // Fazla karakterleri kes
+                teltxt.SelectionStart = teltxt.Text.Length; // İmleci sona taşı
+            }
         }
     }
 }

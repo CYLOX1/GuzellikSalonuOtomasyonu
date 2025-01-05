@@ -198,17 +198,47 @@ namespace GüzellikmerkeziOtomasyon
 
         private void txtfiltread_TextChanged(object sender, EventArgs e)
         {
-            filtre();
+            if (adtxt.Text == "")
+            {
+                listele();
+            }
+            else
+            {
+                filtre();
+            }
         }
 
         private void txtfiltresoyad_TextChanged(object sender, EventArgs e)
         {
-            filtre();
+            if (soyadtxt.Text == "")
+            {
+                listele();
+            }
+            else
+            {
+                filtre();
+            }
         }
 
         private void txtfiltretel_TextChanged(object sender, EventArgs e)
         {
-            filtre();
+            if (teltxt.Text == "")
+            {
+                listele();
+            }
+            else
+            {
+                filtre();
+            }
+        }
+
+        private void teltxt_TextChanged(object sender, EventArgs e)
+        {
+            if (teltxt.Text.Length > 15)
+            {
+                teltxt.Text = teltxt.Text.Substring(0, 12); // Fazla karakterleri kes
+                teltxt.SelectionStart = teltxt.Text.Length; // İmleci sona taşı
+            }
         }
     }
     

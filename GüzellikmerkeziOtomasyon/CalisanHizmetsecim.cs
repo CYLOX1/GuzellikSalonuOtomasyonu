@@ -179,6 +179,11 @@ namespace GüzellikmerkeziOtomasyon
         }
         private void txtfiltretel_TextChanged(object sender, EventArgs e)
         {
+            if (txtfiltretel.Text.Length > 15)
+            {
+                txtfiltretel.Text = txtfiltretel.Text.Substring(0, 15); // Fazla karakterleri kes
+                txtfiltretel.SelectionStart = txtfiltretel.Text.Length; // İmleci sona taşı
+            }
             listele();
         }
 

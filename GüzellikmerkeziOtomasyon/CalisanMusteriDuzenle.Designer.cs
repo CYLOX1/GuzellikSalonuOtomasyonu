@@ -142,6 +142,7 @@
             this.teltxt.Name = "teltxt";
             this.teltxt.Size = new System.Drawing.Size(190, 22);
             this.teltxt.TabIndex = 51;
+            this.teltxt.TextChanged += new System.EventHandler(this.teltxt_TextChanged);
             this.teltxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.teltxt_KeyPress);
             // 
             // btnsil

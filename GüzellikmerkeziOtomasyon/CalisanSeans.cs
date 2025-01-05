@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -26,25 +27,23 @@ namespace GüzellikmerkeziOtomasyon
             this.Close();
         }
 
+        private void liste()
+        {
+            var cagir = bagla.baglan();
+            var liste = cagir.Seanslar.AsNoTracking().ToList();
+            seansdatagrid.DataSource = liste;
+            seansdatagrid.ClearSelection();
+        }
+
+
         private void CalisanSeans_Load(object sender, EventArgs e)
         {
-           try
-            {
-                
-                var cagir = bagla.baglan();
-                var liste= cagir.Seanslar.AsNoTracking().ToList();
-                seansdatagrid.DataSource=liste;
-
-            }
-            catch (Exception ex) 
-            {
-                MessageBox.Show("Bir hata ile karşılaşıldı"+ ex.Message);
-            }
+            liste();
         }
 
         private void kucultfoto_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void kapatmafoto_Click(object sender, EventArgs e)

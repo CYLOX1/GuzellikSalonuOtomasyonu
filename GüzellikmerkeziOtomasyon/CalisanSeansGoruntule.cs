@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -36,10 +37,27 @@ namespace GüzellikmerkeziOtomasyon
         }
         private void listele()
         {
-               var cagir = db.baglan();
-                var liste = cagir.Seanslar.AsNoTracking().ToList();
+
+            try
+            {
+                var cagir = db.baglan();
+
+                // Bugünün tarihini alıyoruz (saat bilgisini sıfırlıyoruz)
+                DateTime bugun = DateTime.Today;
+
+                // Sadece bugünden itibaren tarihleri getiriyoruz
+                var liste = cagir.Seanslar.AsNoTracking()
+                    .Where(s => DbFunctions.TruncateTime(s.Tarih) >= DbFunctions.TruncateTime(bugun))
+                    .ToList();
+
+                // Filtrelenmiş listeyi DataGrid'e bağlıyoruz
                 seanslardatagrid.DataSource = liste;
-               seanslardatagrid.ClearSelection();
+                seanslardatagrid.ClearSelection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Bir hata ile karşılaşıldı: " + ex.Message);
+            }
 
             //var cagir = db.baglan();
             //var liste = (from seans in cagir.Seanslar.AsNoTracking()
