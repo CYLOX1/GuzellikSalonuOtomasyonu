@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatronFiyatDuzenleme));
             this.label3 = new System.Windows.Forms.Label();
             this.btnekle = new System.Windows.Forms.Button();
             this.btnguncelle = new System.Windows.Forms.Button();
@@ -231,6 +232,7 @@
             this.Controls.Add(this.btngeri);
             this.Controls.Add(this.fiyatdatagrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PatronFiyatDuzenleme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PatronFiyatDuzenleme";

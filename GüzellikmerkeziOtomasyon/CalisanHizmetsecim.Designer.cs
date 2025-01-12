@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalisanHizmetsecim));
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tarihzamanaracı = new System.Windows.Forms.DateTimePicker();
@@ -273,6 +274,7 @@
             this.txtfiltretel.TabIndex = 82;
             this.txtfiltretel.Visible = false;
             this.txtfiltretel.TextChanged += new System.EventHandler(this.txtfiltretel_TextChanged);
+            this.txtfiltretel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfiltretel_KeyPress);
             // 
             // CalisanHizmetsecim
             // 
@@ -302,6 +304,7 @@
             this.Controls.Add(this.btnonay);
             this.Controls.Add(this.hizmetlist);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CalisanHizmetsecim";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hizmetsecim";

@@ -170,11 +170,20 @@ namespace GüzellikmerkeziOtomasyon
         private void filtre()
         {
             var cagir = db.baglan();
-            var filtrelenmisListe = cagir.müşteriler.AsNoTracking().Where(m =>
-                (string.IsNullOrEmpty(txtfiltread.Text) || m.Ad.Contains(txtfiltread.Text)) &&
-                (string.IsNullOrEmpty(txtfiltresoyad.Text) || m.Soyad.Contains(txtfiltresoyad.Text)) &&
-                (string.IsNullOrEmpty(txtfiltretel.Text) || m.TelefonNo.StartsWith(txtfiltretel.Text))
-            ).ToList();
+            var filtrelenmisListe = cagir.müşteriler
+                .Where(m =>
+                    (string.IsNullOrEmpty(txtfiltread.Text) || m.Ad.Contains(txtfiltread.Text)) &&
+                    (string.IsNullOrEmpty(txtfiltresoyad.Text) || m.Soyad.Contains(txtfiltresoyad.Text)) &&
+                    (string.IsNullOrEmpty(txtfiltretel.Text) || m.TelefonNo.StartsWith(txtfiltretel.Text))
+                )
+                .Select(m => new
+                {
+                    m.musteriID,
+                    m.Ad,
+                    m.Soyad,
+                    m.TelefonNo
+                })
+                .ToList();
 
             musteridatagrid.DataSource = filtrelenmisListe;
             musteridatagrid.ClearSelection();
@@ -245,6 +254,23 @@ namespace GüzellikmerkeziOtomasyon
             {
                 teltxt.Text = teltxt.Text.Substring(0, 12); // Fazla karakterleri kes
                 teltxt.SelectionStart = teltxt.Text.Length; // İmleci sona taşı
+            }
+        }
+
+        private void txtfiltretel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int maxLength = 12;
+
+            // Sadece rakam ve kontrol tuşlarına (Backspace, Delete) izin ver
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Geçersiz giriş
+            }
+
+            // Maksimum uzunluğu kontrol et
+            if (txtfiltretel.Text.Length >= maxLength && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Fazla karakter girişi engellenir
             }
         }
     }

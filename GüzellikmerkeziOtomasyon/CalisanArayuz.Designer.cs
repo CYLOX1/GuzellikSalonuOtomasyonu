@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalisanArayuz));
             this.btnseansduzen = new System.Windows.Forms.Button();
             this.btncıkıs = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -229,6 +230,7 @@
             this.Controls.Add(this.btnmusteriduzen);
             this.Controls.Add(this.btnyenimusteri);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CalisanArayuz";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";

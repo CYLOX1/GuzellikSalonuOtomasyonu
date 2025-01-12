@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatronArayuz));
             this.btnfiyat = new System.Windows.Forms.Button();
             this.btncalisan = new System.Windows.Forms.Button();
             this.btncıkıs = new System.Windows.Forms.Button();
@@ -202,6 +203,7 @@
             this.Controls.Add(this.btnmusteri);
             this.Controls.Add(this.btnkazanc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PatronArayuz";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PatronArayüz";

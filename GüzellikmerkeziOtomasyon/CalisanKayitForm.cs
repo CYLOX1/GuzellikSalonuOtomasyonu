@@ -68,21 +68,20 @@ namespace GüzellikmerkeziOtomasyon
 
         private void teltxt_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '+') && (e.KeyChar != '-') &&
-                (e.KeyChar != '(') && (e.KeyChar != ')') && (e.KeyChar != ' '))
+            int uzunluk = 12;
+
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+
+            if (teltxt.Text.Length >= uzunluk && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
         }
 
-        private void teltxt_TextChanged(object sender, EventArgs e)
-        {
-            if (teltxt.Text.Length > 15)
-            {
-                teltxt.Text = teltxt.Text.Substring(0, 12); // Fazla karakterleri kes
-                teltxt.SelectionStart = teltxt.Text.Length; // İmleci sona taşı
-            }
-        }
+
     }
 }

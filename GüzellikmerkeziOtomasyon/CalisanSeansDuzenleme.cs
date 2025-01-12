@@ -122,16 +122,23 @@ namespace GüzellikmerkeziOtomasyon
         {
             try
             {
-                int secilensatir = seansdatagrid.SelectedCells[0].RowIndex;
-                ıdtxt.Text = seansdatagrid.Rows[secilensatir].Cells[0].Value.ToString();
-                adtxt.Text = seansdatagrid.Rows[secilensatir].Cells[1].Value.ToString();
-                soyadtxt.Text = seansdatagrid.Rows[secilensatir].Cells[2].Value.ToString();
-                tarihzaman.Text = seansdatagrid.Rows[secilensatir].Cells[4].Value.ToString();
-                combosaat.Text = seansdatagrid.Rows[secilensatir].Cells[5].Value.ToString();
+                // Seçili satırın indeksini alıyoruz
+                int secilensatir = e.RowIndex;
+
+                // Geçersiz satır kontrolü (örneğin, başlık satırı seçildiyse)
+                if (secilensatir < 0) return;
+
+                // Hücrelerden değerleri okuyarak ilgili alanlara dolduruyoruz
+                ıdtxt.Text = seansdatagrid.Rows[secilensatir].Cells["SeansID"].Value?.ToString() ?? "";
+                adtxt.Text = seansdatagrid.Rows[secilensatir].Cells["Ad"].Value?.ToString() ?? "";
+                soyadtxt.Text = seansdatagrid.Rows[secilensatir].Cells["Soyad"].Value?.ToString() ?? "";
+                tarihzaman.Value = Convert.ToDateTime(seansdatagrid.Rows[secilensatir].Cells["Tarih"].Value ?? DateTime.Now);
+                combosaat.Text = seansdatagrid.Rows[secilensatir].Cells["Saat"].Value?.ToString() ?? "";
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                // Hata mesajı kullanıcıya gösterilir
+                MessageBox.Show($"Bir hata oluştu: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -197,7 +204,17 @@ namespace GüzellikmerkeziOtomasyon
                 }
 
                 // Sorgu sonuçlarını listeye dönüştür
-                var filtrelenmisListe = sorgu.ToList();
+                var filtrelenmisListe = sorgu.Select(m => new
+                {
+                    m.SeansID,
+                    m.musteriID,
+                    m.Ad,
+                    m.Soyad,
+                    m.hizmetID,
+                    m.VerilenHizmet,
+                    m.Tarih,
+                    m.Saat
+                }).ToList();
 
                 // Sonuçları DataGrid'e aktar
                 seansdatagrid.DataSource = filtrelenmisListe;
@@ -322,5 +339,7 @@ namespace GüzellikmerkeziOtomasyon
             }
 
         }
+
+
     }
 }

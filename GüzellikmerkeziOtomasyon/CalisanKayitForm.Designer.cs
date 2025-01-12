@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalisanKayitForm));
             this.btngeri = new System.Windows.Forms.Button();
             this.btnkkaydet = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -126,7 +127,6 @@
             this.teltxt.Name = "teltxt";
             this.teltxt.Size = new System.Drawing.Size(195, 22);
             this.teltxt.TabIndex = 5;
-            this.teltxt.TextChanged += new System.EventHandler(this.teltxt_TextChanged);
             this.teltxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.teltxt_KeyPress);
             // 
             // soyadtxt
@@ -209,6 +209,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.kytpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CalisanKayitForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "kayitform";

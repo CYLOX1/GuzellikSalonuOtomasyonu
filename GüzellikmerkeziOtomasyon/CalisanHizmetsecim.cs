@@ -177,7 +177,14 @@ namespace GüzellikmerkeziOtomasyon
             var filtrelenmisListe = cagir.müşteriler.AsNoTracking().Where(m =>
                 (string.IsNullOrEmpty(txtfiltread.Text) || m.Ad.Contains(txtfiltread.Text)) &&
                 (string.IsNullOrEmpty(txtfiltresoyad.Text) || m.Soyad.Contains(txtfiltresoyad.Text)) &&
-                (string.IsNullOrEmpty(txtfiltretel.Text) || m.TelefonNo.Contains(txtfiltretel.Text))
+                (string.IsNullOrEmpty(txtfiltretel.Text) || m.TelefonNo.StartsWith(txtfiltretel.Text))
+                ).Select(m => new
+                {
+                    m.musteriID,
+                    m.Ad,
+                    m.Soyad,
+                    m.TelefonNo
+                }
             ).ToList();
 
             musteridatagrid.DataSource = filtrelenmisListe;
@@ -195,12 +202,7 @@ namespace GüzellikmerkeziOtomasyon
         }
         private void txtfiltretel_TextChanged(object sender, EventArgs e)
         {
-            if (txtfiltretel.Text.Length > 15)
-            {
-                txtfiltretel.Text = txtfiltretel.Text.Substring(0, 15); // Fazla karakterleri kes
-                txtfiltretel.SelectionStart = txtfiltretel.Text.Length; // İmleci sona taşı
-            }
-            listele();
+            filtre();  
         }
 
         private void checkfiltre_CheckedChanged(object sender, EventArgs e)
@@ -224,6 +226,20 @@ namespace GüzellikmerkeziOtomasyon
 
         }
 
-        
+        private void txtfiltretel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int uzunluk = 12; 
+
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+
+            if (txtfiltretel.Text.Length >= uzunluk && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; 
+            }
+        }
     }
 }

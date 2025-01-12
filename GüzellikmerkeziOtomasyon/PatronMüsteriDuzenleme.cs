@@ -124,6 +124,13 @@ namespace GüzellikmerkeziOtomasyon
                 (string.IsNullOrEmpty(txtfiltread.Text) || m.Ad.Contains(txtfiltread.Text)) &&
                 (string.IsNullOrEmpty(txtfiltresoyad.Text) || m.Soyad.Contains(txtfiltresoyad.Text)) &&
                 (string.IsNullOrEmpty(txtfiltretel.Text) || m.TelefonNo.StartsWith(txtfiltretel.Text))
+                ).Select(m => new
+                {
+                    m.musteriID,
+                    m.Ad,
+                    m.Soyad,
+                    m.TelefonNo
+                }
             ).ToList();
 
             musteridatagrid.DataSource = filtrelenmisListe;

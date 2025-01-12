@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalisanMusteriDuzenle));
             this.label4 = new System.Windows.Forms.Label();
             this.btnekle = new System.Windows.Forms.Button();
             this.btnguncelle = new System.Windows.Forms.Button();
@@ -262,6 +263,7 @@
             this.txtfiltretel.TabIndex = 76;
             this.txtfiltretel.Visible = false;
             this.txtfiltretel.TextChanged += new System.EventHandler(this.txtfiltretel_TextChanged);
+            this.txtfiltretel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfiltretel_KeyPress);
             // 
             // checkfiltre
             // 
@@ -303,6 +305,7 @@
             this.Controls.Add(this.btngeri);
             this.Controls.Add(this.musteridatagrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CalisanMusteriDuzenle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CalisanMusteriDüzenle";
