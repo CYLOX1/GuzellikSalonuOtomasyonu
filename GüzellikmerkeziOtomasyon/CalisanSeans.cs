@@ -30,7 +30,18 @@ namespace GüzellikmerkeziOtomasyon
         private void liste()
         {
             var cagir = bagla.baglan();
-            var liste = cagir.Seanslar.AsNoTracking().ToList();
+            var liste = (from s in cagir.Seanslar
+                         select new
+                         {
+                             s.SeansID,
+                             s.musteriID,
+                             s.Ad,
+                             s.Soyad,
+                             s.hizmetID,
+                             s.VerilenHizmet,
+                             s.Tarih,
+                             s.Saat
+                         }).ToList();
             seansdatagrid.DataSource = liste;
             seansdatagrid.ClearSelection();
         }

@@ -46,9 +46,18 @@ namespace GüzellikmerkeziOtomasyon
                 DateTime bugun = DateTime.Today;
 
                 // Sadece bugünden itibaren tarihleri getiriyoruz
-                var liste = cagir.Seanslar.AsNoTracking()
-                    .Where(s => DbFunctions.TruncateTime(s.Tarih) >= DbFunctions.TruncateTime(bugun))
-                    .ToList();
+                var liste = (from s in cagir.Seanslar
+                             select new
+                             {
+                                 s.SeansID,
+                                 s.musteriID,
+                                 s.Ad,
+                                 s.Soyad,
+                                 s.hizmetID,
+                                 s.VerilenHizmet,
+                                 s.Tarih,
+                                 s.Saat
+                             }).Where(s => DbFunctions.TruncateTime(s.Tarih) >= DbFunctions.TruncateTime(bugun)).ToList();
 
                 // Filtrelenmiş listeyi DataGrid'e bağlıyoruz
                 seanslardatagrid.DataSource = liste;
@@ -59,23 +68,7 @@ namespace GüzellikmerkeziOtomasyon
                 MessageBox.Show("Bir hata ile karşılaşıldı: " + ex.Message);
             }
 
-            //var cagir = db.baglan();
-            //var liste = (from seans in cagir.Seanslar.AsNoTracking()
-            //             join musteri in cagir.müşteriler on  equals musteri.MusteriId
-            //             join hizmet in cagir.Hizmetler on seans.HizmetId equals hizmet.HizmetId
-            //             select new
-            //             {
-            //                 SeansID = seans.SeansId,
-            //                 MusteriID = musteri.MusteriId,
-            //                 MusteriAdiSoyadi = musteri.Adi + " " + musteri.Soyadi,
-            //                 AldigiHizmet = hizmet.HizmetAdi,
-            //                 Tarih = seans.Tarih,
-            //                 Saat = seans.Saat,
-            //                 Ucret = seans.Ucret
-            //             }).ToList();
 
-            //seanslardatagrid.DataSource = liste;
-            //seanslardatagrid.ClearSelection();
         }
 
 

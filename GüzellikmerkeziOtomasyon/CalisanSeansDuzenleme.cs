@@ -34,7 +34,18 @@ namespace GüzellikmerkeziOtomasyon
         private void listele()
         {
             var cagir = db.baglan();
-            var liste = cagir.Seanslar.AsNoTracking().ToList();
+            var liste = (from s in cagir.Seanslar 
+                         select new
+                              {
+                                  s.SeansID,
+                                  s.musteriID,
+                                  s.Ad,
+                                  s.Soyad,
+                                  s.hizmetID,
+                                  s.VerilenHizmet,
+                                  s.Tarih,
+                                  s.Saat
+                              }).ToList();
             seansdatagrid.DataSource = liste;
             seansdatagrid.ClearSelection();
             ıdtxt.Clear();
@@ -279,6 +290,7 @@ namespace GüzellikmerkeziOtomasyon
                 txtfiltrekazanc.Visible = true;
                 combofiltresaat.Visible = true;
                 checkfiltretarih.Visible = true;
+                
             }
             else
             {
@@ -292,7 +304,7 @@ namespace GüzellikmerkeziOtomasyon
                 txtfiltrekazanc.Clear();
                 combofiltresaat.ResetText();
                 checkfiltretarih.Checked = false;
-                Filtre();
+                listele();
             }
         }
 

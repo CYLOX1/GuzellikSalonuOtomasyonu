@@ -65,9 +65,8 @@
             this.kazanclbl.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kazanclbl.Location = new System.Drawing.Point(703, 180);
             this.kazanclbl.Name = "kazanclbl";
-            this.kazanclbl.Size = new System.Drawing.Size(79, 29);
+            this.kazanclbl.Size = new System.Drawing.Size(0, 29);
             this.kazanclbl.TabIndex = 4;
-            this.kazanclbl.Text = "XXXX ";
             // 
             // label1
             // 
@@ -209,9 +208,8 @@
             this.filtrekazanc.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.filtrekazanc.Location = new System.Drawing.Point(706, 408);
             this.filtrekazanc.Name = "filtrekazanc";
-            this.filtrekazanc.Size = new System.Drawing.Size(79, 29);
+            this.filtrekazanc.Size = new System.Drawing.Size(0, 29);
             this.filtrekazanc.TabIndex = 63;
-            this.filtrekazanc.Text = "XXXX ";
             // 
             // PatronKazancForm
             // 

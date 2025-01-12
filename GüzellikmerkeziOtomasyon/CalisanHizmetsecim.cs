@@ -18,12 +18,11 @@ namespace GüzellikmerkeziOtomasyon
             InitializeComponent();
             tarihzamanaracı.MinDate = DateTime.Now.Date;
         } 
-        baglanti db = new baglanti(); 
+        baglanti db = new baglanti();
 
 
         private void btnonay_Click(object sender, EventArgs e)
         {
-
             if (hizmetlist.SelectedItem == null || tarihzamanaracı.Text == "" || combosaat.Text == "")
             {
                 MessageBox.Show("Boş alan bırakmayınız!");
@@ -47,16 +46,24 @@ namespace GüzellikmerkeziOtomasyon
                     return;
                 }
 
-                // Seçilen hizmetin fiyatını al
+                // Seçilen hizmetin fiyatı ve ID'sini al
                 string secilenHizmet = hizmetlist.SelectedItem.ToString();
-                string hizmetFiyatStr = cagir.hizmetler
+                var hizmetBilgisi = cagir.hizmetler
                     .Where(h => h.hizmet == secilenHizmet)
-                    .Select(h => h.fiyat)
+                    .Select(h => new { h.hizmetID, h.fiyat })
                     .FirstOrDefault();
 
-                // Fiyat dönüştürme
+                if (hizmetBilgisi == null)
+                {
+                    MessageBox.Show("Seçilen hizmet bulunamadı. Lütfen veritabanını kontrol edin.");
+                    return;
+                }
+
+                int hizmetID = hizmetBilgisi.hizmetID; // Hizmet ID'si
                 int hizmetFiyat = 0;
-                if (!int.TryParse(hizmetFiyatStr, out hizmetFiyat))
+
+                // Fiyat dönüştürme
+                if (!int.TryParse(hizmetBilgisi.fiyat, out hizmetFiyat))
                 {
                     MessageBox.Show("Hizmet fiyatı geçerli bir sayı değil! Lütfen veritabanını kontrol edin.");
                     return;
@@ -65,8 +72,10 @@ namespace GüzellikmerkeziOtomasyon
                 // Seanslar tablosuna ekleme
                 Seanslar ekle = new Seanslar
                 {
+                    musteriID = int.Parse(ıdtxt.Text),
                     Ad = adtxt.Text,
                     Soyad = soyadtxt.Text,
+                    hizmetID = hizmetID, // Hizmet ID'si burada eklendi
                     VerilenHizmet = secilenHizmet,
                     Tarih = secilengun,
                     Saat = secilenSaat,
@@ -76,7 +85,7 @@ namespace GüzellikmerkeziOtomasyon
                 cagir.Seanslar.Add(ekle);
                 cagir.SaveChanges();
 
-                MessageBox.Show($"Seans başarıyla eklendi. Kazanç: {hizmetFiyat:C}");
+                MessageBox.Show($"Seans başarıyla eklendi. Hizmet ID: {hizmetID}, Kazanç: {hizmetFiyat:C}");
 
                 // Formu yenile
                 CalisanSeans cseans = new CalisanSeans();
@@ -87,13 +96,20 @@ namespace GüzellikmerkeziOtomasyon
             {
                 MessageBox.Show("Bir hata oluştu: " + ex.Message);
             }
-
         }
+
         private void listele()
         {
 
             var cagir = db.baglan();
-            var liste = cagir.müşteriler.AsNoTracking().ToList();
+            var liste = (from m in cagir.müşteriler
+                         select new
+                         {
+                             m.musteriID,
+                             m.Ad,
+                             m.Soyad,
+                             m.TelefonNo
+                         }).ToList(); 
             musteridatagrid.DataSource = liste;
             musteridatagrid.ClearSelection();
             adtxt.Clear();

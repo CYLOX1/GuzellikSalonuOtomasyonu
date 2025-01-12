@@ -179,7 +179,7 @@ namespace GüzellikmerkeziOtomasyon
             var filtrelenmisListe = cagir.calisan.AsNoTracking().Where(m =>
                 (string.IsNullOrEmpty(txtfiltread.Text) || m.Ad.Contains(txtfiltread.Text)) &&
                 (string.IsNullOrEmpty(txtfiltresoyad.Text) || m.Soyad.Contains(txtfiltresoyad.Text)) &&
-                (string.IsNullOrEmpty(txtfiltretel.Text) || m.TelefonNo.Contains(txtfiltretel.Text))
+                (string.IsNullOrEmpty(txtfiltretel.Text) || m.TelefonNo.StartsWith(txtfiltretel.Text))
             ).ToList();
 
             calisandatagrid.DataSource = filtrelenmisListe;

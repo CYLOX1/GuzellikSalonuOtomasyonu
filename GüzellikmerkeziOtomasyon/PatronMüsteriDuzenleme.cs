@@ -30,7 +30,14 @@ namespace GüzellikmerkeziOtomasyon
         {
 
             var cagir = db.baglan();
-            var liste = cagir.müşteriler.AsNoTracking().ToList();
+            var liste = (from m in cagir.müşteriler
+                         select new
+                         {
+                             m.musteriID,
+                             m.Ad,
+                             m.Soyad,
+                             m.TelefonNo
+                         }).ToList();
             musteridatagrid.DataSource = liste;
             musteridatagrid.ClearSelection();
             adtxt.Clear();
@@ -116,7 +123,7 @@ namespace GüzellikmerkeziOtomasyon
             var filtrelenmisListe = cagir.müşteriler.AsNoTracking().Where(m =>
                 (string.IsNullOrEmpty(txtfiltread.Text) || m.Ad.Contains(txtfiltread.Text)) &&
                 (string.IsNullOrEmpty(txtfiltresoyad.Text) || m.Soyad.Contains(txtfiltresoyad.Text)) &&
-                (string.IsNullOrEmpty(txtfiltretel.Text) || m.TelefonNo.Contains(txtfiltretel.Text))
+                (string.IsNullOrEmpty(txtfiltretel.Text) || m.TelefonNo.StartsWith(txtfiltretel.Text))
             ).ToList();
 
             musteridatagrid.DataSource = filtrelenmisListe;

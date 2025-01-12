@@ -29,7 +29,13 @@ namespace GüzellikmerkeziOtomasyon
         {
 
             var cagir = db.baglan();
-            var liste = cagir.hizmetler.AsNoTracking().ToList();
+            var liste = (from f in cagir.hizmetler
+                         select new
+                         {
+                             f.hizmetID,
+                             f.hizmet,
+                             f.fiyat
+                         }).ToList(); 
             fiyatdatagrid.DataSource = liste;
             fiyatdatagrid.ClearSelection();
             hizmetıdtxt.Clear();

@@ -14,8 +14,17 @@ namespace GüzellikmerkeziOtomasyon
     
     public partial class hizmetler
     {
-        public int ID { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public hizmetler()
+        {
+            this.Seanslar = new HashSet<Seanslar>();
+        }
+    
+        public int hizmetID { get; set; }
         public string hizmet { get; set; }
         public string fiyat { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Seanslar> Seanslar { get; set; }
     }
 }
