@@ -37,17 +37,42 @@ namespace GüzellikmerkeziOtomasyon
             {
                 try
                 {
-                    müşteriler ekle = new müşteriler();
-                    ekle.Ad = adtxt.Text;
-                    ekle.Soyad = soyadtxt.Text;
-                    ekle.TelefonNo = teltxt.Text;
-                    cagir.müşteriler.Add(ekle);
+                    // Telefon numarasını kontrol et
+                    var varolanTelefon = cagir.müşteriler
+                        .FirstOrDefault(m => m.TelefonNo == teltxt.Text);
 
-                    cagir.SaveChanges();
+                    if (varolanTelefon != null)
+                    {
+                        // Eğer aynı telefon numarasına sahip bir müşteri varsa, yeni kayıt yapılmasın
+                        MessageBox.Show("Bu telefon numarası zaten kayıtlı!");
+                    }
+                    else
+                    {
+                        // Adı, soyadı ve telefon numarasının tamamı aynı olan müşteriyi kontrol et
+                        var varolanMusteri = cagir.müşteriler
+                            .FirstOrDefault(m => m.TelefonNo == teltxt.Text && m.Ad == adtxt.Text && m.Soyad == soyadtxt.Text);
 
-                    CalisanArayuz carayuz = new CalisanArayuz();
-                    carayuz.Show();
-                    this.Hide();
+                        if (varolanMusteri != null)
+                        {
+                            // Eğer adı, soyadı ve telefon numarası aynı olan bir müşteri varsa, yeni kayıt yapılmasın
+                            MessageBox.Show("Bu kişi zaten kayıtlı!");
+                        }
+                        else
+                        {
+                            // Adı, soyadı veya telefon numarası farklıysa yeni müşteri ekleme işlemi yapılır
+                            müşteriler ekle = new müşteriler();
+                            ekle.Ad = adtxt.Text;
+                            ekle.Soyad = soyadtxt.Text;
+                            ekle.TelefonNo = teltxt.Text;
+
+                            cagir.müşteriler.Add(ekle);
+                            cagir.SaveChanges();
+
+                            CalisanArayuz carayuz = new CalisanArayuz();
+                            carayuz.Show();
+                            this.Hide();
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {

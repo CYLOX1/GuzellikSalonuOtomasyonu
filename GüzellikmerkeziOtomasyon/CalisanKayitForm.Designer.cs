@@ -54,9 +54,9 @@
             this.btngeri.BackColor = System.Drawing.Color.HotPink;
             this.btngeri.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btngeri.ForeColor = System.Drawing.SystemColors.Control;
-            this.btngeri.Location = new System.Drawing.Point(12, 525);
+            this.btngeri.Location = new System.Drawing.Point(12, 605);
             this.btngeri.Name = "btngeri";
-            this.btngeri.Size = new System.Drawing.Size(84, 46);
+            this.btngeri.Size = new System.Drawing.Size(94, 51);
             this.btngeri.TabIndex = 16;
             this.btngeri.Text = "GERİ";
             this.btngeri.UseVisualStyleBackColor = false;
@@ -67,7 +67,7 @@
             this.btnkkaydet.BackColor = System.Drawing.Color.HotPink;
             this.btnkkaydet.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnkkaydet.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnkkaydet.Location = new System.Drawing.Point(452, 458);
+            this.btnkkaydet.Location = new System.Drawing.Point(596, 547);
             this.btnkkaydet.Name = "btnkkaydet";
             this.btnkkaydet.Size = new System.Drawing.Size(194, 68);
             this.btnkkaydet.TabIndex = 15;
@@ -79,7 +79,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(458, 111);
+            this.label5.Location = new System.Drawing.Point(623, 129);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(158, 27);
             this.label5.TabIndex = 13;
@@ -89,7 +89,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(392, 35);
+            this.label4.Location = new System.Drawing.Point(541, 42);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(295, 37);
             this.label4.TabIndex = 12;
@@ -105,15 +105,15 @@
             this.kytpanel.Controls.Add(this.label2);
             this.kytpanel.Controls.Add(this.label1);
             this.kytpanel.Controls.Add(this.adtxt);
-            this.kytpanel.Location = new System.Drawing.Point(287, 189);
+            this.kytpanel.Location = new System.Drawing.Point(353, 179);
             this.kytpanel.Name = "kytpanel";
-            this.kytpanel.Size = new System.Drawing.Size(501, 219);
+            this.kytpanel.Size = new System.Drawing.Size(641, 340);
             this.kytpanel.TabIndex = 11;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.user__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 44);
+            this.pictureBox1.Location = new System.Drawing.Point(46, 110);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(127, 116);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -123,7 +123,7 @@
             // teltxt
             // 
             this.teltxt.BackColor = System.Drawing.SystemColors.Window;
-            this.teltxt.Location = new System.Drawing.Point(281, 138);
+            this.teltxt.Location = new System.Drawing.Point(317, 204);
             this.teltxt.Name = "teltxt";
             this.teltxt.Size = new System.Drawing.Size(195, 22);
             this.teltxt.TabIndex = 5;
@@ -132,7 +132,7 @@
             // soyadtxt
             // 
             this.soyadtxt.BackColor = System.Drawing.SystemColors.Window;
-            this.soyadtxt.Location = new System.Drawing.Point(281, 98);
+            this.soyadtxt.Location = new System.Drawing.Point(317, 164);
             this.soyadtxt.Name = "soyadtxt";
             this.soyadtxt.Size = new System.Drawing.Size(195, 22);
             this.soyadtxt.TabIndex = 4;
@@ -140,34 +140,37 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(175, 138);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(211, 204);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 16);
+            this.label3.Size = new System.Drawing.Size(94, 18);
             this.label3.TabIndex = 3;
             this.label3.Text = "TELEFON :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(175, 98);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(211, 164);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 16);
+            this.label2.Size = new System.Drawing.Size(74, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "SOYAD :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(175, 58);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(211, 124);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 16);
+            this.label1.Size = new System.Drawing.Size(40, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "AD :";
             // 
             // adtxt
             // 
             this.adtxt.BackColor = System.Drawing.SystemColors.Window;
-            this.adtxt.Location = new System.Drawing.Point(281, 55);
+            this.adtxt.Location = new System.Drawing.Point(317, 121);
             this.adtxt.Name = "adtxt";
             this.adtxt.Size = new System.Drawing.Size(195, 22);
             this.adtxt.TabIndex = 0;
@@ -176,7 +179,7 @@
             // 
             this.kapatmafoto.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_close_50;
             this.kapatmafoto.InitialImage = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_close_50;
-            this.kapatmafoto.Location = new System.Drawing.Point(1029, 12);
+            this.kapatmafoto.Location = new System.Drawing.Point(1299, 12);
             this.kapatmafoto.Name = "kapatmafoto";
             this.kapatmafoto.Size = new System.Drawing.Size(31, 35);
             this.kapatmafoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -187,7 +190,7 @@
             // kucultfoto
             // 
             this.kucultfoto.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_drop_down_50;
-            this.kucultfoto.Location = new System.Drawing.Point(986, 12);
+            this.kucultfoto.Location = new System.Drawing.Point(1256, 12);
             this.kucultfoto.Name = "kucultfoto";
             this.kucultfoto.Size = new System.Drawing.Size(37, 35);
             this.kucultfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -200,7 +203,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(1072, 583);
+            this.ClientSize = new System.Drawing.Size(1342, 668);
             this.Controls.Add(this.kapatmafoto);
             this.Controls.Add(this.kucultfoto);
             this.Controls.Add(this.btngeri);

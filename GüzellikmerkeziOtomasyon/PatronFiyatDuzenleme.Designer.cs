@@ -66,7 +66,7 @@
             this.btnekle.BackColor = System.Drawing.Color.HotPink;
             this.btnekle.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnekle.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnekle.Location = new System.Drawing.Point(713, 421);
+            this.btnekle.Location = new System.Drawing.Point(1008, 470);
             this.btnekle.Name = "btnekle";
             this.btnekle.Size = new System.Drawing.Size(146, 75);
             this.btnekle.TabIndex = 56;
@@ -79,7 +79,7 @@
             this.btnguncelle.BackColor = System.Drawing.Color.HotPink;
             this.btnguncelle.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnguncelle.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnguncelle.Location = new System.Drawing.Point(784, 502);
+            this.btnguncelle.Location = new System.Drawing.Point(1079, 551);
             this.btnguncelle.Name = "btnguncelle";
             this.btnguncelle.Size = new System.Drawing.Size(146, 75);
             this.btnguncelle.TabIndex = 55;
@@ -127,7 +127,7 @@
             this.btnsil.BackColor = System.Drawing.Color.HotPink;
             this.btnsil.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsil.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnsil.Location = new System.Drawing.Point(865, 421);
+            this.btnsil.Location = new System.Drawing.Point(1160, 470);
             this.btnsil.Name = "btnsil";
             this.btnsil.Size = new System.Drawing.Size(146, 75);
             this.btnsil.TabIndex = 50;
@@ -215,7 +215,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(1072, 583);
+            this.ClientSize = new System.Drawing.Size(1342, 668);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.kapatmafoto);
             this.Controls.Add(this.kucultfoto);

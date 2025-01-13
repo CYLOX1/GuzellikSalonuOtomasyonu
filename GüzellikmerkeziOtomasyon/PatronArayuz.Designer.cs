@@ -53,9 +53,9 @@
             // 
             this.btnfiyat.BackColor = System.Drawing.Color.HotPink;
             this.btnfiyat.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnfiyat.Location = new System.Drawing.Point(601, 443);
+            this.btnfiyat.Location = new System.Drawing.Point(846, 519);
             this.btnfiyat.Name = "btnfiyat";
-            this.btnfiyat.Size = new System.Drawing.Size(231, 73);
+            this.btnfiyat.Size = new System.Drawing.Size(248, 91);
             this.btnfiyat.TabIndex = 18;
             this.btnfiyat.Text = "FİYAT DÜZENLEME";
             this.btnfiyat.UseVisualStyleBackColor = false;
@@ -65,9 +65,9 @@
             // 
             this.btncalisan.BackColor = System.Drawing.Color.HotPink;
             this.btncalisan.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncalisan.Location = new System.Drawing.Point(459, 346);
+            this.btncalisan.Location = new System.Drawing.Point(630, 406);
             this.btncalisan.Name = "btncalisan";
-            this.btncalisan.Size = new System.Drawing.Size(227, 75);
+            this.btncalisan.Size = new System.Drawing.Size(246, 96);
             this.btncalisan.TabIndex = 17;
             this.btncalisan.Text = "ÇALIŞANLARI DÜZENLE";
             this.btncalisan.UseVisualStyleBackColor = false;
@@ -78,9 +78,9 @@
             this.btncıkıs.BackColor = System.Drawing.Color.HotPink;
             this.btncıkıs.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncıkıs.ForeColor = System.Drawing.SystemColors.Control;
-            this.btncıkıs.Location = new System.Drawing.Point(6, 537);
+            this.btncıkıs.Location = new System.Drawing.Point(3, 601);
             this.btncıkıs.Name = "btncıkıs";
-            this.btncıkıs.Size = new System.Drawing.Size(91, 41);
+            this.btncıkıs.Size = new System.Drawing.Size(107, 55);
             this.btncıkıs.TabIndex = 16;
             this.btncıkıs.Text = "ÇIKIŞ";
             this.btncıkıs.UseVisualStyleBackColor = false;
@@ -91,7 +91,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.HotPink;
-            this.label1.Location = new System.Drawing.Point(261, 43);
+            this.label1.Location = new System.Drawing.Point(391, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(584, 40);
             this.label1.TabIndex = 15;
@@ -101,9 +101,9 @@
             // 
             this.btnmusteri.BackColor = System.Drawing.Color.HotPink;
             this.btnmusteri.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmusteri.Location = new System.Drawing.Point(299, 246);
+            this.btnmusteri.Location = new System.Drawing.Point(425, 290);
             this.btnmusteri.Name = "btnmusteri";
-            this.btnmusteri.Size = new System.Drawing.Size(247, 75);
+            this.btnmusteri.Size = new System.Drawing.Size(254, 94);
             this.btnmusteri.TabIndex = 14;
             this.btnmusteri.Text = "MÜŞTERİLERİ  DÜZENLE";
             this.btnmusteri.UseVisualStyleBackColor = false;
@@ -113,9 +113,9 @@
             // 
             this.btnkazanc.BackColor = System.Drawing.Color.HotPink;
             this.btnkazanc.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnkazanc.Location = new System.Drawing.Point(134, 150);
+            this.btnkazanc.Location = new System.Drawing.Point(228, 178);
             this.btnkazanc.Name = "btnkazanc";
-            this.btnkazanc.Size = new System.Drawing.Size(241, 77);
+            this.btnkazanc.Size = new System.Drawing.Size(250, 92);
             this.btnkazanc.TabIndex = 13;
             this.btnkazanc.Text = "KAZANCI GÖRÜNTÜLE";
             this.btnkazanc.UseVisualStyleBackColor = false;
@@ -124,9 +124,9 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.business_finance_4058613;
-            this.pictureBox4.Location = new System.Drawing.Point(839, 443);
+            this.pictureBox4.Location = new System.Drawing.Point(1100, 519);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(114, 73);
+            this.pictureBox4.Size = new System.Drawing.Size(123, 91);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 30;
             this.pictureBox4.TabStop = false;
@@ -134,9 +134,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.profile;
-            this.pictureBox3.Location = new System.Drawing.Point(693, 346);
+            this.pictureBox3.Location = new System.Drawing.Point(882, 412);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(112, 75);
+            this.pictureBox3.Size = new System.Drawing.Size(124, 90);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 29;
             this.pictureBox3.TabStop = false;
@@ -144,9 +144,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.user_setting;
-            this.pictureBox2.Location = new System.Drawing.Point(552, 246);
+            this.pictureBox2.Location = new System.Drawing.Point(685, 290);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(109, 75);
+            this.pictureBox2.Size = new System.Drawing.Size(122, 94);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 28;
             this.pictureBox2.TabStop = false;
@@ -154,9 +154,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.coin;
-            this.pictureBox1.Location = new System.Drawing.Point(381, 150);
+            this.pictureBox1.Location = new System.Drawing.Point(484, 178);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(111, 77);
+            this.pictureBox1.Size = new System.Drawing.Size(116, 92);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
@@ -165,7 +165,7 @@
             // 
             this.kapatmafoto.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_close_50;
             this.kapatmafoto.InitialImage = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_close_50;
-            this.kapatmafoto.Location = new System.Drawing.Point(1029, 12);
+            this.kapatmafoto.Location = new System.Drawing.Point(1299, 12);
             this.kapatmafoto.Name = "kapatmafoto";
             this.kapatmafoto.Size = new System.Drawing.Size(31, 35);
             this.kapatmafoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -176,7 +176,7 @@
             // kucultfoto
             // 
             this.kucultfoto.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_drop_down_50;
-            this.kucultfoto.Location = new System.Drawing.Point(986, 12);
+            this.kucultfoto.Location = new System.Drawing.Point(1256, 12);
             this.kucultfoto.Name = "kucultfoto";
             this.kucultfoto.Size = new System.Drawing.Size(37, 35);
             this.kucultfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -189,7 +189,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(1072, 583);
+            this.ClientSize = new System.Drawing.Size(1342, 668);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);

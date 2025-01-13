@@ -56,7 +56,7 @@
             // 
             this.btnseansduzen.BackColor = System.Drawing.Color.HotPink;
             this.btnseansduzen.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnseansduzen.Location = new System.Drawing.Point(525, 393);
+            this.btnseansduzen.Location = new System.Drawing.Point(636, 445);
             this.btnseansduzen.Name = "btnseansduzen";
             this.btnseansduzen.Size = new System.Drawing.Size(242, 74);
             this.btnseansduzen.TabIndex = 21;
@@ -69,9 +69,9 @@
             this.btncıkıs.BackColor = System.Drawing.Color.HotPink;
             this.btncıkıs.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncıkıs.ForeColor = System.Drawing.SystemColors.Control;
-            this.btncıkıs.Location = new System.Drawing.Point(12, 530);
+            this.btncıkıs.Location = new System.Drawing.Point(12, 604);
             this.btncıkıs.Name = "btncıkıs";
-            this.btncıkıs.Size = new System.Drawing.Size(91, 41);
+            this.btncıkıs.Size = new System.Drawing.Size(91, 52);
             this.btncıkıs.TabIndex = 20;
             this.btncıkıs.Text = "ÇIKIŞ";
             this.btncıkıs.UseVisualStyleBackColor = false;
@@ -82,7 +82,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.HotPink;
-            this.label1.Location = new System.Drawing.Point(236, 54);
+            this.label1.Location = new System.Drawing.Point(366, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(595, 40);
             this.label1.TabIndex = 19;
@@ -92,7 +92,7 @@
             // 
             this.btnmusteriduzen.BackColor = System.Drawing.Color.HotPink;
             this.btnmusteriduzen.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmusteriduzen.Location = new System.Drawing.Point(310, 303);
+            this.btnmusteriduzen.Location = new System.Drawing.Point(393, 349);
             this.btnmusteriduzen.Name = "btnmusteriduzen";
             this.btnmusteriduzen.Size = new System.Drawing.Size(253, 74);
             this.btnmusteriduzen.TabIndex = 18;
@@ -104,7 +104,7 @@
             // 
             this.btnyenimusteri.BackColor = System.Drawing.Color.HotPink;
             this.btnyenimusteri.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnyenimusteri.Location = new System.Drawing.Point(12, 111);
+            this.btnyenimusteri.Location = new System.Drawing.Point(45, 151);
             this.btnyenimusteri.Name = "btnyenimusteri";
             this.btnyenimusteri.Size = new System.Drawing.Size(231, 74);
             this.btnyenimusteri.TabIndex = 17;
@@ -116,7 +116,7 @@
             // 
             this.btnseansbak.BackColor = System.Drawing.Color.HotPink;
             this.btnseansbak.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnseansbak.Location = new System.Drawing.Point(724, 483);
+            this.btnseansbak.Location = new System.Drawing.Point(893, 535);
             this.btnseansbak.Name = "btnseansbak";
             this.btnseansbak.Size = new System.Drawing.Size(247, 74);
             this.btnseansbak.TabIndex = 22;
@@ -128,7 +128,7 @@
             // 
             this.btnseans.BackColor = System.Drawing.Color.HotPink;
             this.btnseans.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnseans.Location = new System.Drawing.Point(138, 204);
+            this.btnseans.Location = new System.Drawing.Point(185, 250);
             this.btnseans.Name = "btnseans";
             this.btnseans.Size = new System.Drawing.Size(247, 74);
             this.btnseans.TabIndex = 25;
@@ -139,7 +139,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.calendar__2_;
-            this.pictureBox5.Location = new System.Drawing.Point(977, 483);
+            this.pictureBox5.Location = new System.Drawing.Point(1146, 535);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(93, 74);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -149,7 +149,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.calendar__1_;
-            this.pictureBox4.Location = new System.Drawing.Point(774, 393);
+            this.pictureBox4.Location = new System.Drawing.Point(885, 445);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(111, 74);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -159,7 +159,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.user_setting;
-            this.pictureBox3.Location = new System.Drawing.Point(569, 303);
+            this.pictureBox3.Location = new System.Drawing.Point(652, 349);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(120, 68);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -169,7 +169,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.calendar;
-            this.pictureBox2.Location = new System.Drawing.Point(391, 204);
+            this.pictureBox2.Location = new System.Drawing.Point(438, 250);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(110, 74);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -179,7 +179,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.user__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(249, 111);
+            this.pictureBox1.Location = new System.Drawing.Point(282, 151);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 70);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -190,7 +190,7 @@
             // 
             this.kapatmafoto.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_close_50;
             this.kapatmafoto.InitialImage = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_close_50;
-            this.kapatmafoto.Location = new System.Drawing.Point(1029, 12);
+            this.kapatmafoto.Location = new System.Drawing.Point(1299, 12);
             this.kapatmafoto.Name = "kapatmafoto";
             this.kapatmafoto.Size = new System.Drawing.Size(31, 35);
             this.kapatmafoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -201,9 +201,9 @@
             // kucultfoto
             // 
             this.kucultfoto.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_drop_down_50;
-            this.kucultfoto.Location = new System.Drawing.Point(986, 12);
+            this.kucultfoto.Location = new System.Drawing.Point(1243, 12);
             this.kucultfoto.Name = "kucultfoto";
-            this.kucultfoto.Size = new System.Drawing.Size(37, 35);
+            this.kucultfoto.Size = new System.Drawing.Size(41, 35);
             this.kucultfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.kucultfoto.TabIndex = 23;
             this.kucultfoto.TabStop = false;
@@ -214,7 +214,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(1072, 583);
+            this.ClientSize = new System.Drawing.Size(1342, 668);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);

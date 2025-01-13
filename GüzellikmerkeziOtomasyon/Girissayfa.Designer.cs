@@ -55,7 +55,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(463, 38);
+            this.label1.Location = new System.Drawing.Point(656, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 44);
             this.label1.TabIndex = 1;
@@ -70,26 +70,26 @@
             this.grspanel.Controls.Add(this.kaditxt);
             this.grspanel.Controls.Add(this.label3);
             this.grspanel.Controls.Add(this.label2);
-            this.grspanel.Location = new System.Drawing.Point(194, 115);
+            this.grspanel.Location = new System.Drawing.Point(369, 99);
             this.grspanel.Name = "grspanel";
-            this.grspanel.Size = new System.Drawing.Size(663, 289);
+            this.grspanel.Size = new System.Drawing.Size(638, 379);
             this.grspanel.TabIndex = 2;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.user__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 71);
+            this.pictureBox2.Location = new System.Drawing.Point(264, 23);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(178, 170);
+            this.pictureBox2.Size = new System.Drawing.Size(142, 117);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(512, 193);
+            this.pictureBox1.Location = new System.Drawing.Point(507, 254);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(101, 59);
+            this.pictureBox1.Size = new System.Drawing.Size(68, 40);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -97,7 +97,7 @@
             // sifretxt
             // 
             this.sifretxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sifretxt.Location = new System.Drawing.Point(361, 151);
+            this.sifretxt.Location = new System.Drawing.Point(232, 254);
             this.sifretxt.Name = "sifretxt";
             this.sifretxt.PasswordChar = '*';
             this.sifretxt.Size = new System.Drawing.Size(252, 22);
@@ -106,7 +106,7 @@
             // kaditxt
             // 
             this.kaditxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.kaditxt.Location = new System.Drawing.Point(361, 82);
+            this.kaditxt.Location = new System.Drawing.Point(232, 185);
             this.kaditxt.Name = "kaditxt";
             this.kaditxt.Size = new System.Drawing.Size(252, 22);
             this.kaditxt.TabIndex = 2;
@@ -115,7 +115,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(260, 151);
+            this.label3.Location = new System.Drawing.Point(132, 254);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 22);
             this.label3.TabIndex = 1;
@@ -125,7 +125,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(200, 82);
+            this.label2.Location = new System.Drawing.Point(72, 185);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(121, 22);
             this.label2.TabIndex = 0;
@@ -136,7 +136,7 @@
             this.btngiris.BackColor = System.Drawing.Color.HotPink;
             this.btngiris.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btngiris.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btngiris.Location = new System.Drawing.Point(458, 447);
+            this.btngiris.Location = new System.Drawing.Point(642, 501);
             this.btngiris.Name = "btngiris";
             this.btngiris.Size = new System.Drawing.Size(133, 71);
             this.btngiris.TabIndex = 5;
@@ -148,7 +148,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(8, 558);
+            this.label4.Location = new System.Drawing.Point(21, 631);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 19);
             this.label4.TabIndex = 8;
@@ -158,7 +158,7 @@
             // 
             this.kapatmafoto.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_close_50;
             this.kapatmafoto.InitialImage = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_close_50;
-            this.kapatmafoto.Location = new System.Drawing.Point(1018, 21);
+            this.kapatmafoto.Location = new System.Drawing.Point(1299, 12);
             this.kapatmafoto.Name = "kapatmafoto";
             this.kapatmafoto.Size = new System.Drawing.Size(31, 35);
             this.kapatmafoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -169,7 +169,7 @@
             // kucultfoto
             // 
             this.kucultfoto.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_drop_down_50;
-            this.kucultfoto.Location = new System.Drawing.Point(975, 21);
+            this.kucultfoto.Location = new System.Drawing.Point(1256, 12);
             this.kucultfoto.Name = "kucultfoto";
             this.kucultfoto.Size = new System.Drawing.Size(37, 35);
             this.kucultfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -180,9 +180,9 @@
             // kapatfoto
             // 
             this.kapatfoto.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_shutdown_64;
-            this.kapatfoto.Location = new System.Drawing.Point(12, 501);
+            this.kapatfoto.Location = new System.Drawing.Point(12, 558);
             this.kapatfoto.Name = "kapatfoto";
-            this.kapatfoto.Size = new System.Drawing.Size(51, 54);
+            this.kapatfoto.Size = new System.Drawing.Size(68, 70);
             this.kapatfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.kapatfoto.TabIndex = 7;
             this.kapatfoto.TabStop = false;
@@ -193,7 +193,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(1072, 583);
+            this.ClientSize = new System.Drawing.Size(1342, 668);
             this.Controls.Add(this.kapatmafoto);
             this.Controls.Add(this.kucultfoto);
             this.Controls.Add(this.label4);

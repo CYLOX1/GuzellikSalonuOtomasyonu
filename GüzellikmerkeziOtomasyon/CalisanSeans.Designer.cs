@@ -44,7 +44,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.HotPink;
-            this.label2.Location = new System.Drawing.Point(454, 34);
+            this.label2.Location = new System.Drawing.Point(592, 37);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(178, 40);
             this.label2.TabIndex = 51;
@@ -53,11 +53,11 @@
             // seansdatagrid
             // 
             this.seansdatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.seansdatagrid.Location = new System.Drawing.Point(61, 106);
+            this.seansdatagrid.Location = new System.Drawing.Point(148, 134);
             this.seansdatagrid.Name = "seansdatagrid";
             this.seansdatagrid.RowHeadersWidth = 51;
             this.seansdatagrid.RowTemplate.Height = 24;
-            this.seansdatagrid.Size = new System.Drawing.Size(945, 385);
+            this.seansdatagrid.Size = new System.Drawing.Size(1009, 422);
             this.seansdatagrid.TabIndex = 48;
             // 
             // btnanasayfa
@@ -65,9 +65,9 @@
             this.btnanasayfa.BackColor = System.Drawing.Color.HotPink;
             this.btnanasayfa.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnanasayfa.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnanasayfa.Location = new System.Drawing.Point(12, 530);
+            this.btnanasayfa.Location = new System.Drawing.Point(12, 607);
             this.btnanasayfa.Name = "btnanasayfa";
-            this.btnanasayfa.Size = new System.Drawing.Size(122, 41);
+            this.btnanasayfa.Size = new System.Drawing.Size(131, 49);
             this.btnanasayfa.TabIndex = 50;
             this.btnanasayfa.Text = "ANASAYFA";
             this.btnanasayfa.UseVisualStyleBackColor = false;
@@ -77,7 +77,7 @@
             // 
             this.kapatmafoto.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_close_50;
             this.kapatmafoto.InitialImage = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_close_50;
-            this.kapatmafoto.Location = new System.Drawing.Point(1029, 12);
+            this.kapatmafoto.Location = new System.Drawing.Point(1299, 12);
             this.kapatmafoto.Name = "kapatmafoto";
             this.kapatmafoto.Size = new System.Drawing.Size(31, 35);
             this.kapatmafoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -88,7 +88,7 @@
             // kucultfoto
             // 
             this.kucultfoto.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_drop_down_50;
-            this.kucultfoto.Location = new System.Drawing.Point(986, 12);
+            this.kucultfoto.Location = new System.Drawing.Point(1256, 12);
             this.kucultfoto.Name = "kucultfoto";
             this.kucultfoto.Size = new System.Drawing.Size(37, 35);
             this.kucultfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -101,7 +101,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(1072, 583);
+            this.ClientSize = new System.Drawing.Size(1342, 668);
             this.Controls.Add(this.kapatmafoto);
             this.Controls.Add(this.kucultfoto);
             this.Controls.Add(this.label2);
