@@ -50,6 +50,9 @@
             this.txtfiltretel = new System.Windows.Forms.TextBox();
             this.txtfiltresoyad = new System.Windows.Forms.TextBox();
             this.txtfiltread = new System.Windows.Forms.TextBox();
+            this.lbltel = new System.Windows.Forms.Label();
+            this.lblsoyad = new System.Windows.Forms.Label();
+            this.lblad = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.calisandatagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).BeginInit();
@@ -72,7 +75,7 @@
             this.btnekle.BackColor = System.Drawing.Color.HotPink;
             this.btnekle.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnekle.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnekle.Location = new System.Drawing.Point(987, 426);
+            this.btnekle.Location = new System.Drawing.Point(900, 433);
             this.btnekle.Name = "btnekle";
             this.btnekle.Size = new System.Drawing.Size(149, 75);
             this.btnekle.TabIndex = 58;
@@ -84,7 +87,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(276, 578);
+            this.label3.Location = new System.Drawing.Point(245, 581);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 22);
             this.label3.TabIndex = 57;
@@ -94,7 +97,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(276, 536);
+            this.label2.Location = new System.Drawing.Point(245, 539);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 22);
             this.label2.TabIndex = 56;
@@ -104,7 +107,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(304, 496);
+            this.label1.Location = new System.Drawing.Point(273, 499);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 22);
             this.label1.TabIndex = 55;
@@ -112,21 +115,21 @@
             // 
             // soyadtxt
             // 
-            this.soyadtxt.Location = new System.Drawing.Point(367, 534);
+            this.soyadtxt.Location = new System.Drawing.Point(336, 537);
             this.soyadtxt.Name = "soyadtxt";
             this.soyadtxt.Size = new System.Drawing.Size(221, 22);
             this.soyadtxt.TabIndex = 54;
             // 
             // adtxt
             // 
-            this.adtxt.Location = new System.Drawing.Point(367, 494);
+            this.adtxt.Location = new System.Drawing.Point(336, 497);
             this.adtxt.Name = "adtxt";
             this.adtxt.Size = new System.Drawing.Size(221, 22);
             this.adtxt.TabIndex = 53;
             // 
             // teltxt
             // 
-            this.teltxt.Location = new System.Drawing.Point(367, 575);
+            this.teltxt.Location = new System.Drawing.Point(336, 578);
             this.teltxt.Name = "teltxt";
             this.teltxt.Size = new System.Drawing.Size(221, 22);
             this.teltxt.TabIndex = 52;
@@ -150,9 +153,9 @@
             this.btnguncelle.BackColor = System.Drawing.Color.HotPink;
             this.btnguncelle.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnguncelle.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnguncelle.Location = new System.Drawing.Point(1181, 588);
+            this.btnguncelle.Location = new System.Drawing.Point(1194, 581);
             this.btnguncelle.Name = "btnguncelle";
-            this.btnguncelle.Size = new System.Drawing.Size(149, 75);
+            this.btnguncelle.Size = new System.Drawing.Size(136, 75);
             this.btnguncelle.TabIndex = 50;
             this.btnguncelle.Text = "GÜNCELLE";
             this.btnguncelle.UseVisualStyleBackColor = false;
@@ -163,7 +166,7 @@
             this.btnsil.BackColor = System.Drawing.Color.HotPink;
             this.btnsil.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsil.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnsil.Location = new System.Drawing.Point(1095, 507);
+            this.btnsil.Location = new System.Drawing.Point(1044, 511);
             this.btnsil.Name = "btnsil";
             this.btnsil.Size = new System.Drawing.Size(149, 75);
             this.btnsil.TabIndex = 49;
@@ -188,7 +191,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(312, 459);
+            this.label5.Location = new System.Drawing.Point(281, 462);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(28, 22);
             this.label5.TabIndex = 60;
@@ -196,7 +199,7 @@
             // 
             // ıdtxt
             // 
-            this.ıdtxt.Location = new System.Drawing.Point(367, 456);
+            this.ıdtxt.Location = new System.Drawing.Point(336, 459);
             this.ıdtxt.Name = "ıdtxt";
             this.ıdtxt.ReadOnly = true;
             this.ıdtxt.Size = new System.Drawing.Size(221, 22);
@@ -239,7 +242,7 @@
             // 
             this.checkfiltre.AutoSize = true;
             this.checkfiltre.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkfiltre.Location = new System.Drawing.Point(811, 441);
+            this.checkfiltre.Location = new System.Drawing.Point(689, 433);
             this.checkfiltre.Name = "checkfiltre";
             this.checkfiltre.Size = new System.Drawing.Size(75, 28);
             this.checkfiltre.TabIndex = 81;
@@ -249,7 +252,7 @@
             // 
             // txtfiltretel
             // 
-            this.txtfiltretel.Location = new System.Drawing.Point(778, 575);
+            this.txtfiltretel.Location = new System.Drawing.Point(721, 581);
             this.txtfiltretel.Name = "txtfiltretel";
             this.txtfiltretel.Size = new System.Drawing.Size(152, 22);
             this.txtfiltretel.TabIndex = 80;
@@ -258,7 +261,7 @@
             // 
             // txtfiltresoyad
             // 
-            this.txtfiltresoyad.Location = new System.Drawing.Point(778, 526);
+            this.txtfiltresoyad.Location = new System.Drawing.Point(721, 537);
             this.txtfiltresoyad.Name = "txtfiltresoyad";
             this.txtfiltresoyad.Size = new System.Drawing.Size(152, 22);
             this.txtfiltresoyad.TabIndex = 79;
@@ -267,12 +270,45 @@
             // 
             // txtfiltread
             // 
-            this.txtfiltread.Location = new System.Drawing.Point(778, 480);
+            this.txtfiltread.Location = new System.Drawing.Point(721, 486);
             this.txtfiltread.Name = "txtfiltread";
             this.txtfiltread.Size = new System.Drawing.Size(152, 22);
             this.txtfiltread.TabIndex = 78;
             this.txtfiltread.Visible = false;
             this.txtfiltread.TextChanged += new System.EventHandler(this.txtfiltread_TextChanged);
+            // 
+            // lbltel
+            // 
+            this.lbltel.AutoSize = true;
+            this.lbltel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbltel.Location = new System.Drawing.Point(637, 585);
+            this.lbltel.Name = "lbltel";
+            this.lbltel.Size = new System.Drawing.Size(68, 18);
+            this.lbltel.TabIndex = 87;
+            this.lbltel.Text = "TEL NO";
+            this.lbltel.Visible = false;
+            // 
+            // lblsoyad
+            // 
+            this.lblsoyad.AutoSize = true;
+            this.lblsoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblsoyad.Location = new System.Drawing.Point(641, 539);
+            this.lblsoyad.Name = "lblsoyad";
+            this.lblsoyad.Size = new System.Drawing.Size(64, 18);
+            this.lblsoyad.TabIndex = 86;
+            this.lblsoyad.Text = "SOYAD";
+            this.lblsoyad.Visible = false;
+            // 
+            // lblad
+            // 
+            this.lblad.AutoSize = true;
+            this.lblad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblad.Location = new System.Drawing.Point(675, 490);
+            this.lblad.Name = "lblad";
+            this.lblad.Size = new System.Drawing.Size(30, 18);
+            this.lblad.TabIndex = 85;
+            this.lblad.Text = "AD";
+            this.lblad.Visible = false;
             // 
             // PatronCalisanDuzenle
             // 
@@ -280,6 +316,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1342, 668);
+            this.Controls.Add(this.lbltel);
+            this.Controls.Add(this.lblsoyad);
+            this.Controls.Add(this.lblad);
             this.Controls.Add(this.checkfiltre);
             this.Controls.Add(this.txtfiltretel);
             this.Controls.Add(this.txtfiltresoyad);
@@ -339,5 +378,8 @@
         private System.Windows.Forms.TextBox txtfiltretel;
         private System.Windows.Forms.TextBox txtfiltresoyad;
         private System.Windows.Forms.TextBox txtfiltread;
+        private System.Windows.Forms.Label lbltel;
+        private System.Windows.Forms.Label lblsoyad;
+        private System.Windows.Forms.Label lblad;
     }
 }

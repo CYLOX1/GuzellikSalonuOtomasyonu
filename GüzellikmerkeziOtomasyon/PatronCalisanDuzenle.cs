@@ -162,12 +162,18 @@ namespace GüzellikmerkeziOtomasyon
                 txtfiltread.Visible = true;
                 txtfiltresoyad.Visible = true;
                 txtfiltretel.Visible = true;
+                lblad.Visible = true;
+                lblsoyad.Visible = true;
+                lbltel.Visible = true;
             }
             else
             {
                 txtfiltread.Visible = false;
                 txtfiltresoyad.Visible = false;
                 txtfiltretel.Visible = false;
+                lblad.Visible = false;
+                lblsoyad.Visible = false;
+                lbltel.Visible = false;
                 txtfiltread.Clear();
                 txtfiltresoyad.Clear();
                 txtfiltretel.Clear();

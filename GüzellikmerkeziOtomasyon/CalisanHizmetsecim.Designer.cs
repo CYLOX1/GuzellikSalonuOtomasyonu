@@ -104,7 +104,7 @@
             this.btnonay.BackColor = System.Drawing.Color.HotPink;
             this.btnonay.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnonay.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnonay.Location = new System.Drawing.Point(1107, 533);
+            this.btnonay.Location = new System.Drawing.Point(1155, 566);
             this.btnonay.Name = "btnonay";
             this.btnonay.Size = new System.Drawing.Size(175, 84);
             this.btnonay.TabIndex = 49;

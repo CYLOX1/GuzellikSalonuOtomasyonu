@@ -54,7 +54,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(788, 180);
+            this.label3.Location = new System.Drawing.Point(728, 160);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 29);
             this.label3.TabIndex = 5;
@@ -64,7 +64,7 @@
             // 
             this.kazanclbl.AutoSize = true;
             this.kazanclbl.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kazanclbl.Location = new System.Drawing.Point(703, 180);
+            this.kazanclbl.Location = new System.Drawing.Point(643, 160);
             this.kazanclbl.Name = "kazanclbl";
             this.kazanclbl.Size = new System.Drawing.Size(0, 29);
             this.kazanclbl.TabIndex = 4;
@@ -73,19 +73,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.MistyRose;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(638, 323);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(917, 486);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(272, 44);
+            this.label1.Size = new System.Drawing.Size(82, 31);
             this.label1.TabIndex = 3;
-            this.label1.Text = "TOPLAM GELİR";
+            this.label1.Text = "GELİR";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.HotPink;
-            this.label4.Location = new System.Drawing.Point(381, 31);
+            this.label4.Location = new System.Drawing.Point(595, 21);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(247, 40);
             this.label4.TabIndex = 52;
@@ -96,9 +96,9 @@
             this.btngeri.BackColor = System.Drawing.Color.HotPink;
             this.btngeri.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btngeri.ForeColor = System.Drawing.SystemColors.Control;
-            this.btngeri.Location = new System.Drawing.Point(12, 522);
+            this.btngeri.Location = new System.Drawing.Point(12, 596);
             this.btngeri.Name = "btngeri";
-            this.btngeri.Size = new System.Drawing.Size(120, 49);
+            this.btngeri.Size = new System.Drawing.Size(131, 60);
             this.btngeri.TabIndex = 53;
             this.btngeri.Text = "GERİ";
             this.btngeri.UseVisualStyleBackColor = false;
@@ -108,7 +108,7 @@
             // 
             this.kapatmafoto.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_close_50;
             this.kapatmafoto.InitialImage = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_close_50;
-            this.kapatmafoto.Location = new System.Drawing.Point(1017, 12);
+            this.kapatmafoto.Location = new System.Drawing.Point(1299, 21);
             this.kapatmafoto.Name = "kapatmafoto";
             this.kapatmafoto.Size = new System.Drawing.Size(31, 35);
             this.kapatmafoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -119,7 +119,7 @@
             // kucultfoto
             // 
             this.kucultfoto.Image = global::GüzellikmerkeziOtomasyon.Properties.Resources.icons8_drop_down_50;
-            this.kucultfoto.Location = new System.Drawing.Point(965, 12);
+            this.kucultfoto.Location = new System.Drawing.Point(1247, 21);
             this.kucultfoto.Name = "kucultfoto";
             this.kucultfoto.Size = new System.Drawing.Size(37, 35);
             this.kucultfoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -129,24 +129,25 @@
             // 
             // kazancdatagrid
             // 
+            this.kazancdatagrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.kazancdatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kazancdatagrid.Location = new System.Drawing.Point(29, 108);
+            this.kazancdatagrid.Location = new System.Drawing.Point(273, 215);
             this.kazancdatagrid.Name = "kazancdatagrid";
             this.kazancdatagrid.RowHeadersWidth = 51;
             this.kazancdatagrid.RowTemplate.Height = 24;
-            this.kazancdatagrid.Size = new System.Drawing.Size(493, 218);
+            this.kazancdatagrid.Size = new System.Drawing.Size(831, 218);
             this.kazancdatagrid.TabIndex = 56;
             // 
             // dateTimebaslangic
             // 
-            this.dateTimebaslangic.Location = new System.Drawing.Point(29, 376);
+            this.dateTimebaslangic.Location = new System.Drawing.Point(340, 514);
             this.dateTimebaslangic.Name = "dateTimebaslangic";
             this.dateTimebaslangic.Size = new System.Drawing.Size(200, 22);
             this.dateTimebaslangic.TabIndex = 57;
             // 
             // dateTimebitis
             // 
-            this.dateTimebitis.Location = new System.Drawing.Point(272, 376);
+            this.dateTimebitis.Location = new System.Drawing.Point(583, 514);
             this.dateTimebitis.Name = "dateTimebitis";
             this.dateTimebitis.Size = new System.Drawing.Size(200, 22);
             this.dateTimebitis.TabIndex = 58;
@@ -154,7 +155,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(83, 345);
+            this.label2.Location = new System.Drawing.Point(394, 483);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 16);
             this.label2.TabIndex = 59;
@@ -163,7 +164,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(336, 345);
+            this.label5.Location = new System.Drawing.Point(647, 483);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 16);
             this.label5.TabIndex = 60;
@@ -174,7 +175,7 @@
             this.btnfiltre.BackColor = System.Drawing.Color.HotPink;
             this.btnfiltre.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnfiltre.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnfiltre.Location = new System.Drawing.Point(200, 426);
+            this.btnfiltre.Location = new System.Drawing.Point(518, 564);
             this.btnfiltre.Name = "btnfiltre";
             this.btnfiltre.Size = new System.Drawing.Size(90, 49);
             this.btnfiltre.TabIndex = 61;
@@ -187,17 +188,17 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.MistyRose;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(703, 108);
+            this.label6.Location = new System.Drawing.Point(551, 89);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(135, 44);
+            this.label6.Size = new System.Drawing.Size(271, 44);
             this.label6.TabIndex = 62;
-            this.label6.Text = "Kazanç";
+            this.label6.Text = "AYLIK KAZANÇ";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(791, 408);
+            this.label7.Location = new System.Drawing.Point(964, 564);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 29);
             this.label7.TabIndex = 64;
@@ -207,7 +208,7 @@
             // 
             this.filtrekazanc.AutoSize = true;
             this.filtrekazanc.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.filtrekazanc.Location = new System.Drawing.Point(706, 408);
+            this.filtrekazanc.Location = new System.Drawing.Point(901, 564);
             this.filtrekazanc.Name = "filtrekazanc";
             this.filtrekazanc.Size = new System.Drawing.Size(0, 29);
             this.filtrekazanc.TabIndex = 63;
@@ -217,7 +218,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(1060, 583);
+            this.ClientSize = new System.Drawing.Size(1342, 668);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.filtrekazanc);
             this.Controls.Add(this.label6);

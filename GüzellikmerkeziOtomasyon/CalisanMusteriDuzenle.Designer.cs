@@ -50,6 +50,9 @@
             this.txtfiltresoyad = new System.Windows.Forms.TextBox();
             this.txtfiltretel = new System.Windows.Forms.TextBox();
             this.checkfiltre = new System.Windows.Forms.CheckBox();
+            this.lbltel = new System.Windows.Forms.Label();
+            this.lblsoyad = new System.Windows.Forms.Label();
+            this.lblad = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.musteridatagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).BeginInit();
@@ -240,7 +243,7 @@
             // 
             // txtfiltread
             // 
-            this.txtfiltread.Location = new System.Drawing.Point(749, 474);
+            this.txtfiltread.Location = new System.Drawing.Point(779, 474);
             this.txtfiltread.Name = "txtfiltread";
             this.txtfiltread.Size = new System.Drawing.Size(152, 22);
             this.txtfiltread.TabIndex = 74;
@@ -249,7 +252,7 @@
             // 
             // txtfiltresoyad
             // 
-            this.txtfiltresoyad.Location = new System.Drawing.Point(749, 520);
+            this.txtfiltresoyad.Location = new System.Drawing.Point(779, 520);
             this.txtfiltresoyad.Name = "txtfiltresoyad";
             this.txtfiltresoyad.Size = new System.Drawing.Size(152, 22);
             this.txtfiltresoyad.TabIndex = 75;
@@ -258,7 +261,7 @@
             // 
             // txtfiltretel
             // 
-            this.txtfiltretel.Location = new System.Drawing.Point(749, 569);
+            this.txtfiltretel.Location = new System.Drawing.Point(779, 569);
             this.txtfiltretel.Name = "txtfiltretel";
             this.txtfiltretel.Size = new System.Drawing.Size(152, 22);
             this.txtfiltretel.TabIndex = 76;
@@ -270,7 +273,7 @@
             // 
             this.checkfiltre.AutoSize = true;
             this.checkfiltre.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.checkfiltre.Location = new System.Drawing.Point(782, 435);
+            this.checkfiltre.Location = new System.Drawing.Point(749, 414);
             this.checkfiltre.Name = "checkfiltre";
             this.checkfiltre.Size = new System.Drawing.Size(75, 28);
             this.checkfiltre.TabIndex = 77;
@@ -278,12 +281,48 @@
             this.checkfiltre.UseVisualStyleBackColor = true;
             this.checkfiltre.CheckedChanged += new System.EventHandler(this.checkfiltre_CheckedChanged);
             // 
+            // lbltel
+            // 
+            this.lbltel.AutoSize = true;
+            this.lbltel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbltel.Location = new System.Drawing.Point(693, 570);
+            this.lbltel.Name = "lbltel";
+            this.lbltel.Size = new System.Drawing.Size(68, 18);
+            this.lbltel.TabIndex = 87;
+            this.lbltel.Text = "TEL NO";
+            this.lbltel.Visible = false;
+            // 
+            // lblsoyad
+            // 
+            this.lblsoyad.AutoSize = true;
+            this.lblsoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblsoyad.Location = new System.Drawing.Point(697, 519);
+            this.lblsoyad.Name = "lblsoyad";
+            this.lblsoyad.Size = new System.Drawing.Size(64, 18);
+            this.lblsoyad.TabIndex = 86;
+            this.lblsoyad.Text = "SOYAD";
+            this.lblsoyad.Visible = false;
+            // 
+            // lblad
+            // 
+            this.lblad.AutoSize = true;
+            this.lblad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblad.Location = new System.Drawing.Point(731, 467);
+            this.lblad.Name = "lblad";
+            this.lblad.Size = new System.Drawing.Size(30, 18);
+            this.lblad.TabIndex = 85;
+            this.lblad.Text = "AD";
+            this.lblad.Visible = false;
+            // 
             // CalisanMusteriDuzenle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1342, 668);
+            this.Controls.Add(this.lbltel);
+            this.Controls.Add(this.lblsoyad);
+            this.Controls.Add(this.lblad);
             this.Controls.Add(this.checkfiltre);
             this.Controls.Add(this.txtfiltretel);
             this.Controls.Add(this.txtfiltresoyad);
@@ -343,5 +382,8 @@
         private System.Windows.Forms.TextBox txtfiltresoyad;
         private System.Windows.Forms.TextBox txtfiltretel;
         private System.Windows.Forms.CheckBox checkfiltre;
+        private System.Windows.Forms.Label lbltel;
+        private System.Windows.Forms.Label lblsoyad;
+        private System.Windows.Forms.Label lblad;
     }
 }

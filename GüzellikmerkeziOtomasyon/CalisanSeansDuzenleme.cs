@@ -307,7 +307,10 @@ namespace GüzellikmerkeziOtomasyon
                 txtfiltrekazanc.Visible = true;
                 combofiltresaat.Visible = true;
                 checkfiltretarih.Visible = true;
-                
+                lblad.Visible = true;
+                lblsoyad.Visible = true;
+                lbltel.Visible = true;
+
             }
             else
             {
@@ -316,6 +319,9 @@ namespace GüzellikmerkeziOtomasyon
                 txtfiltrekazanc.Visible = false;
                 combofiltresaat.Visible = false;
                 checkfiltretarih.Visible = false;
+                lblad.Visible = false;
+                lblsoyad.Visible = false;
+                lbltel.Visible = false;
                 txtfiltread.Clear();
                 txtfiltresoyad.Clear();
                 txtfiltrekazanc.Clear();
