@@ -75,7 +75,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(242, 571);
+            this.label3.Location = new System.Drawing.Point(226, 568);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 22);
             this.label3.TabIndex = 39;
@@ -85,7 +85,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(239, 533);
+            this.label2.Location = new System.Drawing.Point(222, 530);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 22);
             this.label2.TabIndex = 38;
@@ -95,7 +95,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(267, 497);
+            this.label1.Location = new System.Drawing.Point(255, 494);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 22);
             this.label1.TabIndex = 37;
@@ -178,7 +178,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(267, 461);
+            this.label5.Location = new System.Drawing.Point(267, 458);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(28, 22);
             this.label5.TabIndex = 54;
@@ -240,7 +240,7 @@
             // 
             // txtfiltretel
             // 
-            this.txtfiltretel.Location = new System.Drawing.Point(700, 581);
+            this.txtfiltretel.Location = new System.Drawing.Point(700, 580);
             this.txtfiltretel.Name = "txtfiltretel";
             this.txtfiltretel.Size = new System.Drawing.Size(152, 22);
             this.txtfiltretel.TabIndex = 80;

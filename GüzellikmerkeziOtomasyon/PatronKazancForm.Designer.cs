@@ -45,6 +45,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.filtrekazanc = new System.Windows.Forms.Label();
+            this.Tümü = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.kapatmafoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kucultfoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kazancdatagrid)).BeginInit();
@@ -213,12 +214,26 @@
             this.filtrekazanc.Size = new System.Drawing.Size(0, 29);
             this.filtrekazanc.TabIndex = 63;
             // 
+            // Tümü
+            // 
+            this.Tümü.BackColor = System.Drawing.Color.HotPink;
+            this.Tümü.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tümü.ForeColor = System.Drawing.SystemColors.Control;
+            this.Tümü.Location = new System.Drawing.Point(1163, 305);
+            this.Tümü.Name = "Tümü";
+            this.Tümü.Size = new System.Drawing.Size(121, 65);
+            this.Tümü.TabIndex = 65;
+            this.Tümü.Text = "Tüm Kazanç";
+            this.Tümü.UseVisualStyleBackColor = false;
+            this.Tümü.Click += new System.EventHandler(this.Tümü_Click);
+            // 
             // PatronKazancForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1342, 668);
+            this.Controls.Add(this.Tümü);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.filtrekazanc);
             this.Controls.Add(this.label6);
@@ -267,5 +282,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label filtrekazanc;
+        private System.Windows.Forms.Button Tümü;
     }
 }

@@ -90,5 +90,10 @@ namespace GüzellikmerkeziOtomasyon
             // Toplam kazancı Label'a yazdır
             filtrekazanc.Text = toplamKazanc.ToString(); 
         }
+
+        private void Tümü_Click(object sender, EventArgs e)
+        {
+            SeanslariListele();
+        }
     }
 }

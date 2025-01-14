@@ -136,7 +136,7 @@
             this.btngeri.ForeColor = System.Drawing.SystemColors.Control;
             this.btngeri.Location = new System.Drawing.Point(12, 602);
             this.btngeri.Name = "btngeri";
-            this.btngeri.Size = new System.Drawing.Size(106, 54);
+            this.btngeri.Size = new System.Drawing.Size(94, 51);
             this.btngeri.TabIndex = 48;
             this.btngeri.Text = "GERİ";
             this.btngeri.UseVisualStyleBackColor = false;
@@ -364,7 +364,7 @@
             // 
             this.lblad.AutoSize = true;
             this.lblad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblad.Location = new System.Drawing.Point(290, 544);
+            this.lblad.Location = new System.Drawing.Point(281, 544);
             this.lblad.Name = "lblad";
             this.lblad.Size = new System.Drawing.Size(35, 20);
             this.lblad.TabIndex = 89;
@@ -375,7 +375,7 @@
             // 
             this.lblsoyad.AutoSize = true;
             this.lblsoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblsoyad.Location = new System.Drawing.Point(253, 581);
+            this.lblsoyad.Location = new System.Drawing.Point(244, 581);
             this.lblsoyad.Name = "lblsoyad";
             this.lblsoyad.Size = new System.Drawing.Size(72, 20);
             this.lblsoyad.TabIndex = 90;
@@ -386,11 +386,11 @@
             // 
             this.lbltel.AutoSize = true;
             this.lbltel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbltel.Location = new System.Drawing.Point(249, 618);
+            this.lbltel.Location = new System.Drawing.Point(235, 616);
             this.lbltel.Name = "lbltel";
-            this.lbltel.Size = new System.Drawing.Size(76, 20);
+            this.lbltel.Size = new System.Drawing.Size(81, 20);
             this.lbltel.TabIndex = 91;
-            this.lbltel.Text = "TEL NO";
+            this.lbltel.Text = "KAZANÇ";
             this.lbltel.Visible = false;
             // 
             // CalisanSeansDuzenleme

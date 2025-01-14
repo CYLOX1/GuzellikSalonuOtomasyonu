@@ -167,9 +167,9 @@
             this.btngeri.BackColor = System.Drawing.Color.HotPink;
             this.btngeri.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btngeri.ForeColor = System.Drawing.SystemColors.Control;
-            this.btngeri.Location = new System.Drawing.Point(12, 598);
+            this.btngeri.Location = new System.Drawing.Point(12, 605);
             this.btngeri.Name = "btngeri";
-            this.btngeri.Size = new System.Drawing.Size(101, 58);
+            this.btngeri.Size = new System.Drawing.Size(94, 51);
             this.btngeri.TabIndex = 49;
             this.btngeri.Text = "GERİ";
             this.btngeri.UseVisualStyleBackColor = false;

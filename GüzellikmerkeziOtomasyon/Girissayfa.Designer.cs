@@ -55,7 +55,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(656, 33);
+            this.label1.Location = new System.Drawing.Point(634, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 44);
             this.label1.TabIndex = 1;
@@ -70,7 +70,7 @@
             this.grspanel.Controls.Add(this.kaditxt);
             this.grspanel.Controls.Add(this.label3);
             this.grspanel.Controls.Add(this.label2);
-            this.grspanel.Location = new System.Drawing.Point(369, 99);
+            this.grspanel.Location = new System.Drawing.Point(356, 99);
             this.grspanel.Name = "grspanel";
             this.grspanel.Size = new System.Drawing.Size(638, 379);
             this.grspanel.TabIndex = 2;
@@ -99,9 +99,9 @@
             this.sifretxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sifretxt.Location = new System.Drawing.Point(232, 254);
             this.sifretxt.Name = "sifretxt";
-            this.sifretxt.PasswordChar = '*';
             this.sifretxt.Size = new System.Drawing.Size(252, 22);
             this.sifretxt.TabIndex = 3;
+            this.sifretxt.UseSystemPasswordChar = true;
             // 
             // kaditxt
             // 
@@ -136,7 +136,7 @@
             this.btngiris.BackColor = System.Drawing.Color.HotPink;
             this.btngiris.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btngiris.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btngiris.Location = new System.Drawing.Point(642, 501);
+            this.btngiris.Location = new System.Drawing.Point(629, 501);
             this.btngiris.Name = "btngiris";
             this.btngiris.Size = new System.Drawing.Size(133, 71);
             this.btngiris.TabIndex = 5;

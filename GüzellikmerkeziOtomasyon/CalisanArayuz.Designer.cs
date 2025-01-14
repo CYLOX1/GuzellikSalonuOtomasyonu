@@ -69,9 +69,9 @@
             this.btncıkıs.BackColor = System.Drawing.Color.HotPink;
             this.btncıkıs.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncıkıs.ForeColor = System.Drawing.SystemColors.Control;
-            this.btncıkıs.Location = new System.Drawing.Point(12, 604);
+            this.btncıkıs.Location = new System.Drawing.Point(12, 605);
             this.btncıkıs.Name = "btncıkıs";
-            this.btncıkıs.Size = new System.Drawing.Size(91, 52);
+            this.btncıkıs.Size = new System.Drawing.Size(94, 51);
             this.btncıkıs.TabIndex = 20;
             this.btncıkıs.Text = "ÇIKIŞ";
             this.btncıkıs.UseVisualStyleBackColor = false;

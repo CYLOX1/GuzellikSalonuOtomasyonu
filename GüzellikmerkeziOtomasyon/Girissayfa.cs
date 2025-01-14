@@ -56,21 +56,20 @@ namespace GüzellikmerkeziOtomasyon
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if(sifretxt.PasswordChar == '*')
+            sifretxt.UseSystemPasswordChar = !sifretxt.UseSystemPasswordChar; // Şifre gizleme
+            if (sifretxt.UseSystemPasswordChar)
             {
-                sifretxt.PasswordChar = '\0';
-                pictureBox1.Image = Properties.Resources.acikgoz;
+                pictureBox1.Image = Properties.Resources.acikgoz; // Göz açık ikonu
             }
             else
             {
-                sifretxt.PasswordChar = '*';
-                pictureBox1.Image = Properties.Resources.kapaligoz;
+                pictureBox1.Image = Properties.Resources.kapaligoz; // Göz kapalı ikonu
             }
+
         }
 
         private void Girissayfa_Load(object sender, EventArgs e)
         {
-            sifretxt.PasswordChar = '*';
 
 
             pictureBox1.Image = Properties.Resources.kapaligoz;

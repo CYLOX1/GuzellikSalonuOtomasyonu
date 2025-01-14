@@ -57,7 +57,7 @@
             this.btngeri.ForeColor = System.Drawing.SystemColors.Control;
             this.btngeri.Location = new System.Drawing.Point(12, 605);
             this.btngeri.Name = "btngeri";
-            this.btngeri.Size = new System.Drawing.Size(118, 51);
+            this.btngeri.Size = new System.Drawing.Size(94, 51);
             this.btngeri.TabIndex = 51;
             this.btngeri.Text = "GERİ";
             this.btngeri.UseVisualStyleBackColor = false;
